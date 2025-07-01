@@ -108,6 +108,14 @@ Route::group(['middleware' => ['auth']], function () {
 
         Route::get('profil', [CustomerController::class, 'profil']);
         Route::post('profil', [CustomerController::class, 'update_profil']);
+
+        Route::get('penunjukan', [CustomerController::class, 'penunjukan']);
+        Route::get('penunjukan/create', [CustomerController::class, 'penunjukan_create']);
+        Route::post('penunjukan/create', [CustomerController::class, 'penunjukan_store']);
+        Route::get('penunjukan/edit/{id}', [CustomerController::class, 'penunjukan_edit']);
+        Route::post('penunjukan/edit/{id}', [CustomerController::class, 'penunjukan_update']);
+        Route::get('penunjukan/delete/{id}', [CustomerController::class, 'penunjukan_delete']);
+
         Route::post('chat/{dokter_id}', [KonsultasiController::class, 'kirimChat']);
         Route::get('jadwal', [KonsultasiController::class, 'jadwal']);
         Route::get('konsultasi', [KonsultasiController::class, 'pasien']);

@@ -17,8 +17,7 @@
             </a>
         </li>
         <li class="nav-item">
-            <a href="/customer/surat_penunjukan"
-                class="nav-link {{Request::is('customer/surat_penunjukan') ? 'active' : ''}}">
+            <a href="/customer/penunjukan" class="nav-link {{Request::is('customer/penunjukan') ? 'active' : ''}}">
                 <i class="nav-icon fa fa-calendar"></i>
                 <p>
                     Surat Penunjukkan
