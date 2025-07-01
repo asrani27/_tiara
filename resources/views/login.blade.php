@@ -18,8 +18,7 @@
   @toastr_css
 </head>
 
-<body class="hold-transition login-page"
-  style="background-image: url('/ppni/assets/img/hero-bg.jpg'); background-size: cover;">
+<body class="hold-transition login-page" style="background-image: url('/theme/bg2.jpg'); background-size: cover;">
   <div class="login-box">
     <!-- /.login-logo -->
     <div class="card card-outline card-primary">
@@ -54,7 +53,7 @@
               <button type="submit" class="btn btn-primary btn-block">Sign In</button>
             </div>
             <div class="col-8">
-              <a href="/daftar" class="btn btn-danger btn-block">Daftar Pasien</a>
+              <a href="/daftar" class="btn btn-danger btn-block">Daftar Customer</a>
             </div>
           </div>
         </form>

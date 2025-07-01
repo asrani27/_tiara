@@ -48,12 +48,12 @@ class User extends Authenticatable
     {
         return $this->roles()->where('name', $role)->count() == 1;
     }
-    public function pasien()
+    public function customer()
     {
-        return $this->hasOne(Pasien::class, 'user_id');
+        return $this->hasOne(Customer::class, 'user_id');
     }
-    public function dokter()
+    public function foreman()
     {
-        return $this->hasOne(Dokter::class, 'user_id');
+        return $this->hasOne(Foreman::class, 'user_id');
     }
 }

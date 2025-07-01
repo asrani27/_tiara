@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
 
-  <title>PELAYANAN KESEHATAN</title>
+  <title>TIARA</title>
   @include('layouts.css')
 </head>
 
@@ -46,10 +46,10 @@
         </div>
         @if (Auth::user()->roles == 'superadmin')
         @include('layouts.menu_superadmin')
-        @elseif (Auth::user()->roles == 'pasien')
-        @include('layouts.menu_pasien')
+        @elseif (Auth::user()->roles == 'customer')
+        @include('layouts.menu_customer')
         @else
-        @include('layouts.menu_dokter')
+        @include('layouts.menu_foreman')
         @endif
 
 

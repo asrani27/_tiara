@@ -3,15 +3,13 @@
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
-use App\Http\Controllers\SkpdController;
-use App\Http\Controllers\TokoController;
-use App\Http\Controllers\AdminController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\BannerController;
 use App\Http\Controllers\ProdukController;
 use App\Http\Controllers\ProfilController;
 use App\Http\Controllers\UploadController;
 use App\Http\Controllers\BiodataController;
+use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\DokterController;
 use App\Http\Controllers\LaporanController;
 use App\Http\Controllers\LayananController;
@@ -106,7 +104,10 @@ Route::group(['middleware' => ['auth']], function () {
 });
 
 Route::group(['middleware' => ['auth']], function () {
-    Route::prefix('pasien')->group(function () {
+    Route::prefix('customer')->group(function () {
+
+        Route::get('profil', [CustomerController::class, 'profil']);
+        Route::post('profil', [CustomerController::class, 'update_profil']);
         Route::post('chat/{dokter_id}', [KonsultasiController::class, 'kirimChat']);
         Route::get('jadwal', [KonsultasiController::class, 'jadwal']);
         Route::get('konsultasi', [KonsultasiController::class, 'pasien']);
@@ -123,6 +124,6 @@ Route::group(['middleware' => ['auth']], function () {
 
 Route::group(['middleware' => ['auth']], function () {
     Route::get('/superadmin/home', [HomeController::class, 'superadmin']);
-    Route::get('/dokter/home', [HomeController::class, 'dokter']);
-    Route::get('/pasien/home', [HomeController::class, 'pasien']);
+    Route::get('/foreman/home', [HomeController::class, 'foreman']);
+    Route::get('/customer/home', [HomeController::class, 'customer']);
 });

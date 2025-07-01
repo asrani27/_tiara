@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Customer;
 use App\Models\Konsumen;
 use App\Models\Pasien;
 use App\Models\Role;
@@ -19,10 +20,10 @@ class LoginController extends Controller
             if (Auth::user()->roles == 'superadmin') {
 
                 return redirect('/superadmin/home');
-            } elseif (Auth::user()->roles == 'pasien') {
-                return redirect('/pasien/home');
+            } elseif (Auth::user()->roles == 'customer') {
+                return redirect('/customer/home');
             } else {
-                return redirect('/dokter/home');
+                return redirect('/foreman/home');
             }
         } else {
             toastr()->error('Username / Password Tidak Ditemukan');
@@ -44,19 +45,19 @@ class LoginController extends Controller
             $user->name = $req->name;
             $user->username = $req->username;
             $user->password = bcrypt($req->password);
-            $user->roles = 'pasien';
+            $user->roles = 'customer';
             $user->save();
 
-            $pasien = new Pasien();
-            $pasien->nama = $req->name;
-            $pasien->alamat = $req->alamat;
-            $pasien->telp = $req->telp;
-            $pasien->user_id = $user->id;
-            $pasien->save();
+            $cus = new Customer();
+            $cus->nama = $req->name;
+            $cus->alamat = $req->alamat;
+            $cus->telp = $req->telp;
+            $cus->user_id = $user->id;
+            $cus->save();
 
             toastr()->success('Berhasil Di Simpan');
             Auth::loginUsingId($user->id);
-            return redirect('/pasien/home');
+            return redirect('/customer/home');
         } else {
             toastr()->error('Username sudah digunakan');
             return back();

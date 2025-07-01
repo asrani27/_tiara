@@ -36,9 +36,9 @@ class HomeController extends Controller
         return view('dokter.home');
     }
 
-    public function pasien()
+    public function customer()
     {
-        return view('pasien.home');
+        return view('customer.home');
     }
 
     public function superadmin()
@@ -87,10 +87,17 @@ class HomeController extends Controller
 
     public function welcome()
     {
-        // $produk = Produk::orderBy('created_at', 'DESC')->paginate(12);
-        // $banner = Banner::get();
-        // $kategori = Kategori::get();
-        // $profil = Profil::first();
+        if (Auth::check()) {
+            if (Auth::user()->roles == 'superadmin') {
+                return redirect('/superadmin/home');
+            }
+            if (Auth::user()->roles == 'customer') {
+                return redirect('/customer/home');
+            }
+            if (Auth::user()->roles == 'foreman') {
+                return redirect('/foreman/home');
+            }
+        }
         return view('welcome');
     }
 

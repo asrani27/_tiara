@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>PELAYANAN KESEHATAN</title>
+  <title>TIARA</title>
   <meta name="description" content="">
   <meta name="keywords" content="">
 
@@ -47,8 +47,8 @@
       <div class="container d-flex justify-content-center justify-content-md-between">
         <div class="contact-info d-flex align-items-center">
           <i class="bi bi-envelope d-flex align-items-center"><a
-              href="mailto:contact@example.com">contact@example.com</a></i>
-          <i class="bi bi-phone d-flex align-items-center ms-4"><span>+1 5589 55488 55</span></i>
+              href="mailto:contact@example.com">ptbpu@gmail.com</a></i>
+          <i class="bi bi-phone d-flex align-items-center ms-4"><span>+62877 1667 3232</span></i>
         </div>
         <div class="social-links d-none d-md-flex align-items-center">
           <a href="#" class="twitter"><i class="bi bi-twitter-x"></i></a>
@@ -65,7 +65,7 @@
         <a href="/" class="logo d-flex align-items-center me-auto">
           <!-- Uncomment the line below if you also wish to use an image logo -->
           <img src="/logo/ppni.png" alt="" style="max-height: 60px">
-          <h1 class="sitename">KARISSA</h1>
+          <h1 class="sitename">PT. BPU</h1>
         </a>
 
         <nav id="navmenu" class="navmenu">
@@ -75,7 +75,7 @@
           <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
         </nav>
 
-        <a class="cta-btn d-none d-sm-block" href="/daftar">DAFTAR PASIEN</a>
+        <a class="cta-btn d-none d-sm-block" href="/daftar">DAFTAR CUSTOMER</a>
         <a class="cta-btn d-none d-sm-block" href="/login"> <i class="fa fa-lock"></i> LOGIN</a>
 
       </div>
@@ -89,22 +89,21 @@
     <!-- Hero Section -->
     <section id="hero" class="hero section light-background">
 
-      <img src="/ppni/assets/img/hero-bg.jpg" alt="" data-aos="fade-in">
+      <img src="/theme/bg2.jpg" alt="" data-aos="fade-in">
 
       <div class="container position-relative">
 
         <div class="welcome position-relative" data-aos="fade-down" data-aos-delay="100">
-          <h2>SELAMAT DATANG <br />DI SISTEM INFORMASI <br />APLIKASI PELAYANAN KESEHATAN</h2>
+          <h2>SELAMAT DATANG <br />DI SISTEM INFORMASI <br />BONGKAR MUAT BARANG</h2>
         </div><!-- End Welcome -->
 
         <div class="content row gy-4">
           <div class="col-lg-4 d-flex align-items-stretch">
             <div class="why-box" data-aos="zoom-out" data-aos-delay="200">
-              <h3>SELAMAT DATANG</h3>
+
               <p>
-                Website ini Adalah Sebuah Aplikasi sistem informasi berbasis web yang dapat membantu rumah sakit
-                mengatasi berbagai permasalahan pelayanan kesehatan, memberikan kemudahan bagi pasien, serta mendukung
-                pengelolaan rumah sakit yang lebih efektif dan modern.
+                Website ini Adalah Sebuah Aplikasi sistem informasi berbasis web yang dapat membantu PT BPU
+                mengatasi berbagai permasalahan pelayanan bongkar muat barang yang lebih efektif dan modern.
               </p>
               {{-- <div class="text-center">
                 <a href="/masuk" class="more-btn"><span>Ajukan Sekarang</span> <i class="bi bi-chevron-right"></i></a>
@@ -116,7 +115,7 @@
             <div class="d-flex flex-column justify-content-center">
               <div class="row gy-4">
 
-                <div class="col-xl-4 d-flex align-items-stretch">
+                {{-- <div class="col-xl-4 d-flex align-items-stretch">
                   <div class="icon-box" data-aos="zoom-out" data-aos-delay="300">
                     <i class="bi bi-clipboard-data"></i>
                     <h4>Konsultasi</h4>
@@ -147,7 +146,7 @@
 
                     </div>
                   </div>
-                </div><!-- End Icon Box -->
+                </div><!-- End Icon Box --> --}}
 
               </div>
             </div>

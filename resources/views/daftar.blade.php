@@ -18,8 +18,7 @@
   @toastr_css
 </head>
 
-<body class="hold-transition login-page"
-  style="background-image: url('/ppni/assets/img/hero-bg.jpg'); background-size: cover;">
+<body class="hold-transition login-page" style="background-image: url('/theme/bg2.jpg'); background-size: cover;">
   <div class="login-box">
     <!-- /.login-logo -->
     <div class="card card-outline card-primary">
@@ -27,7 +26,7 @@
         <a href="/" class="h1">DAFTAR</a>
       </div>
       <div class="card-body">
-        <p class="login-box-msg">Daftar Sebagai Pasien</p>
+        <p class="login-box-msg">Daftar Menjadi Customer</p>
 
         <form class="form" action="/daftar" method="post">
           @csrf
