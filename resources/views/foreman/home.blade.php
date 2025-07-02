@@ -18,7 +18,7 @@ Beranda
 @endsection
 @section('content')
 <div class="row">
-  <div class="col-md-12">
+  <div class="col-md-12 text-center">
     <h2>Hi {{Auth::user()->foreman->nama}},</h2>
     <br />
     <h4>SELAMAT DATANG DI APLIKASI BONGKAR MUAT BARANG <BR /> PT BORNEO PERSADA
