@@ -38,10 +38,10 @@
             </a>
         </li>
         <li class="nav-item">
-            <a href="/foreman/monitoring" class="nav-link">
+            <a href="/foreman/kendala" class="nav-link">
                 <i class="nav-icon fas fa-file"></i>
                 <p>
-                    Monitoring
+                    Kendala
                 </p>
             </a>
         </li>
