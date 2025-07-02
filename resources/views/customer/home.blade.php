@@ -20,8 +20,10 @@ Beranda
 <div class="row ">
 
   <div class="col col-md-12 text-center">
-    <img src="/theme/logo2.png" width="30%">
-    <H2>SELAMAT DATANG DI APLIKASI BONGKAR MUAT BARANG <BR /> PT BPU</H2>
+    <img src="/images/icons/logonew.png" width="25%">
+    <H2>SELAMAT DATANG DI APLIKASI BONGKAR MUAT BARANG <BR /> PT BORNEO PERSADA UTAMA</H2>
+    <h4>Terima Kasih Telah Menggunakan Layanan Kami</h4>
+
   </div>
 </div>
 

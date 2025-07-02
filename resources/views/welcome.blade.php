@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>TIARA</title>
+  <title>SIBONGKAR PT BPU</title>
   <meta name="description" content="">
   <meta name="keywords" content="">
 
@@ -47,15 +47,15 @@
       <div class="container d-flex justify-content-center justify-content-md-between">
         <div class="contact-info d-flex align-items-center">
           <i class="bi bi-envelope d-flex align-items-center"><a
-              href="mailto:contact@example.com">ptbpu@gmail.com</a></i>
-          <i class="bi bi-phone d-flex align-items-center ms-4"><span>+62877 1667 3232</span></i>
+              href="mailto:contact@example.com">borneopersadautama@gmail.com</a></i>
+          <i class="bi bi-phone d-flex align-items-center ms-4"><span>+62823 5162 9200</span></i>
         </div>
-        <div class="social-links d-none d-md-flex align-items-center">
+        <!--<div class="social-links d-none d-md-flex align-items-center">
           <a href="#" class="twitter"><i class="bi bi-twitter-x"></i></a>
           <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
           <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
           <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
-        </div>
+        </div>-->
       </div>
     </div><!-- End Top Bar -->
 
@@ -65,7 +65,7 @@
         <a href="/" class="logo d-flex align-items-center me-auto">
           <!-- Uncomment the line below if you also wish to use an image logo -->
           <img src="/logo/ppni.png" alt="" style="max-height: 60px">
-          <h1 class="sitename">PT. BPU</h1>
+          <h1 class="sitename">PT Borneo Persada Utama</h1>
         </a>
 
         <nav id="navmenu" class="navmenu">
@@ -89,7 +89,7 @@
     <!-- Hero Section -->
     <section id="hero" class="hero section light-background">
 
-      <img src="/theme/bg2.jpg" alt="" data-aos="fade-in">
+      <img src="/theme/bg3.jpeg" alt="" data-aos="fade-in">
 
       <div class="container position-relative">
 
@@ -102,8 +102,12 @@
             <div class="why-box" data-aos="zoom-out" data-aos-delay="200">
 
               <p>
-                Website ini Adalah Sebuah Aplikasi sistem informasi berbasis web yang dapat membantu PT BPU
-                mengatasi berbagai permasalahan pelayanan bongkar muat barang yang lebih efektif dan modern.
+                PT Borneo Persada Utama adalah perusahaan ter kemuka di bidang stevedoring, 
+                yang bergerak dalam layanan bongkar muat barang dari dan ke kapal di pelabuhan. 
+                Sejak berdiri pada tahun 2012, kami telah menjadi mitra terpercaya bagi berb agai 
+                perusahaan dalam industri pertambangan, energi, dan logis-tik. Dengan pengalaman 
+                lebih dari satu dekade PT BPU telah membangun reputasi sebagai perusahaan yang profesional. 
+                cepat, dan efisien dalam setiap operasinya.
               </p>
               {{-- <div class="text-center">
                 <a href="/masuk" class="more-btn"><span>Ajukan Sekarang</span> <i class="bi bi-chevron-right"></i></a>
@@ -164,7 +168,7 @@
     <div class="container copyright text-center mt-4">
 
       <div class="credits">
-        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+        Designed by <a href="https://bootstrapmade.com/">Mutiara_2110010439</a>
       </div>
     </div>
   </footer>

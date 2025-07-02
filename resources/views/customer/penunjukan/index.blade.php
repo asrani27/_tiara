@@ -4,7 +4,7 @@
 <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
 @endpush
 @section('title')
-ADMIN
+CUSTOMER
 @endsection
 @section('content')
 <div class="row">
@@ -14,7 +14,7 @@ ADMIN
         <br /><br />
         <div class="card">
             <div class="card-header">
-                <h3 class="card-title">Data Produk</h3>
+                <h3 class="card-title">Data Surat</h3>
                 <div class="card-tools">
                 </div>
             </div>
@@ -23,7 +23,7 @@ ADMIN
                 <table class="table table-striped table-valign-middle">
                     <thead>
                         <tr>
-                            <th>#</th>
+                            <th>No</th>
                             <th>Tanggal</th>
                             <th>Rencana muatan</th>
                             <th>Pelabuhan Muatan</th>
