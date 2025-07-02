@@ -75,8 +75,8 @@ Route::group(['middleware' => ['auth']], function () {
         Route::get('gantipass', [HomeController::class, 'gantipass']);
         Route::post('gantipass', [HomeController::class, 'resetpass']);
 
-        Route::get('/dokter/{id}/akun', [DokterController::class, 'akun']);
-        Route::get('/dokter/{id}/reset', [DokterController::class, 'reset']);
+        Route::get('/foreman/{id}/akun', [ForemanController::class, 'akun']);
+        Route::get('/foreman/{id}/reset', [ForemanController::class, 'reset']);
         Route::get('/pasien/{id}/akun', [PasienController::class, 'akun']);
         Route::get('/pasien/{id}/reset', [PasienController::class, 'reset']);
 
