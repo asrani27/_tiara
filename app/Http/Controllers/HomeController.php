@@ -33,9 +33,9 @@ class HomeController extends Controller
         $data = Auth::user()->toko;
         return view('user.home', compact('tp', 'pt', 'data'));
     }
-    public function dokter()
+    public function foreman()
     {
-        return view('dokter.home');
+        return view('foreman.home');
     }
 
     public function customer()
