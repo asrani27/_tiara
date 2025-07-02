@@ -8,4 +8,10 @@ use Illuminate\Database\Eloquent\Model;
 class Foreman extends Model
 {
     use HasFactory;
+    protected $table = 'foreman';
+    protected $guarded = ['id'];
+    public function user()
+    {
+        return $this->belongsTo(User::class, 'user_id');
+    }
 }

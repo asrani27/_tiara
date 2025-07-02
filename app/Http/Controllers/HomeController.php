@@ -16,7 +16,9 @@ use App\Models\Peserta;
 use App\Models\Kategori;
 use App\Models\Pengajuan;
 use App\Models\BenarSalah;
+use App\Models\Customer;
 use App\Models\Dokter;
+use App\Models\Foreman;
 use App\Models\Pasien;
 use App\Models\Stok;
 use Illuminate\Http\Request;
@@ -43,11 +45,11 @@ class HomeController extends Controller
 
     public function superadmin()
     {
-        $pasien = count(Pasien::get());
-        $produk = count(Stok::get());
-        $dokter = count(Dokter::get());
+        $customer = count(Customer::get());
+        $produk = 1;
+        $foreman = count(Foreman::get());
 
-        return view('superadmin.home', compact('pasien', 'produk', 'dokter'));
+        return view('superadmin.home', compact('customer', 'produk', 'foreman'));
     }
 
     public function gantipass()

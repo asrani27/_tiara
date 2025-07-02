@@ -14,8 +14,8 @@ Beranda
       <span class="info-box-icon"><i class="fas fa-users"></i></span>
 
       <div class="info-box-content">
-        <span class="info-box-text">Total Pasien</span>
-        <span class="info-box-number">{{$pasien}}</span>
+        <span class="info-box-text">Total Customer</span>
+        <span class="info-box-number">{{$customer}}</span>
 
         <div class="progress">
           <div class="progress-bar" style="width: 70%"></div>
@@ -31,7 +31,7 @@ Beranda
       <span class="info-box-icon"><i class="fas fa-shopping-cart"></i></span>
 
       <div class="info-box-content">
-        <span class="info-box-text">Total Produk</span>
+        <span class="info-box-text">Total Penunjukan</span>
         <span class="info-box-number">{{$produk}}</span>
 
         <div class="progress">
@@ -48,8 +48,8 @@ Beranda
       <span class="info-box-icon"><i class="fas fa-users"></i></span>
 
       <div class="info-box-content">
-        <span class="info-box-text">Total Dokter</span>
-        <span class="info-box-number">{{$dokter}}</span>
+        <span class="info-box-text">Total Foreman</span>
+        <span class="info-box-number">{{$foreman}}</span>
 
         <div class="progress">
           <div class="progress-bar" style="width: 70%"></div>
