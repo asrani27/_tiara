@@ -18,9 +18,12 @@ Beranda
 @endsection
 @section('content')
 <div class="row">
-  <h2>Hi Dokter {{Auth::user()->foreman->nama}}, SELAMAT DATANG DI APLIKASI BONGKAR MUAT BARANG <BR /> PT BORNEO PERSADA
-    UTAMA</H2>
-
+  <div class="col-md-12">
+    <h2>Hi {{Auth::user()->foreman->nama}},</h2>
+    <br />
+    <h4>SELAMAT DATANG DI APLIKASI BONGKAR MUAT BARANG <BR /> PT BORNEO PERSADA
+      UTAMA</h4>
+  </div>
 </div>
 
 @endsection
