@@ -65,6 +65,7 @@ TAMBAH
                                     <input type="datetime" class="form-control" name="mulai_memuat"
                                         value="{{\Carbon\Carbon::now()->format('Y-m-d H:i:s')}}" required>
                                 </div>
+                            </div>
                             <div class="form-group row">
                                 <label class="col-sm-2 col-form-label">Selesai Memuat</label>
                                 <div class="col-sm-10">

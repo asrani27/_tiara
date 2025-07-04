@@ -1,5 +1,7 @@
 <?php
 
+use PgSql\Lob;
+use App\Models\AwalLoading;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
@@ -12,13 +14,14 @@ use App\Http\Controllers\JadwalController;
 use App\Http\Controllers\PasienController;
 use App\Http\Controllers\ProdukController;
 use App\Http\Controllers\ProfilController;
+use App\Http\Controllers\ReportController;
 use App\Http\Controllers\UploadController;
 use App\Http\Controllers\BiodataController;
+use App\Http\Controllers\ForemanController;
 use App\Http\Controllers\LaporanController;
 use App\Http\Controllers\LayananController;
 use App\Http\Controllers\PegawaiController;
 use App\Http\Controllers\CustomerController;
-use App\Http\Controllers\ForemanController;
 use App\Http\Controllers\KategoriController;
 use App\Http\Controllers\KonsumenController;
 use App\Http\Controllers\GantiPassController;
@@ -27,11 +30,10 @@ use App\Http\Controllers\PengajuanController;
 use App\Http\Controllers\JadwalSayaController;
 use App\Http\Controllers\KonsultasiController;
 use App\Http\Controllers\ProdukSayaController;
+use App\Http\Controllers\SuperadminController;
+use App\Http\Controllers\AwalLoadingController;
 use App\Http\Controllers\PersyaratanController;
 use App\Http\Controllers\PemesananKonsumenController;
-use App\Http\Controllers\ReportController;
-use App\Http\Controllers\SuperadminController;
-use PgSql\Lob;
 
 Route::get('/', [HomeController::class, 'welcome']);
 Route::get('/tentangkami', [HomeController::class, 'tentang']);
@@ -135,6 +137,13 @@ Route::group(['middleware' => ['auth']], function () {
         Route::get('/loading/edit/{id}', [ReportController::class, 'loading_edit']);
         Route::get('/loading/delete/{id}', [ReportController::class, 'loading_delete']);
         Route::post('/loading/edit/{id}', [ReportController::class, 'loading_update']);
+
+        Route::get('/awalloading', [AwalLoadingController::class, 'awalloading']);
+        Route::get('/awalloading/create', [AwalLoadingController::class, 'awalloading_create']);
+        Route::post('/awalloading/create', [AwalLoadingController::class, 'awalloading_store']);
+        Route::get('/awalloading/edit/{id}', [AwalLoadingController::class, 'awalloading_edit']);
+        Route::get('/awalloading/delete/{id}', [AwalLoadingController::class, 'awalloading_delete']);
+        Route::post('/awalloading/edit/{id}', [AwalLoadingController::class, 'awalloading_update']);
     });
 });
 Route::group(['middleware' => ['auth']], function () {

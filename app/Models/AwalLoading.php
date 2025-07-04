@@ -8,4 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class AwalLoading extends Model
 {
     use HasFactory;
+    protected $table = 'awalloading';
+    protected $guarded = ['id'];
 }
