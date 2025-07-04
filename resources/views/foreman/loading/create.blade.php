@@ -9,55 +9,45 @@
 <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-bs4.min.css" rel="stylesheet">
 @endpush
 @section('title')
-EDIT
+TAMBAH
 @endsection
 @section('content')
 <div class="row">
     <div class="col-12">
-        <a href="/foreman/penunjukan" class="btn btn-sm btn-secondary"><i class="fas fa-arrow-left"></i>
+        <a href="/foreman/loading" class="btn btn-sm btn-secondary"><i class="fas fa-arrow-left"></i>
             Kembali</a><br /><br />
-        <form method="post" action="/foreman/penunjukan/verifikasi/{{$data->id}}" enctype="multipart/form-data">
+        <form method="post" action="/foreman/loading/create" enctype="multipart/form-data">
             @csrf
             <div class="row">
                 <div class="col-lg-12 col-12">
                     <div class="card">
                         <div class="card-body">
+
                             <div class="form-group row">
                                 <label class="col-sm-2 col-form-label">Tanggal</label>
                                 <div class="col-sm-10">
-                                    <input type="date" class="form-control" name="tanggal" value="{{$data->tanggal}}"
-                                        readonly>
+                                    <input type="date" class="form-control" name="tanggal"
+                                        value="{{\Carbon\Carbon::now()->format('Y-m-d')}}" required>
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <label class="col-sm-2 col-form-label">Rencana muatan</label>
+                                <label class="col-sm-2 col-form-label">nomor palka</label>
                                 <div class="col-sm-10">
-                                    <input type="text" class="form-control" name="rencana_muatan"
-                                        value="{{$data->rencana_muatan}}" readonly>
+                                    <input type="text" class="form-control" name="nomor">
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <label class="col-sm-2 col-form-label">pelabuhan muatan</label>
+                                <label class="col-sm-2 col-form-label">waktu</label>
                                 <div class="col-sm-10">
-                                    <input type="text" class="form-control" name="pelabuhan_muatan"
-                                        value="{{$data->pelabuhan_muatan}}" readonly>
+                                    <input type="text" class="form-control" name="waktu">
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <label class="col-sm-2 col-form-label">pelabuhan tujuan</label>
+                                <label class="col-sm-2 col-form-label">perkataan</label>
                                 <div class="col-sm-10">
-                                    <input type="text" class="form-control" name="pelabuhan_tujuan"
-                                        value="{{$data->pelabuhan_tujuan}}" readonly>
+                                    <input type="text" class="form-control" name="perkataan">
                                 </div>
                             </div>
-
-                            <div class="form-group row">
-                                <label class="col-sm-2 col-form-label">status</label>
-                                <div class="col-sm-10">
-                                    <input type="text" class="form-control" name="status" value="{{$data->status}}">
-                                </div>
-                            </div>
-
 
                             <div class="form-group row">
                                 <label class="col-sm-2 col-form-label"></label>

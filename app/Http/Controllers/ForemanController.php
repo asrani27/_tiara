@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use App\Models\Foreman;
+use App\Models\Pengajuan;
 use App\Models\Penunjukan;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -131,7 +132,7 @@ class ForemanController extends Controller
         return back();
     }
 
-
+    //PENUNJUKAN
     public function penunjukan()
     {
         $data = Penunjukan::orderBy('id', 'DESC')->where('foreman_id', Auth::user()->foreman->id)->paginate(10);
@@ -151,4 +152,42 @@ class ForemanController extends Controller
         toastr()->success('berhasil Di update');
         return redirect('/foreman/penunjukan');
     }
+    //SURAT PENGAJUAN
+    public function pengajuan()
+    {
+        $data = Pengajuan::orderBy('id', 'DESC')->paginate(10);
+        return view('foreman.pengajuan.index', compact('data'));
+    }
+
+    public function pengajuan_create()
+    {
+        return view('foreman.pengajuan.create');
+    }
+    public function pengajuan_store(Request $req)
+    {
+
+        Pengajuan::create($req->all());
+        toastr()->success('berhasil Di simpan');
+        return redirect('foreman/pengajuan');
+    }
+    public function pengajuan_update(Request $req, $id)
+    {
+        Pengajuan::find($id)->update($req->all());
+        toastr()->success('berhasil Di simpan');
+        return redirect('foreman/pengajuan');
+    }
+    public function pengajuan_edit($id)
+    {
+        $data = Pengajuan::find($id);
+        return view('foreman.pengajuan.edit', compact('data'));
+    }
+    public function pengajuan_delete($id)
+    {
+        Pengajuan::find($id)->delete();
+        toastr()->success('berhasil Di hapus');
+        return redirect('foreman/pengajuan');
+    }
+
+    //REPORT LOADING
+    
 }

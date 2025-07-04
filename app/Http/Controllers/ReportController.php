@@ -7,38 +7,38 @@ use Illuminate\Http\Request;
 
 class ReportController extends Controller
 {
-    public function report()
+    public function loading()
     {
         $data = Report::orderBy('id', 'DESC')->paginate(10);
-        return view('superadmin.report.index', compact('data'));
+        return view('foreman.loading.index', compact('data'));
     }
 
-    public function report_create()
+    public function loading_create()
     {
-        return view('superadmin.report.create');
+        return view('foreman.loading.create');
     }
-    public function report_store(Request $req)
+    public function loading_store(Request $req)
     {
 
         Report::create($req->all());
         toastr()->success('berhasil Di simpan');
-        return redirect('superadmin/report');
+        return redirect('foreman/loading');
     }
-    public function report_update(Request $req, $id)
+    public function loading_update(Request $req, $id)
     {
         Report::find($id)->update($req->all());
         toastr()->success('berhasil Di simpan');
-        return redirect('superadmin/report');
+        return redirect('foreman/loading');
     }
-    public function report_edit($id)
+    public function loading_edit($id)
     {
         $data = Report::find($id);
-        return view('superadmin.report.edit', compact('data'));
+        return view('foreman.loading.edit', compact('data'));
     }
-    public function report_delete($id)
+    public function loading_delete($id)
     {
         Report::find($id)->delete();
         toastr()->success('berhasil Di hapus');
-        return redirect('superadmin/report');
+        return redirect('foreman/loading');
     }
 }

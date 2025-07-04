@@ -31,6 +31,7 @@ use App\Http\Controllers\PersyaratanController;
 use App\Http\Controllers\PemesananKonsumenController;
 use App\Http\Controllers\ReportController;
 use App\Http\Controllers\SuperadminController;
+use PgSql\Lob;
 
 Route::get('/', [HomeController::class, 'welcome']);
 Route::get('/tentangkami', [HomeController::class, 'tentang']);
@@ -66,7 +67,6 @@ Route::post('/daftar', [LoginController::class, 'simpanDaftar']);
 
 Route::group(['middleware' => ['auth']], function () {
     Route::prefix('superadmin')->group(function () {
-
 
         Route::get('/report', [ReportController::class, 'report']);
         Route::get('/report/create', [ReportController::class, 'report_create']);
@@ -104,25 +104,14 @@ Route::group(['middleware' => ['auth']], function () {
 
         Route::get('/foreman/{id}/akun', [ForemanController::class, 'akun']);
         Route::get('/foreman/{id}/reset', [ForemanController::class, 'reset']);
-        Route::get('/pasien/{id}/akun', [PasienController::class, 'akun']);
-        Route::get('/pasien/{id}/reset', [PasienController::class, 'reset']);
+
 
         Route::get('laporan', [LaporanController::class, 'index']);
 
         Route::get('/laporan/pilih', [LaporanController::class, 'pilih']);
-        Route::get('pemesanan', [PemesananController::class, 'index']);
-        Route::get('pemesanan/create', [PemesananController::class, 'create']);
-        Route::get('keranjang/delete/{id}', [PemesananController::class, 'deletekeranjang']);
-        Route::post('/pemesanan/create', [PemesananController::class, 'transaksisimpan']);
-        Route::resource('konsumen', KonsumenController::class);
         Route::resource('profildinas', ProfilController::class);
-        Route::resource('banner', BannerController::class);
-        Route::resource('kategori', KategoriController::class);
-        Route::resource('dokter', DokterController::class);
+
         Route::resource('foreman', ForemanController::class);
-        Route::resource('pasien', PasienController::class);
-        Route::resource('produk', ProdukController::class);
-        Route::resource('jadwal', JadwalController::class);
     });
 });
 
@@ -132,6 +121,20 @@ Route::group(['middleware' => ['auth']], function () {
         Route::get('penunjukan', [ForemanController::class, 'penunjukan']);
         Route::get('penunjukan/verifikasi/{id}', [ForemanController::class, 'penunjukan_verifikasi']);
         Route::post('penunjukan/verifikasi/{id}', [ForemanController::class, 'penunjukan_verifikasi_update']);
+
+        Route::get('pengajuan', [ForemanController::class, 'pengajuan']);
+        Route::get('pengajuan/create', [ForemanController::class, 'pengajuan_create']);
+        Route::post('pengajuan/create', [ForemanController::class, 'pengajuan_store']);
+        Route::get('pengajuan/edit/{id}', [ForemanController::class, 'pengajuan_edit']);
+        Route::post('pengajuan/edit/{id}', [ForemanController::class, 'pengajuan_update']);
+        Route::get('pengajuan/delete/{id}', [ForemanController::class, 'pengajuan_delete']);
+
+        Route::get('/loading', [ReportController::class, 'loading']);
+        Route::get('/loading/create', [ReportController::class, 'loading_create']);
+        Route::post('/loading/create', [ReportController::class, 'loading_store']);
+        Route::get('/loading/edit/{id}', [ReportController::class, 'loading_edit']);
+        Route::get('/loading/delete/{id}', [ReportController::class, 'loading_delete']);
+        Route::post('/loading/edit/{id}', [ReportController::class, 'loading_update']);
     });
 });
 Route::group(['middleware' => ['auth']], function () {
@@ -146,18 +149,6 @@ Route::group(['middleware' => ['auth']], function () {
         Route::get('penunjukan/edit/{id}', [CustomerController::class, 'penunjukan_edit']);
         Route::post('penunjukan/edit/{id}', [CustomerController::class, 'penunjukan_update']);
         Route::get('penunjukan/delete/{id}', [CustomerController::class, 'penunjukan_delete']);
-
-        Route::post('chat/{dokter_id}', [KonsultasiController::class, 'kirimChat']);
-        Route::get('jadwal', [KonsultasiController::class, 'jadwal']);
-        Route::get('konsultasi', [KonsultasiController::class, 'pasien']);
-        Route::get('konsultasi/chat/{id}', [KonsultasiController::class, 'chat']);
-        Route::get('gantipass', [PasienController::class, 'gantipass']);
-        Route::post('gantipass', [PasienController::class, 'resetpass']);
-
-        Route::get('pemesanan', [PemesananKonsumenController::class, 'index']);
-        Route::get('pemesanan/create', [PemesananKonsumenController::class, 'create']);
-        Route::get('keranjang/delete/{id}', [PemesananKonsumenController::class, 'deletekeranjang']);
-        Route::post('/pemesanan/create', [PemesananKonsumenController::class, 'transaksisimpan']);
     });
 });
 

@@ -4,15 +4,18 @@
 <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
 @endpush
 @section('title')
-foreman
+Foreman
 @endsection
 @section('content')
 <div class="row">
     <div class="col-12">
 
+        <a href="/foreman/loading/create" class="btn btn-sm bg-gradient-purple"><i class="fas fa-plus"></i>
+            Tambah</a>
+        <br /><br />
         <div class="card">
             <div class="card-header">
-                <h3 class="card-title">Data Surat</h3>
+                <h3 class="card-title">Data Report Loading</h3>
                 <div class="card-tools">
                 </div>
             </div>
@@ -22,12 +25,11 @@ foreman
                     <thead>
                         <tr>
                             <th>No</th>
-                            <th>Tanggal</th>
-                            <th>Rencana muatan</th>
-                            <th>Pelabuhan Muatan</th>
-                            <th>Pelabuhan Tujuan</th>
-                            <th>Foreman Yg di tugaskan</th>
-                            <th>File</th>
+                            <th>Hari/Tanggal</th>
+                            <th>No Palksa</th>
+                            <th>Waktu Kerja</th>
+                            <th>Perkataan</th>
+                            <th>Aksi</th>
                         </tr>
                     </thead>
                     @php
@@ -38,13 +40,20 @@ foreman
                         <tr style="font-size:12px; font-family:Arial, Helvetica, sans-serif">
                             <td>{{$data->firstItem() + $key}}</td>
                             <td>{{\Carbon\Carbon::parse($item->tanggal)->format('d-m-Y')}}</td>
-                            <td>{{$item->rencana_muatan}}</td>
-                            <td>{{$item->pelabuhan_muatan}}</td>
-                            <td>{{$item->pelabuhan_tujuan}}</td>
-                            <td>{{$item->foreman == null ? null : $item->foreman->nama}}</td>
-                            <td><a href="/storage/{{$item->file}}" target="_blank"><i class="fa fa-download"></i>
-                                    Download</a></td>
-                            <td>{{$item->status}}</td>
+                            <td>{{$item->nomor}}</td>
+                            <td>{{$item->waktu}}</td>
+                            <td>{{$item->perkataan}}</td>
+
+                            <td>
+
+                                <a href="/foreman/loading/edit/{{$item->id}}" class="btn btn-xs btn-success"><i
+                                        class="fas fa-edit"></i> edit</a>
+
+                                <a href="/foreman/loading/delete/{{$item->id}}" class=" btn btn-xs btn-danger"
+                                    onclick="return confirm('yakin Di Hapus?');"><i class="fas fa-trash"></i>
+                                    Delete</a>
+
+                            </td>
                         </tr>
                         @endforeach
                     </tbody>
