@@ -4,17 +4,15 @@
 <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
 @endpush
 @section('title')
-ADMIN
+foreman
 @endsection
 @section('content')
 <div class="row">
     <div class="col-12">
-        {{-- <a href="/superadmin/jadwal/create" class="btn btn-sm bg-gradient-purple"><i class="fas fa-plus"></i>
-            Tambah</a>
-        <br /><br /> --}}
+
         <div class="card">
             <div class="card-header">
-                <h3 class="card-title">Data jadwal Saya</h3>
+                <h3 class="card-title">Data Surat</h3>
                 <div class="card-tools">
                 </div>
             </div>
@@ -23,16 +21,14 @@ ADMIN
                 <table class="table table-striped table-valign-middle">
                     <thead>
                         <tr>
-                            <th>#</th>
-                            <th>Nama Dokter</th>
-                            <th>Ruangan</th>
-                            <th>Senin</th>
-                            <th>Selasa</th>
-                            <th>Rabu</th>
-                            <th>Kamis</th>
-                            <th>Jumat</th>
-                            <th>Sabtu</th>
-                            <th>Minggu</th>
+                            <th>No</th>
+                            <th>Tanggal</th>
+                            <th>Rencana muatan</th>
+                            <th>Pelabuhan Muatan</th>
+                            <th>Pelabuhan Tujuan</th>
+                            <th>Foreman Yg di tugaskan</th>
+                            <th>File</th>
+                            <th>status</th>
                             <th>Aksi</th>
                         </tr>
                     </thead>
@@ -43,19 +39,18 @@ ADMIN
                         @foreach ($data as $key => $item)
                         <tr style="font-size:12px; font-family:Arial, Helvetica, sans-serif">
                             <td>{{$data->firstItem() + $key}}</td>
-                            <td>{{$item->dokter->nama}}</td>
-                            <td>{{$item->ruangan}}</td>
-                            <td>{{$item->senin}}</td>
-                            <td>{{$item->selasa}}</td>
-                            <td>{{$item->rabu}}</td>
-                            <td>{{$item->kamis}}</td>
-                            <td>{{$item->jumat}}</td>
-                            <td>{{$item->sabtu}}</td>
-                            <td>{{$item->minggu}}</td>
+                            <td>{{\Carbon\Carbon::parse($item->tanggal)->format('d-m-Y')}}</td>
+                            <td>{{$item->rencana_muatan}}</td>
+                            <td>{{$item->pelabuhan_muatan}}</td>
+                            <td>{{$item->pelabuhan_tujuan}}</td>
+                            <td>{{$item->foreman == null ? null : $item->foreman->nama}}</td>
+                            <td><a href="/storage/{{$item->file}}" target="_blank"><i class="fa fa-download"></i>
+                                    Download</a></td>
+                            <td>{{$item->status}}</td>
                             <td>
 
-                                <a href="/dokter/jadwal/{{$item->id}}/edit" class="btn btn-xs btn-success"><i
-                                        class="fas fa-edit"></i> Edit</a>
+                                <a href="/foreman/penunjukan/verifikasi/{{$item->id}}" class="btn btn-xs btn-success"><i
+                                        class="fas fa-edit"></i> verifikasi</a>
 
                             </td>
                         </tr>

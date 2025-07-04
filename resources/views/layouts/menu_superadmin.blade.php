@@ -1,5 +1,7 @@
 <nav class="mt-2">
     <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+
+        <li class="nav-header">MENU UTAMA</li>
         <li class="nav-item">
             <a href="/superadmin/home" class="nav-link {{ Request::is('superadmin/home*') ? 'active' : '' }}">
                 <i class="nav-icon fas fa-home"></i>
@@ -8,7 +10,6 @@
                 </p>
             </a>
         </li>
-        <li class="nav-header">DATA UTAMA</li>
         <li class="nav-item">
             <a href="/superadmin/user" class="nav-link {{ Request::is('superadmin/user*') ? 'active' : '' }}">
                 <i class="nav-icon fas fa-users"></i>
@@ -53,12 +54,11 @@
             </a>
         </li>
 
-        <li class="nav-header">SETTING</li>
         <li class="nav-item">
-            <a href="/superadmin/laporan" class="nav-link">
+            <a href="/superadmin/report" class="nav-link">
                 <i class="nav-icon fas fa-file"></i>
                 <p>
-                    Laporan
+                    Report Loading
                 </p>
             </a>
         </li>

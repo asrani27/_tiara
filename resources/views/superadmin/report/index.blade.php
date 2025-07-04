@@ -4,16 +4,18 @@
 <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
 @endpush
 @section('title')
-ADMIN
+superadmin
 @endsection
 @section('content')
 <div class="row">
     <div class="col-12">
-        <a href="/dokter/rekam/create" class="btn btn-sm bg-gradient-purple"><i class="fas fa-plus"></i> Tambah</a>
+
+        <a href="/superadmin/report/create" class="btn btn-sm bg-gradient-purple"><i class="fas fa-plus"></i>
+            Tambah</a>
         <br /><br />
         <div class="card">
             <div class="card-header">
-                <h3 class="card-title">Data rekam</h3>
+                <h3 class="card-title">Data Report Loading</h3>
                 <div class="card-tools">
                 </div>
             </div>
@@ -22,13 +24,11 @@ ADMIN
                 <table class="table table-striped table-valign-middle">
                     <thead>
                         <tr>
-                            <th>#</th>
-                            <th>No Rekam</th>
-                            <th>Tanggal</th>
-                            <th>NIK</th>
-                            <th>Nama Pasien</th>
-                            <th>Keluhan</th>
-                            <th>Obat/Tindakan</th>
+                            <th>No</th>
+                            <th>Hari/Tanggal</th>
+                            <th>No Palksa</th>
+                            <th>Waktu Kerja</th>
+                            <th>Perkataan</th>
                             <th>Aksi</th>
                         </tr>
                     </thead>
@@ -39,23 +39,19 @@ ADMIN
                         @foreach ($data as $key => $item)
                         <tr style="font-size:12px; font-family:Arial, Helvetica, sans-serif">
                             <td>{{$data->firstItem() + $key}}</td>
+                            <td>{{\Carbon\Carbon::parse($item->tanggal)->format('d-m-Y')}}</td>
                             <td>{{$item->nomor}}</td>
-                            <td>{{$item->tanggal}}</td>
-                            <td>{{$item->nik}}</td>
-                            <td>{{$item->nama}}</td>
-                            <td>{{$item->keluhan}}</td>
-                            <td>{{$item->obat}}</td>
+                            <td>{{$item->waktu}}</td>
+                            <td>{{$item->perkataan}}</td>
+
                             <td>
 
-                                <form action="/dokter/rekam/{{$item->id}}" method="post">
-                                    <a href="/dokter/rekam/{{$item->id}}/edit" class="btn btn-xs btn-success"><i
-                                            class="fas fa-edit"></i> Edit</a>
-                                    @csrf
-                                    @method('delete')
-                                    <button type="submit" class="btn btn-xs btn-danger"
-                                        onclick="return confirm('yakin DI Hapus?');"><i class="fas fa-trash"></i>
-                                        Delete</button>
-                                </form>
+                                <a href="/superadmin/report/edit/{{$item->id}}" class="btn btn-xs btn-success"><i
+                                        class="fas fa-edit"></i> edit</a>
+
+                                <a href="/superadmin/report/delete/{{$item->id}}" class=" btn btn-xs btn-danger"
+                                    onclick="return confirm('yakin DI Hapus?');"><i class="fas fa-trash"></i>
+                                    Delete</a>
 
                             </td>
                         </tr>

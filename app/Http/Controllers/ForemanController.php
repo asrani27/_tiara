@@ -4,7 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use App\Models\Foreman;
+use App\Models\Penunjukan;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Validator;
 
 class ForemanController extends Controller
@@ -127,5 +129,26 @@ class ForemanController extends Controller
 
         toastr()->success('Password direset : foreman');
         return back();
+    }
+
+
+    public function penunjukan()
+    {
+        $data = Penunjukan::orderBy('id', 'DESC')->where('foreman_id', Auth::user()->foreman->id)->paginate(10);
+        return view('foreman.penunjukan.index', compact('data'));
+    }
+    public function penunjukan_verifikasi($id)
+    {
+        $data = Penunjukan::find($id);
+
+        return view('foreman.penunjukan.verifikasi', compact('data'));
+    }
+    public function penunjukan_verifikasi_update(Request $req, $id)
+    {
+        $data = Penunjukan::find($id)->update([
+            'status' => $req->status
+        ]);
+        toastr()->success('berhasil Di update');
+        return redirect('/foreman/penunjukan');
     }
 }

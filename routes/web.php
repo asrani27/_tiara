@@ -29,6 +29,7 @@ use App\Http\Controllers\KonsultasiController;
 use App\Http\Controllers\ProdukSayaController;
 use App\Http\Controllers\PersyaratanController;
 use App\Http\Controllers\PemesananKonsumenController;
+use App\Http\Controllers\ReportController;
 use App\Http\Controllers\SuperadminController;
 
 Route::get('/', [HomeController::class, 'welcome']);
@@ -66,6 +67,13 @@ Route::post('/daftar', [LoginController::class, 'simpanDaftar']);
 Route::group(['middleware' => ['auth']], function () {
     Route::prefix('superadmin')->group(function () {
 
+
+        Route::get('/report', [ReportController::class, 'report']);
+        Route::get('/report/create', [ReportController::class, 'report_create']);
+        Route::post('/report/create', [ReportController::class, 'report_store']);
+        Route::get('/report/edit/{id}', [ReportController::class, 'report_edit']);
+        Route::get('/report/delete/{id}', [ReportController::class, 'report_delete']);
+        Route::post('/report/edit/{id}', [ReportController::class, 'report_update']);
 
         Route::get('/customer', [SuperadminController::class, 'customer']);
         Route::get('/customer/{id}/reset', [SuperadminController::class, 'customer_reset']);
@@ -118,6 +126,14 @@ Route::group(['middleware' => ['auth']], function () {
     });
 });
 
+
+Route::group(['middleware' => ['auth']], function () {
+    Route::prefix('foreman')->group(function () {
+        Route::get('penunjukan', [ForemanController::class, 'penunjukan']);
+        Route::get('penunjukan/verifikasi/{id}', [ForemanController::class, 'penunjukan_verifikasi']);
+        Route::post('penunjukan/verifikasi/{id}', [ForemanController::class, 'penunjukan_verifikasi_update']);
+    });
+});
 Route::group(['middleware' => ['auth']], function () {
     Route::prefix('customer')->group(function () {
 

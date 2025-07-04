@@ -2,16 +2,11 @@
 
 @push('css')
 <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
-
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
     integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
 </script>
 
 <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-bs4.min.css" rel="stylesheet">
-
-<!-- Select2 -->
-<link rel="stylesheet" href="/theme/plugins/select2/css/select2.min.css">
-<link rel="stylesheet" href="/theme/plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css">
 @endpush
 @section('title')
 TAMBAH
@@ -19,9 +14,9 @@ TAMBAH
 @section('content')
 <div class="row">
     <div class="col-12">
-        <a href="/dokter/rekam" class="btn btn-sm btn-secondary"><i class="fas fa-arrow-left"></i>
+        <a href="/superadmin/report" class="btn btn-sm btn-secondary"><i class="fas fa-arrow-left"></i>
             Kembali</a><br /><br />
-        <form method="post" action="/dokter/rekam" enctype="multipart/form-data">
+        <form method="post" action="/superadmin/report/create" enctype="multipart/form-data">
             @csrf
             <div class="row">
                 <div class="col-lg-12 col-12">
@@ -29,43 +24,28 @@ TAMBAH
                         <div class="card-body">
 
                             <div class="form-group row">
-                                <label class="col-sm-2 col-form-label">tanggal</label>
+                                <label class="col-sm-2 col-form-label">Tanggal</label>
                                 <div class="col-sm-10">
                                     <input type="date" class="form-control" name="tanggal"
-                                        value="{{\Carbon\Carbon::now()->format('Y-m-d')}}">
+                                        value="{{\Carbon\Carbon::now()->format('Y-m-d')}}" required>
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <label class="col-sm-2 col-form-label">nomor rekam</label>
+                                <label class="col-sm-2 col-form-label">nomor palka</label>
                                 <div class="col-sm-10">
-                                    <input type="text" class="form-control" name="nomor" required>
-                                </div>
-                            </div>
-
-                            <div class="form-group row">
-                                <label class="col-sm-2 col-form-label">nik pasien</label>
-                                <div class="col-sm-10">
-                                    <input type="text" class="form-control" name="nik" required>
+                                    <input type="text" class="form-control" name="nomor">
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <label class="col-sm-2 col-form-label">nama pasien</label>
+                                <label class="col-sm-2 col-form-label">waktu</label>
                                 <div class="col-sm-10">
-                                    <input type="text" class="form-control" name="nama" required>
+                                    <input type="text" class="form-control" name="waktu">
                                 </div>
                             </div>
-
                             <div class="form-group row">
-                                <label class="col-sm-2 col-form-label">keluhan</label>
+                                <label class="col-sm-2 col-form-label">perkataan</label>
                                 <div class="col-sm-10">
-                                    <input type="text" class="form-control" name="keluhan" required>
-                                </div>
-                            </div>
-
-                            <div class="form-group row">
-                                <label class="col-sm-2 col-form-label">obat/tindakan</label>
-                                <div class="col-sm-10">
-                                    <input type="text" class="form-control" name="obat" required>
+                                    <input type="text" class="form-control" name="perkataan">
                                 </div>
                             </div>
 
@@ -88,20 +68,6 @@ TAMBAH
 
 @push('js')
 
-
-<!-- Select2 -->
-<script src="/theme/plugins/select2/js/select2.full.min.js"></script>
-<script>
-    $(function () {
-      //Initialize Select2 Elements
-      $('.select2').select2()
-  
-      //Initialize Select2 Elements
-      $('.select2bs4').select2({
-        theme: 'bootstrap4'
-      })
-    })
-</script>
 <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-bs4.min.js"></script>
 <script>
     $(document).ready(function() {
