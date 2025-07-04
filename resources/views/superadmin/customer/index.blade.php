@@ -9,11 +9,12 @@ ADMIN
 @section('content')
 <div class="row">
     <div class="col-12">
-        <a href="/superadmin/pasien/create" class="btn btn-sm bg-gradient-purple"><i class="fas fa-plus"></i> Tambah</a>
-        <br /><br />
+        {{-- <a href="/superadmin/foreman/create" class="btn btn-sm bg-gradient-purple"><i class="fas fa-plus"></i>
+            Tambah</a>
+        <br /><br /> --}}
         <div class="card">
             <div class="card-header">
-                <h3 class="card-title">Data pasien</h3>
+                <h3 class="card-title">Data Customer</h3>
                 <div class="card-tools">
                 </div>
             </div>
@@ -24,9 +25,7 @@ ADMIN
                         <tr>
                             <th>#</th>
                             <th>Foto</th>
-                            <th>Nama pasien</th>
-                            <th>Telp</th>
-                            <th>Umur</th>
+                            <th>Nama Cutomer</th>
                             <th>Username</th>
                             <th>Aksi</th>
                         </tr>
@@ -49,29 +48,24 @@ ADMIN
                                 @endif
                             </td>
                             <td>{{$item->nama}}</td>
-                            <td>{{$item->telp}}</td>
-                            <td>{{$item->umur}}</td>
                             <td>{{$item->user == null ? '' : $item->user->username}}</td>
                             <td>
 
-                                <form action="/superadmin/pasien/{{$item->id}}" method="post">
-                                    <a href="/superadmin/pasien/{{$item->id}}/edit" class="btn btn-xs btn-success"><i
-                                            class="fas fa-edit"></i> Edit</a>
-                                    @csrf
-                                    @method('delete')
-                                    <button type="submit" class="btn btn-xs btn-danger"
-                                        onclick="return confirm('yakin DI Hapus?');"><i class="fas fa-trash"></i>
-                                        Delete</button>
-                                    @if ($item->user == null)
-                                    <a href="/superadmin/pasien/{{$item->id}}/akun" class="btn btn-xs btn-warning"><i
-                                            class="fas fa-key"></i> Buat Akun</a>
+                                {{-- <a href="/superadmin/customer/{{$item->id}}/edit" class="btn btn-xs btn-success"><i
+                                        class="fas fa-edit"></i> Edit</a> --}}
+                                <a href="/superadmin/customer/{{$item->id}}/delete" class="btn btn-xs btn-danger"
+                                    onclick="return confirm('yakin DI Hapus?');"><i class="fas fa-trash"></i>
+                                    delete</a>
 
-                                    @else
-                                    <a href="/superadmin/pasien/{{$item->id}}/reset" class="btn btn-xs btn-info"><i
-                                            class="fas fa-lock"></i> Reset Password</a>
+                                @if ($item->user == null)
+                                <a href="/superadmin/customer/{{$item->id}}/akun" class="btn btn-xs btn-warning"><i
+                                        class="fas fa-key"></i> Buat Akun</a>
 
-                                    @endif
-                                </form>
+                                @else
+                                <a href="/superadmin/customer/{{$item->id}}/reset" class="btn btn-xs btn-info"><i
+                                        class="fas fa-lock"></i> Reset Password</a>
+
+                                @endif
 
                             </td>
                         </tr>

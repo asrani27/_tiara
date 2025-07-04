@@ -29,6 +29,7 @@ use App\Http\Controllers\KonsultasiController;
 use App\Http\Controllers\ProdukSayaController;
 use App\Http\Controllers\PersyaratanController;
 use App\Http\Controllers\PemesananKonsumenController;
+use App\Http\Controllers\SuperadminController;
 
 Route::get('/', [HomeController::class, 'welcome']);
 Route::get('/tentangkami', [HomeController::class, 'tentang']);
@@ -65,6 +66,24 @@ Route::post('/daftar', [LoginController::class, 'simpanDaftar']);
 Route::group(['middleware' => ['auth']], function () {
     Route::prefix('superadmin')->group(function () {
 
+
+        Route::get('/customer', [SuperadminController::class, 'customer']);
+        Route::get('/customer/{id}/reset', [SuperadminController::class, 'customer_reset']);
+        Route::get('/customer/{id}/delete', [SuperadminController::class, 'customer_delete']);
+
+
+        Route::get('penunjukan', [SuperadminController::class, 'penunjukan']);
+        Route::get('penunjukan/verifikasi/{id}', [SuperadminController::class, 'penunjukan_verifikasi']);
+        Route::post('penunjukan/verifikasi/{id}', [SuperadminController::class, 'penunjukan_verifikasi_update']);
+        Route::get('penunjukan/delete/{id}', [SuperadminController::class, 'penunjukan_delete']);
+
+        Route::get('pengajuan', [SuperadminController::class, 'pengajuan']);
+        Route::get('pengajuan/create', [SuperadminController::class, 'pengajuan_create']);
+        Route::post('pengajuan/create', [SuperadminController::class, 'pengajuan_store']);
+        Route::get('pengajuan/edit/{id}', [SuperadminController::class, 'pengajuan_edit']);
+        Route::post('pengajuan/edit/{id}', [SuperadminController::class, 'pengajuan_update']);
+        Route::get('pengajuan/delete/{id}', [SuperadminController::class, 'pengajuan_delete']);
+
         Route::get('/user', [UserController::class, 'index']);
         Route::get('/user/add', [UserController::class, 'add']);
         Route::get('/user/edit/{id}', [UserController::class, 'edit']);
@@ -96,21 +115,6 @@ Route::group(['middleware' => ['auth']], function () {
         Route::resource('pasien', PasienController::class);
         Route::resource('produk', ProdukController::class);
         Route::resource('jadwal', JadwalController::class);
-    });
-});
-
-Route::group(['middleware' => ['auth']], function () {
-    Route::prefix('dokter')->group(function () {
-        Route::resource('rekam', RekamController::class);
-        Route::get('jadwal', [JadwalSayaController::class, 'index']);
-        Route::get('jadwal/{id}/edit', [JadwalSayaController::class, 'edit']);
-        Route::get('gantipass', [GantiPassController::class, 'gantipassuser']);
-        Route::post('gantipass', [GantiPassController::class, 'resetpass']);
-        Route::post('profil', [GantiPassController::class, 'profil']);
-        Route::get('konsultasi', [KonsultasiController::class, 'dokter']);
-        Route::get('konsultasi/chat/{pasien_id}', [KonsultasiController::class, 'chatPasien']);
-        Route::post('chat/{pasien_id}', [KonsultasiController::class, 'kirimChatKePasien']);
-        Route::resource('produksaya', ProdukSayaController::class);
     });
 });
 

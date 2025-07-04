@@ -26,6 +26,7 @@
                             <th>No</th>
                             <th>Username</th>
                             <th>Nama Lengkap</th>
+                            <th>Roles</th>
                             <th>Aksi</th>
                         </tr>
                     </thead>
@@ -35,6 +36,7 @@
                             <td>{{$key + 1}}</td>
                             <td>{{$item->username}}</td>
                             <td>{{$item->name}}</td>
+                            <td>{{$item->roles}}</td>
                             <td class="text-right">
 
                                 <a href="/superadmin/user/edit/{{$item->id}}" class="btn btn-xs btn-success"><i

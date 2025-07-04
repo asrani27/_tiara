@@ -1,6 +1,8 @@
 <?php
 
+use App\Models\Foreman;
 use App\Models\Pasien;
+use App\Models\Penunjukan;
 use App\Models\Upload;
 
 function listUpload($pegawai_id, $persyaratan_id)
@@ -14,7 +16,12 @@ function listSyarat($persyaratan_id)
     return Upload::whereIn('id', $id)->get();
 }
 
-function namaPasien($id)
+function foreman()
 {
-    return Pasien::find($id);
+    return Foreman::get();
+}
+
+function penunjukan()
+{
+    return Penunjukan::get();
 }

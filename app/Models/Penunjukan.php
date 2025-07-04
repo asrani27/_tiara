@@ -14,4 +14,8 @@ class Penunjukan extends Model
     {
         return $this->belongsTo(User::class, 'user_id');
     }
+    public function foreman()
+    {
+        return $this->belongsTo(Foreman::class, 'foreman_id');
+    }
 }

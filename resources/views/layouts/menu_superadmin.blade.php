@@ -18,6 +18,14 @@
             </a>
         </li>
         <li class="nav-item">
+            <a href="/superadmin/customer" class="nav-link {{ Request::is('superadmin/customer*') ? 'active' : '' }}">
+                <i class="nav-icon fas fa-users"></i>
+                <p>
+                    Customer
+                </p>
+            </a>
+        </li>
+        <li class="nav-item">
             <a href="/superadmin/foreman" class="nav-link {{ Request::is('superadmin/foreman*') ? 'active' : '' }}">
                 <i class="nav-icon fas fa-users"></i>
                 <p>
