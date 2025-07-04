@@ -23,7 +23,7 @@ ADMIN
                 <table class="table table-striped table-valign-middle">
                     <thead>
                         <tr>
-                            <th>#</th>
+                            <th>No</th>
                             <th>Foto</th>
                             <th>Nama foreman</th>
                             <th>Jabatan</th>

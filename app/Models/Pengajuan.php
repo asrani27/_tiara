@@ -10,14 +10,4 @@ class Pengajuan extends Model
     use HasFactory;
     protected $table = 'surat_pengajuan';
     protected $guarded = ['id'];
-
-    public function pegawai()
-    {
-        return $this->belongsTo(Pegawai::class, 'pegawai_id');
-    }
-
-    public function layanan()
-    {
-        return $this->belongsTo(Layanan::class, 'layanan_id');
-    }
 }

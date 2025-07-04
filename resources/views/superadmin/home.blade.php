@@ -28,10 +28,10 @@ Beranda
   <!-- /.col -->
   <div class="col-md-3 col-sm-6 col-12">
     <div class="info-box bg-gradient-success">
-      <span class="info-box-icon"><i class="fas fa-shopping-cart"></i></span>
+      <span class="info-box-icon"><i class="fas fa-envelope-square"></i></span>
 
       <div class="info-box-content">
-        <span class="info-box-text">Total Penunjukan</span>
+        <span class="info-box-text">Total Surat Penunjukan</span>
         <span class="info-box-number">{{$produk}}</span>
 
         <div class="progress">

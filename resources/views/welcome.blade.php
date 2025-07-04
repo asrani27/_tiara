@@ -89,7 +89,7 @@
     <!-- Hero Section -->
     <section id="hero" class="hero section light-background">
 
-      <img src="/theme/bg3.jpeg" alt="" data-aos="fade-in">
+      <img src="/theme/bg4.jpeg" alt="" data-aos="fade-in">
 
       <div class="container position-relative">
 
@@ -102,12 +102,15 @@
             <div class="why-box" data-aos="zoom-out" data-aos-delay="200">
 
               <p>
-                PT Borneo Persada Utama adalah perusahaan ter kemuka di bidang stevedoring, 
+                PT Borneo Persada Utama adalah perusahaan terkemuka di bidang stevedoring, 
                 yang bergerak dalam layanan bongkar muat barang dari dan ke kapal di pelabuhan. 
-                Sejak berdiri pada tahun 2012, kami telah menjadi mitra terpercaya bagi berb agai 
-                perusahaan dalam industri pertambangan, energi, dan logis-tik. Dengan pengalaman 
-                lebih dari satu dekade PT BPU telah membangun reputasi sebagai perusahaan yang profesional. 
-                cepat, dan efisien dalam setiap operasinya.
+              </p>
+              <p>
+                PT Borneo Persada Utama (BPU) memiliki dua kantor, yaitu kantor pusat dan kantor cabang. 
+                Kantor pusat berlokasi di Jalan Mulawarman, Desa Kaliorang, Kecamatan Kaliorang, 
+                Kabupaten Kutai Timur, Kalimantan Timur. Sementara itu, kantor cabang terletak 
+                di Mangkupalas Bawah No. 10, RT 13, Kelurahan Masjid, Kecamatan Samarinda Seberang, 
+                Kota Samarinda.
               </p>
               {{-- <div class="text-center">
                 <a href="/masuk" class="more-btn"><span>Ajukan Sekarang</span> <i class="bi bi-chevron-right"></i></a>

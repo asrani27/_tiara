@@ -8,11 +8,11 @@
                 </p>
             </a>
         </li>
-        <li class="nav-header">DATA UTAMA</li>
-
+        <li class="nav-header">SURAT</li>
         <li class="nav-item">
-            <a href="/foreman/penunjukan" class="nav-link {{ Request::is('foreman/penunjukan*') ? 'active' : '' }}">
-                <i class="nav-icon fas fa-file"></i>
+            <a href="/foreman/penunjukan"
+                class="nav-link {{ Request::is('foreman/penunjukan*') ? 'active' : '' }}">
+                <i class="nav-icon fas fa-envelope-square"></i>
                 <p>
                     Surat Penunjukan
                 </p>
@@ -21,27 +21,52 @@
 
         <li class="nav-item">
             <a href="/foreman/pengajuan" class="nav-link {{ Request::is('foreman/pengajuan*') ? 'active' : '' }}">
-                <i class="nav-icon fas fa-file"></i>
+                <i class="nav-icon far fa-envelope-open"></i>
                 <p>
                     Surat Pengajuan
                 </p>
             </a>
         </li>
 
-        <li class="nav-header">SETTING</li>
+        <li class="nav-header">REPORT</li>
         <li class="nav-item">
-            <a href="/foreman/laporan" class="nav-link">
-                <i class="nav-icon fas fa-file"></i>
+            <a href="/foreman/awalloading" class="nav-link">
+                <i class="nav-icon fas fa-file-alt"></i>
                 <p>
-                    Laporan
+                    Report Awal Loading
                 </p>
             </a>
         </li>
         <li class="nav-item">
-            <a href="/foreman/kendala" class="nav-link">
-                <i class="nav-icon fas fa-file"></i>
+            <a href="/foreman/loading" class="nav-link">
+                <i class="nav-icon fas fa-file-alt"></i>
                 <p>
-                    Kendala
+                    Report Loading
+                </p>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="/foreman/complated" class="nav-link">
+                <i class="nav-icon fas fa-file-alt"></i>
+                <p>
+                    Report Complated
+                </p>
+            </a>
+        </li>
+        <li class="nav-header">KENDALA</li>
+        <li class="nav-item">
+            <a href="/foreman/demage" class="nav-link">
+                <i class="nav-icon fas fa-window-close"></i>
+                <p>
+                    Demage
+                </p>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="/foreman/perubahancargo" class="nav-link">
+                <i class="nav-icon fas fa-window-close"></i>
+                <p>
+                    Perubahan Cargo
                 </p>
             </a>
         </li>

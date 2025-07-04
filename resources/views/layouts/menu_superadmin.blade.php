@@ -28,7 +28,7 @@
         </li>
         <li class="nav-item">
             <a href="/superadmin/foreman" class="nav-link {{ Request::is('superadmin/foreman*') ? 'active' : '' }}">
-                <i class="nav-icon fas fa-users"></i>
+                <i class="nav-icon fas fa-user-alt"></i>
                 <p>
                     Foreman
                 </p>
@@ -38,7 +38,7 @@
         <li class="nav-item">
             <a href="/superadmin/penunjukan"
                 class="nav-link {{ Request::is('superadmin/penunjukan*') ? 'active' : '' }}">
-                <i class="nav-icon fas fa-file"></i>
+                <i class="nav-icon fas fa-envelope-square"></i>
                 <p>
                     Surat Penunjukan
                 </p>
@@ -47,26 +47,60 @@
 
         <li class="nav-item">
             <a href="/superadmin/pengajuan" class="nav-link {{ Request::is('superadmin/pengajuan*') ? 'active' : '' }}">
-                <i class="nav-icon fas fa-file"></i>
+                <i class="nav-icon far fa-envelope-open"></i>
                 <p>
                     Surat Pengajuan
                 </p>
             </a>
         </li>
 
+<<<<<<< HEAD
         <li class="nav-item">
             <a href="/superadmin/report" class="nav-link">
                 <i class="nav-icon fas fa-file"></i>
+                <p>
+                    Report Loading
+=======
+        <li class="nav-header">REPORT</li>
+        <li class="nav-item">
+            <a href="/superadmin/awalloading" class="nav-link">
+                <i class="nav-icon fas fa-file-alt"></i>
+                <p>
+                    Report Awal Loading
+>>>>>>> 6361c65 (f)
+                </p>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="/superadmin/loading" class="nav-link">
+                <i class="nav-icon fas fa-file-alt"></i>
                 <p>
                     Report Loading
                 </p>
             </a>
         </li>
         <li class="nav-item">
-            <a href="/superadmin/monitoring" class="nav-link">
-                <i class="nav-icon fas fa-file"></i>
+            <a href="/superadmin/complated" class="nav-link">
+                <i class="nav-icon fas fa-file-alt"></i>
                 <p>
-                    Monitoring
+                    Report Complated
+                </p>
+            </a>
+        </li>
+        <li class="nav-header">KENDALA</li>
+        <li class="nav-item">
+            <a href="/superadmin/demage" class="nav-link">
+                <i class="nav-icon fas fa-window-close"></i>
+                <p>
+                    Demage
+                </p>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="/superadmin/perubahancargo" class="nav-link">
+                <i class="nav-icon fas fa-window-close"></i>
+                <p>
+                    Perubahan Cargo
                 </p>
             </a>
         </li>
