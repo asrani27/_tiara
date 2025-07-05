@@ -10,8 +10,11 @@ class Complated extends Model
     use HasFactory;
     protected $table = 'complated';
     protected $guarded = ['id'];
+<<<<<<< HEAD
     public function foreman()
     {
         return $this->belongsTo(Foreman::class);
     }
+=======
+>>>>>>> 90ef2df (f)
 }

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Complated;
 use Illuminate\Http\Request;
+<<<<<<< HEAD
 use Illuminate\Support\Facades\Auth;
 
 class ComplatedController extends Controller
@@ -47,4 +48,14 @@ class ComplatedController extends Controller
         toastr()->success('berhasil Di hapus');
         return redirect('foreman/complated');
     }
+=======
+
+class ComplatedController extends Controller
+{
+    public function complated()
+    {
+        $data = Complated::orderBy('id', 'DESC')->paginate(10);
+        return view('foreman.complated.index', compact('data'));
+    }
+>>>>>>> 90ef2df (f)
 }

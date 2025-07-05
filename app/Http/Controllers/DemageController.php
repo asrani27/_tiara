@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Demage;
 use Illuminate\Http\Request;
+<<<<<<< HEAD
 use Barryvdh\DomPDF\Facade\Pdf;
 use Illuminate\Support\Facades\Auth;
 
@@ -54,4 +55,14 @@ class DemageController extends Controller
         toastr()->success('berhasil Di hapus');
         return redirect('foreman/demage');
     }
+=======
+
+class DemageController extends Controller
+{
+    public function demage()
+    {
+        $data = Demage::orderBy('id', 'DESC')->paginate(10);
+        return view('foreman.demage.index', compact('data'));
+    }
+>>>>>>> 90ef2df (f)
 }

@@ -10,8 +10,11 @@ class PerubahanCargo extends Model
     use HasFactory;
     protected $table = 'perubahancargo';
     protected $guarded = ['id'];
+<<<<<<< HEAD
     public function foreman()
     {
         return $this->belongsTo(Foreman::class);
     }
+=======
+>>>>>>> 90ef2df (f)
 }

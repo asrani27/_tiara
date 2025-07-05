@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+<<<<<<< HEAD
 use Illuminate\Http\Request;
 use App\Models\PerubahanCargo;
 use Illuminate\Support\Facades\Auth;
@@ -47,4 +48,16 @@ class PerubahanCargoController extends Controller
         toastr()->success('berhasil Di hapus');
         return redirect('foreman/perubahancargo');
     }
+=======
+use App\Models\PerubahanCargo;
+use Illuminate\Http\Request;
+
+class PerubahanCargoController extends Controller
+{
+    public function perubahancargo()
+    {
+        $data = PerubahanCargo::orderBy('id', 'DESC')->paginate(10);
+        return view('foreman.perubahancargo.index', compact('data'));
+    }
+>>>>>>> 90ef2df (f)
 }
