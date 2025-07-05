@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\AwalLoading;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class AwalLoadingController extends Controller
 {
@@ -20,13 +21,17 @@ class AwalLoadingController extends Controller
     public function awalloading_store(Request $req)
     {
 
-        AwalLoading::create($req->all());
+        $param = $req->all();
+        $param['foreman_id'] = Auth::user()->foreman->id;
+        AwalLoading::create($param);
         toastr()->success('berhasil Di simpan');
         return redirect('foreman/awalloading');
     }
     public function awalloading_update(Request $req, $id)
     {
-        AwalLoading::find($id)->update($req->all());
+        $param = $req->all();
+        $param['foreman_id'] = Auth::user()->foreman->id;
+        AwalLoading::find($id)->update($param);
         toastr()->success('berhasil Di simpan');
         return redirect('foreman/awalloading');
     }

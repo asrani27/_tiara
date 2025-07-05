@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Complated;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class ComplatedController extends Controller
 {
@@ -21,13 +22,17 @@ class ComplatedController extends Controller
     public function complated_store(Request $req)
     {
 
-        Complated::create($req->all());
+        $param = $req->all();
+        $param['foreman_id'] = Auth::user()->foreman->id;
+        Complated::create($param);
         toastr()->success('berhasil Di simpan');
         return redirect('foreman/complated');
     }
     public function complated_update(Request $req, $id)
     {
-        Complated::find($id)->update($req->all());
+        $param = $req->all();
+        $param['foreman_id'] = Auth::user()->foreman->id;
+        Complated::find($id)->update($param);
         toastr()->success('berhasil Di simpan');
         return redirect('foreman/complated');
     }
