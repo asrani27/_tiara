@@ -55,7 +55,7 @@
         </li>
         <li class="nav-header">REPORT</li>
         <li class="nav-item">
-            <a href="/superadmin/report" class="nav-link">
+            <a href="/superadmin/awalloading" class="nav-link">
                 <i class="nav-icon fas fa-file-alt"></i>
                 <p>
                     Report Awal Loading
@@ -63,14 +63,14 @@
             </a>
         </li>
         <li class="nav-item">
-            <a href="/superadmin/report" class="nav-link">
+            <a href="/superadmin/loading" class="nav-link">
                 <i class="nav-icon fas fa-file-alt"></i>
                 <p>
                     Report Loading
                 </p>
             </a>
         </li>
-        
+
         <li class="nav-item">
             <a href="/superadmin/complated" class="nav-link">
                 <i class="nav-icon fas fa-file-alt"></i>

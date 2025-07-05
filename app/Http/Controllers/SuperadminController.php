@@ -2,9 +2,14 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\AwalLoading;
+use App\Models\Complated;
 use App\Models\Customer;
+use App\Models\Demage;
 use App\Models\Pengajuan;
 use App\Models\Penunjukan;
+use App\Models\PerubahanCargo;
+use App\Models\Report;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -84,5 +89,60 @@ class SuperadminController extends Controller
         Pengajuan::find($id)->delete();
         toastr()->success('berhasil Di hapus');
         return redirect('superadmin/pengajuan');
+    }
+    public function awalloading()
+    {
+        $data = AwalLoading::orderBy('id', 'DESC')->get();
+        return view('superadmin.awalloading.index', compact('data'));
+    }
+    public function awalloading_delete($id)
+    {
+        AwalLoading::find($id)->delete();
+        toastr()->success('berhasil Di hapus');
+        return back();
+    }
+    public function loading()
+    {
+        $data = Report::orderBy('id', 'DESC')->get();
+        return view('superadmin.loading.index', compact('data'));
+    }
+    public function loading_delete($id)
+    {
+        Report::find($id)->delete();
+        toastr()->success('berhasil Di hapus');
+        return back();
+    }
+    public function complated()
+    {
+        $data = Complated::orderBy('id', 'DESC')->get();
+        return view('superadmin.complated.index', compact('data'));
+    }
+    public function complated_delete($id)
+    {
+        Complated::find($id)->delete();
+        toastr()->success('berhasil Di hapus');
+        return back();
+    }
+    public function demage()
+    {
+        $data = Demage::orderBy('id', 'DESC')->get();
+        return view('superadmin.demage.index', compact('data'));
+    }
+    public function demage_delete($id)
+    {
+        Demage::find($id)->delete();
+        toastr()->success('berhasil Di hapus');
+        return back();
+    }
+    public function perubahancargo()
+    {
+        $data = PerubahanCargo::orderBy('id', 'DESC')->get();
+        return view('superadmin.perubahancargo.index', compact('data'));
+    }
+    public function perubahancargo_delete($id)
+    {
+        PerubahanCargo::find($id)->delete();
+        toastr()->success('berhasil Di hapus');
+        return back();
     }
 }

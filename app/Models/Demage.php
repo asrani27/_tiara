@@ -10,4 +10,8 @@ class Demage extends Model
     use HasFactory;
     protected $table = 'demage';
     protected $guarded = ['id'];
+    public function foreman()
+    {
+        return $this->belongsTo(Foreman::class);
+    }
 }

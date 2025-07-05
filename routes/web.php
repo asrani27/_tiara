@@ -84,6 +84,20 @@ Route::group(['middleware' => ['auth']], function () {
         Route::get('/customer/{id}/reset', [SuperadminController::class, 'customer_reset']);
         Route::get('/customer/{id}/delete', [SuperadminController::class, 'customer_delete']);
 
+        Route::get('awalloading', [SuperadminController::class, 'awalloading']);
+        Route::get('awalloading/delete/{id}', [SuperadminController::class, 'awalloading_delete']);
+
+        Route::get('loading', [SuperadminController::class, 'loading']);
+        Route::get('loading/delete/{id}', [SuperadminController::class, 'loading_delete']);
+
+        Route::get('complated', [SuperadminController::class, 'complated']);
+        Route::get('complated/delete/{id}', [SuperadminController::class, 'complated_delete']);
+
+        Route::get('demage', [SuperadminController::class, 'demage']);
+        Route::get('demage/delete/{id}', [SuperadminController::class, 'demage_delete']);
+
+        Route::get('perubahancargo', [SuperadminController::class, 'perubahancargo']);
+        Route::get('perubahancargo/delete/{id}', [SuperadminController::class, 'perubahancargo_delete']);
 
         Route::get('penunjukan', [SuperadminController::class, 'penunjukan']);
         Route::get('penunjukan/verifikasi/{id}', [SuperadminController::class, 'penunjukan_verifikasi']);
