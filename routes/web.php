@@ -113,6 +113,7 @@ Route::group(['middleware' => ['auth']], function () {
 
         Route::get('pengajuan', [SuperadminController::class, 'pengajuan']);
         Route::get('pengajuan/print', [SuperadminController::class, 'pengajuan_print']);
+        Route::get('pengajuan/cetak/{id}', [SuperadminController::class, 'pengajuan_cetak']);
         Route::get('pengajuan/create', [SuperadminController::class, 'pengajuan_create']);
         Route::post('pengajuan/create', [SuperadminController::class, 'pengajuan_store']);
         Route::get('pengajuan/edit/{id}', [SuperadminController::class, 'pengajuan_edit']);

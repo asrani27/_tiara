@@ -202,4 +202,10 @@ class SuperadminController extends Controller
         $pdf = Pdf::loadView('laporan.pdf_foreman', compact('data'))->setPaper('a4', 'landscape');;
         return $pdf->stream();
     }
+    public function pengajuan_cetak($id)
+    {
+        $data = Pengajuan::find($id);
+        $pdf = Pdf::loadView('laporan.pdf_surat_pengajuan', compact('data'));
+        return $pdf->stream();
+    }
 }

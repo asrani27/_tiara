@@ -54,6 +54,8 @@ superadmin
                                 <a href="/superadmin/pengajuan/delete/{{$item->id}}" class=" btn btn-xs btn-danger"
                                     onclick="return confirm('yakin DI Hapus?');"><i class="fas fa-trash"></i>
                                     Delete</a>
+                                <a href="/superadmin/pengajuan/cetak/{{$item->id}}" class="btn btn-xs btn-warning"><i
+                                        class="fas fa-print"></i> cetak surat</a>
 
                             </td>
                         </tr>
