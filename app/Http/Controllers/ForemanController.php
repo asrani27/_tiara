@@ -166,13 +166,17 @@ class ForemanController extends Controller
     public function pengajuan_store(Request $req)
     {
 
-        Pengajuan::create($req->all());
+        $param = $req->all();
+        $param['foreman_id'] = Auth::user()->foreman->id;
+        Pengajuan::create($param);
         toastr()->success('berhasil Di simpan');
         return redirect('foreman/pengajuan');
     }
     public function pengajuan_update(Request $req, $id)
     {
-        Pengajuan::find($id)->update($req->all());
+        $param = $req->all();
+        $param['foreman_id'] = Auth::user()->foreman->id;
+        Pengajuan::find($id)->update($param);
         toastr()->success('berhasil Di simpan');
         return redirect('foreman/pengajuan');
     }
@@ -189,5 +193,5 @@ class ForemanController extends Controller
     }
 
     //REPORT LOADING
-    
+
 }

@@ -20,8 +20,8 @@ Foreman
                 </div>
             </div>
             <!-- /.card-header -->
-            <div class="card-body table-responsive p-0">
-                <table class="table table-striped table-valign-middle">
+            <div class="card-body table-responsive">
+                <table id="example1" class="table table-striped table-valign-middle">
                     <thead>
                         <tr>
                             <th>No</th>

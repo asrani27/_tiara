@@ -20,8 +20,8 @@ Foreman
                 </div>
             </div>
             <!-- /.card-header -->
-            <div class="card-body table-responsive p-0">
-                <table class="table table-striped table-valign-middle">
+            <div class="card-body table-responsive">
+                <table id="example1" class="table table-striped table-valign-middle">
                     <thead>
                         <tr>
                             <th>No</th>
@@ -39,7 +39,7 @@ Foreman
                         @foreach ($data as $key => $item)
                         <tr style="font-size:12px; font-family:Arial, Helvetica, sans-serif">
                             <td>{{$data->firstItem() + $key}}</td>
-                            <td>{{$item->memuat_olah}}</td>
+                            <td>{{$item->memuat_oleh}}</td>
                             <td>{{$item->agent_diataskapal}}</td>
                             <td>{{$item->rencana_penyimpanan}}</td>
                             <td>{{$item->cargo_diataskapal}}</td>

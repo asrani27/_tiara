@@ -7,6 +7,11 @@
   <meta http-equiv="x-ua-compatible" content="ie=edge">
 
   <title>SIBONGKAR PT BPU </title>
+
+  <!-- DataTables -->
+  <link rel="stylesheet" href="/theme/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
+  <link rel="stylesheet" href="/theme/plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
+  <link rel="stylesheet" href="/theme/plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
   @include('layouts.css')
 </head>
 
@@ -80,6 +85,30 @@
   </div>
 
   @include('layouts.js')
+
+  <!-- DataTables  & Plugins -->
+  <script src="/theme/plugins/datatables/jquery.dataTables.min.js"></script>
+  <script src="/theme/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+  <script src="/theme/plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
+  <script src="/theme/plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
+  <script src="/theme/plugins/datatables-buttons/js/dataTables.buttons.min.js"></script>
+  <script>
+    $(function () {
+    $("#example1").DataTable({
+      "responsive": true, "lengthChange": false, "autoWidth": false,
+      "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
+    }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
+    $('#example2').DataTable({
+      "paging": true,
+      "lengthChange": false,
+      "searching": false,
+      "ordering": true,
+      "info": true,
+      "autoWidth": false,
+      "responsive": true,
+    });
+  });
+  </script>
 </body>
 
 </html>
