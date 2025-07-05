@@ -81,6 +81,7 @@ Route::group(['middleware' => ['auth']], function () {
         Route::post('/report/edit/{id}', [ReportController::class, 'report_update']);
 
         Route::get('/customer', [SuperadminController::class, 'customer']);
+        Route::get('/customer/print', [SuperadminController::class, 'customer_print']);
         Route::get('/customer/{id}/reset', [SuperadminController::class, 'customer_reset']);
         Route::get('/customer/{id}/delete', [SuperadminController::class, 'customer_delete']);
 
@@ -130,6 +131,7 @@ Route::group(['middleware' => ['auth']], function () {
 
         Route::get('/foreman/{id}/akun', [ForemanController::class, 'akun']);
         Route::get('/foreman/{id}/reset', [ForemanController::class, 'reset']);
+        Route::get('/foreman/print', [SuperadminController::class, 'foreman_print']);
 
 
         Route::get('laporan', [LaporanController::class, 'index']);

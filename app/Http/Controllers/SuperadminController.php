@@ -9,6 +9,7 @@ use App\Models\Complated;
 use App\Models\Pengajuan;
 use App\Models\Penunjukan;
 use App\Models\AwalLoading;
+use App\Models\Foreman;
 use Illuminate\Http\Request;
 use App\Models\PerubahanCargo;
 use Barryvdh\DomPDF\Facade\Pdf;
@@ -187,6 +188,18 @@ class SuperadminController extends Controller
     {
         $data = Pengajuan::get();
         $pdf = Pdf::loadView('laporan.pdf_pengajuan', compact('data'))->setPaper('a4', 'landscape');;
+        return $pdf->stream();
+    }
+    public function customer_print()
+    {
+        $data = Customer::get();
+        $pdf = Pdf::loadView('laporan.pdf_customer', compact('data'))->setPaper('a4', 'landscape');;
+        return $pdf->stream();
+    }
+    public function foreman_print()
+    {
+        $data = Foreman::get();
+        $pdf = Pdf::loadView('laporan.pdf_foreman', compact('data'))->setPaper('a4', 'landscape');;
         return $pdf->stream();
     }
 }
