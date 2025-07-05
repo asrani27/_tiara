@@ -194,10 +194,10 @@ class ForemanController extends Controller
     }
 
     //REPORT LOADING
-    public function print_penunjukkan()
+    public function print_penunjukan()
     {
         $data = Penunjukan::where('foreman_id', Auth::user()->foreman->id)->get();
-        $pdf = Pdf::loadView('superadmin.laporan.pdf_penunjukan', compact('data'))->setPaper('a4', 'landscape');;
+        $pdf = Pdf::loadView('laporan.pdf_penunjukan', compact('data'))->setPaper('a4', 'landscape');;
         return $pdf->stream();
     }
 }
