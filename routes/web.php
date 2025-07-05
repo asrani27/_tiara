@@ -33,8 +33,10 @@ use App\Http\Controllers\ProdukSayaController;
 use App\Http\Controllers\SuperadminController;
 use App\Http\Controllers\AwalLoadingController;
 use App\Http\Controllers\ComplatedController;
+use App\Http\Controllers\DemageController;
 use App\Http\Controllers\PersyaratanController;
 use App\Http\Controllers\PemesananKonsumenController;
+use App\Http\Controllers\PerubahanCargoController;
 
 Route::get('/', [HomeController::class, 'welcome']);
 Route::get('/tentangkami', [HomeController::class, 'tentang']);
@@ -152,6 +154,20 @@ Route::group(['middleware' => ['auth']], function () {
         Route::get('/complated/edit/{id}', [ComplatedController::class, 'complated_edit']);
         Route::get('/complated/delete/{id}', [ComplatedController::class, 'complated_delete']);
         Route::post('/complated/edit/{id}', [ComplatedController::class, 'complated_update']);
+
+        Route::get('/demage', [DemageController::class, 'demage']);
+        Route::get('/demage/create', [DemageController::class, 'demage_create']);
+        Route::post('/demage/create', [DemageController::class, 'demage_store']);
+        Route::get('/demage/edit/{id}', [DemageController::class, 'demage_edit']);
+        Route::get('/demage/delete/{id}', [DemageController::class, 'demage_delete']);
+        Route::post('/demage/edit/{id}', [DemageController::class, 'demage_update']);
+
+        Route::get('/perubahancargo', [PerubahanCargoController::class, 'perubahancargo']);
+        Route::get('/perubahancargo/create', [PerubahanCargoController::class, 'perubahancargo_create']);
+        Route::post('/perubahancargo/create', [PerubahanCargoController::class, 'perubahancargo_store']);
+        Route::get('/perubahancargo/edit/{id}', [PerubahanCargoController::class, 'perubahancargo_edit']);
+        Route::get('/perubahancargo/delete/{id}', [PerubahanCargoController::class, 'perubahancargo_delete']);
+        Route::post('/perubahancargo/edit/{id}', [PerubahanCargoController::class, 'perubahancargo_update']);
     });
 });
 Route::group(['middleware' => ['auth']], function () {
