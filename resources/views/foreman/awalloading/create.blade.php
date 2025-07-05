@@ -31,13 +31,13 @@ TAMBAH
                             <div class="form-group row">
                                 <label class="col-sm-2 col-form-label">Pelabuhan Muatan</label>
                                 <div class="col-sm-10">
-                                    <input type="text" class="form-control" name="pelabuhan_muatan">
+                                    <input type="text" class="form-control" name="pelabuhan_pemuatan">
                                 </div>
                             </div>
                             <div class="form-group row">
                                 <label class="col-sm-2 col-form-label">Pelabuhan Pembuangan</label>
                                 <div class="col-sm-10">
-                                    <input type="text" class="form-control" name="prlabuhan_pembuangan">
+                                    <input type="text" class="form-control" name="pelabuhan_pembuangan">
                                 </div>
                             </div>
                             <div class="form-group row">
@@ -55,21 +55,28 @@ TAMBAH
                             <div class="form-group row">
                                 <label class="col-sm-2 col-form-label">Waktu Dihidupkan</label>
                                 <div class="col-sm-10">
-                                    <input type="datetime" class="form-control" name="waktu_dihidupkan"
+                                    <input type="datetime-local" class="form-control" name="waktu_dihidupkan"
                                         value="{{\Carbon\Carbon::now()->format('Y-m-d H:i:s')}}" required>
                                 </div>
                             </div>
                             <div class="form-group row">
                                 <label class="col-sm-2 col-form-label">mulai_memuat</label>
                                 <div class="col-sm-10">
-                                    <input type="datetime" class="form-control" name="mulai_memuat"
+                                    <input type="datetime-local" class="form-control" name="mulai_memuat"
+                                        value="{{\Carbon\Carbon::now()->format('Y-m-d H:i:s')}}" required>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-sm-2 col-form-label">mulai_memuat</label>
+                                <div class="col-sm-10">
+                                    <input type="datetime-local" class="form-control" name="mulai_memuat"
                                         value="{{\Carbon\Carbon::now()->format('Y-m-d H:i:s')}}" required>
                                 </div>
                             </div>
                             <div class="form-group row">
                                 <label class="col-sm-2 col-form-label">Selesai Memuat</label>
                                 <div class="col-sm-10">
-                                    <input type="datetime" class="form-control" name="selesai_memuat"
+                                    <input type="datetime-local" class="form-control" name="selesai_memuat"
                                         value="{{\Carbon\Carbon::now()->format('Y-m-d H:i:s')}}" required>
                                 </div>
                             </div>
@@ -80,31 +87,6 @@ TAMBAH
                                 </div>
                             </div>
 
-                            <div class="form-group row">
-                                <label class="col-sm-2 col-form-label">Tanggal</label>
-                                <div class="col-sm-10">
-                                    <input type="date" class="form-control" name="tanggal"
-                                        value="{{\Carbon\Carbon::now()->format('Y-m-d')}}" required>
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <label class="col-sm-2 col-form-label">nomor palka</label>
-                                <div class="col-sm-10">
-                                    <input type="text" class="form-control" name="nomor">
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <label class="col-sm-2 col-form-label">waktu</label>
-                                <div class="col-sm-10">
-                                    <input type="text" class="form-control" name="waktu">
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <label class="col-sm-2 col-form-label">perkataan</label>
-                                <div class="col-sm-10">
-                                    <input type="text" class="form-control" name="perkataan">
-                                </div>
-                            </div>
 
                             <div class="form-group row">
                                 <label class="col-sm-2 col-form-label"></label>

@@ -44,10 +44,10 @@ Foreman
                             <td>{{\Carbon\Carbon::parse($item->mulai_memuat)->format('d-m-Y H:i:s')}}</td>
                             <td>{{\Carbon\Carbon::parse($item->selesai_memuat)->format('d-m-Y H:i:s')}}</td>
                             <td>
-                                <a href="/foreman/awalloading/edit/{{$item->id}}" class="btn btn-xs btn-success"><i
+                                <a href="/foreman/loading/edit/{{$item->id}}" class="btn btn-xs btn-success"><i
                                         class="fas fa-edit"></i> edit</a>
 
-                                <a href="/foreman/awalloading/delete/{{$item->id}}" class=" btn btn-xs btn-danger"
+                                <a href="/foreman/loading/delete/{{$item->id}}" class=" btn btn-xs btn-danger"
                                     onclick="return confirm('yakin Di Hapus?');"><i class="fas fa-trash"></i>
                                     Delete</a>
 

@@ -14,76 +14,67 @@ EDIT
 @section('content')
 <div class="row">
     <div class="col-12">
-        <a href="/foreman/awalloading" class="btn btn-sm btn-secondary"><i class="fas fa-arrow-left"></i>
+        <a href="/foreman/complated" class="btn btn-sm btn-secondary"><i class="fas fa-arrow-left"></i>
             Kembali</a><br /><br />
-        <form method="post" action="/foreman/awalloading/edit/{{$data->id}}" enctype="multipart/form-data">
+        <form method="post" action="/foreman/complated/edit/{{$data->id}}" enctype="multipart/form-data">
             @csrf
             <div class="row">
                 <div class="col-lg-12 col-12">
                     <div class="card">
                         <div class="card-body">
-
                             <div class="form-group row">
-                                <label class="col-sm-2 col-form-label">Nama Kapal</label>
+                                <label class="col-sm-2 col-form-label">Nama tempat</label>
                                 <div class="col-sm-10">
-                                    <input type="text" class="form-control" name="nama_kapal"
-                                        value="{{$data->nama_kapal}}">
+                                    <input type="text" class="form-control" name="nama_tempat"
+                                        value="{{$data->nama_tempat}}">
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <label class="col-sm-2 col-form-label">Pelabuhan Muatan</label>
+                                <label class="col-sm-2 col-form-label">posisi</label>
                                 <div class="col-sm-10">
-                                    <input type="text" class="form-control" name="pelabuhan_pemuatan"
-                                        value="{{$data->pelabuhan_pemuatan}}">
+                                    <input type="text" class="form-control" name="posisi" value="{{$data->posisi}}">
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <label class="col-sm-2 col-form-label">Pelabuhan Pembuangan</label>
+                                <label class="col-sm-2 col-form-label">tanggal mulai</label>
                                 <div class="col-sm-10">
-                                    <input type="text" class="form-control" name="pelabuhan_pembuangan"
-                                        value="{{$data->pelabuhan_pembuangan}}">
+                                    <input type="date" class="form-control" name="tanggal_mulai"
+                                        value="{{$data->tanggal_mulai}}">
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <label class="col-sm-2 col-form-label">Deskripsi Barang</label>
+                                <label class="col-sm-2 col-form-label">mulai pemuatan</label>
                                 <div class="col-sm-10">
-                                    <input type="text" class="form-control" name="deskripsi_barang"
-                                        value="{{$data->deskripsi_barang}}">
+                                    <input type="text" class="form-control" name="mulai_pemuatan"
+                                        value="{{$data->mulai_pemuatan}}">
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <label class="col-sm-2 col-form-label">Jumlah Cargo</label>
+                                <label class="col-sm-2 col-form-label">tanggal selesai</label>
                                 <div class="col-sm-10">
-                                    <input type="text" class="form-control" name="jumlah_cargo"
-                                        value="{{$data->jumlah_cargo}}">
+                                    <input type="date" class="form-control" name="tanggal_selesai"
+                                        value="{{$data->tanggal_selesai}}">
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <label class="col-sm-2 col-form-label">Waktu Dihidupkan</label>
+                                <label class="col-sm-2 col-form-label"> pemuatan selesai</label>
                                 <div class="col-sm-10">
-                                    <input type="datetime-local" class="form-control" name="waktu_dihidupkan"
-                                        value="{{$data->waktu_dihidupkan}}">
+                                    <input type="text" class="form-control" name="pemuatan_selesai"
+                                        value="{{$data->pemuatan_selesai}}">
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <label class="col-sm-2 col-form-label">Mulai Memuat</label>
+                                <label class="col-sm-2 col-form-label">penyimpanan sebelum</label>
                                 <div class="col-sm-10">
-                                    <input type="datetime-local" class="form-control" name="mulai_memuat"
-                                        value="{{$data->mulai_memuat}}">
+                                    <input type="text" class="form-control" name="penyimpanan_sebelum"
+                                        value="{{$data->penyimpanan_sebelum}}">
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <label class="col-sm-2 col-form-label">Selesai Memuat</label>
+                                <label class="col-sm-2 col-form-label">draft survey</label>
                                 <div class="col-sm-10">
-                                    <input type="datetime-local" class="form-control" name="selesai_memuat"
-                                        value="{{$data->selesai_memuat}}">
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <label class="col-sm-2 col-form-label">Survei Akhir</label>
-                                <div class="col-sm-10">
-                                    <input type="text" class="form-control" name="survei_akhir"
-                                        value="{{$data->survei_akhir}}">
+                                    <input type="text" class="form-control" name="draf_survei"
+                                        value="{{$data->draf_survei}}">
                                 </div>
                             </div>
 

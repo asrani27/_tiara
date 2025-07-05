@@ -32,6 +32,7 @@ use App\Http\Controllers\KonsultasiController;
 use App\Http\Controllers\ProdukSayaController;
 use App\Http\Controllers\SuperadminController;
 use App\Http\Controllers\AwalLoadingController;
+use App\Http\Controllers\ComplatedController;
 use App\Http\Controllers\PersyaratanController;
 use App\Http\Controllers\PemesananKonsumenController;
 
@@ -144,6 +145,13 @@ Route::group(['middleware' => ['auth']], function () {
         Route::get('/awalloading/edit/{id}', [AwalLoadingController::class, 'awalloading_edit']);
         Route::get('/awalloading/delete/{id}', [AwalLoadingController::class, 'awalloading_delete']);
         Route::post('/awalloading/edit/{id}', [AwalLoadingController::class, 'awalloading_update']);
+
+        Route::get('/complated', [ComplatedController::class, 'complated']);
+        Route::get('/complated/create', [ComplatedController::class, 'complated_create']);
+        Route::post('/complated/create', [ComplatedController::class, 'complated_store']);
+        Route::get('/complated/edit/{id}', [ComplatedController::class, 'complated_edit']);
+        Route::get('/complated/delete/{id}', [ComplatedController::class, 'complated_delete']);
+        Route::post('/complated/edit/{id}', [ComplatedController::class, 'complated_update']);
     });
 });
 Route::group(['middleware' => ['auth']], function () {
