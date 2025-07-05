@@ -7,6 +7,7 @@
 </script>
 
 <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-bs4.min.css" rel="stylesheet">
+
 @endpush
 @section('title')
 TAMBAH
@@ -53,7 +54,12 @@ TAMBAH
                                     <input type="text" class="form-control" name="bertandatangan">
                                 </div>
                             </div>
-
+                            <div class="form-group row">
+                                <label class="col-sm-2 col-form-label">detail</label>
+                                <div class="col-sm-10">
+                                    <textarea id="summernote" name="detail"></textarea>
+                                </div>
+                            </div>
                             <div class="form-group row">
                                 <label class="col-sm-2 col-form-label"></label>
                                 <div class="col-sm-10">

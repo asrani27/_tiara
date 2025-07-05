@@ -151,55 +151,61 @@ class SuperadminController extends Controller
     public function awalloading_print()
     {
         $data = AwalLoading::get();
-        $pdf = Pdf::loadView('laporan.pdf_awalloading', compact('data'))->setPaper('a4', 'landscape');;
+        $pdf = Pdf::loadView('laporan.pdf_awalloading', compact('data'))->setPaper('a4', 'landscape');
         return $pdf->stream();
     }
     public function perubahancargo_print()
     {
         $data = PerubahanCargo::get();
-        $pdf = Pdf::loadView('laporan.pdf_perubahancargo', compact('data'))->setPaper('a4', 'landscape');;
+        $pdf = Pdf::loadView('laporan.pdf_perubahancargo', compact('data'))->setPaper('a4', 'landscape');
         return $pdf->stream();
     }
     public function loading_print()
     {
         $data = Report::get();
-        $pdf = Pdf::loadView('laporan.pdf_report', compact('data'))->setPaper('a4', 'landscape');;
+        $pdf = Pdf::loadView('laporan.pdf_report', compact('data'))->setPaper('a4', 'landscape');
         return $pdf->stream();
     }
     public function complated_print()
     {
         $data = Complated::get();
-        $pdf = Pdf::loadView('laporan.pdf_complated', compact('data'))->setPaper('a4', 'landscape');;
+        $pdf = Pdf::loadView('laporan.pdf_complated', compact('data'))->setPaper('a4', 'landscape');
         return $pdf->stream();
     }
     public function demage_print()
     {
         $data = Demage::get();
-        $pdf = Pdf::loadView('laporan.pdf_demage', compact('data'))->setPaper('a4', 'landscape');;
+        $pdf = Pdf::loadView('laporan.pdf_demage', compact('data'))->setPaper('a4', 'landscape');
+        return $pdf->stream();
+    }
+    public function demage_beritaacara($id)
+    {
+        $data = Demage::find($id);
+        $pdf = Pdf::loadView('laporan.pdf_berita_acara', compact('data'));
         return $pdf->stream();
     }
     public function penunjukan_print()
     {
         $data = Penunjukan::get();
-        $pdf = Pdf::loadView('laporan.pdf_penunjukan', compact('data'))->setPaper('a4', 'landscape');;
+        $pdf = Pdf::loadView('laporan.pdf_penunjukan', compact('data'))->setPaper('a4', 'landscape');
         return $pdf->stream();
     }
     public function pengajuan_print()
     {
         $data = Pengajuan::get();
-        $pdf = Pdf::loadView('laporan.pdf_pengajuan', compact('data'))->setPaper('a4', 'landscape');;
+        $pdf = Pdf::loadView('laporan.pdf_pengajuan', compact('data'))->setPaper('a4', 'landscape');
         return $pdf->stream();
     }
     public function customer_print()
     {
         $data = Customer::get();
-        $pdf = Pdf::loadView('laporan.pdf_customer', compact('data'))->setPaper('a4', 'landscape');;
+        $pdf = Pdf::loadView('laporan.pdf_customer', compact('data'))->setPaper('a4', 'landscape');
         return $pdf->stream();
     }
     public function foreman_print()
     {
         $data = Foreman::get();
-        $pdf = Pdf::loadView('laporan.pdf_foreman', compact('data'))->setPaper('a4', 'landscape');;
+        $pdf = Pdf::loadView('laporan.pdf_foreman', compact('data'))->setPaper('a4', 'landscape');
         return $pdf->stream();
     }
     public function pengajuan_cetak($id)

@@ -50,6 +50,8 @@ Foreman
                                 <a href="/foreman/demage/delete/{{$item->id}}" class=" btn btn-xs btn-danger"
                                     onclick="return confirm('yakin Di Hapus?');"><i class="fas fa-trash"></i>
                                     Delete</a>
+                                <a href="/foreman/demage/cetak/{{$item->id}}" class="btn btn-xs btn-warning"><i
+                                        class="fas fa-print"></i> berita acara</a>
 
                             </td>
                         </tr>

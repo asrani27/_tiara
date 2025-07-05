@@ -100,6 +100,7 @@ Route::group(['middleware' => ['auth']], function () {
         Route::get('demage', [SuperadminController::class, 'demage']);
         Route::get('demage/print', [SuperadminController::class, 'demage_print']);
         Route::get('demage/delete/{id}', [SuperadminController::class, 'demage_delete']);
+        Route::get('demage/cetak/{id}', [SuperadminController::class, 'demage_beritaacara']);
 
         Route::get('perubahancargo', [SuperadminController::class, 'perubahancargo']);
         Route::get('perubahancargo/print', [SuperadminController::class, 'perubahancargo_print']);
@@ -195,6 +196,7 @@ Route::group(['middleware' => ['auth']], function () {
         Route::get('/demage/edit/{id}', [DemageController::class, 'demage_edit']);
         Route::get('/demage/delete/{id}', [DemageController::class, 'demage_delete']);
         Route::post('/demage/edit/{id}', [DemageController::class, 'demage_update']);
+        Route::get('demage/cetak/{id}', [DemageController::class, 'demage_beritaacara']);
 
         Route::get('/perubahancargo', [PerubahanCargoController::class, 'perubahancargo']);
         Route::get('/perubahancargo/create', [PerubahanCargoController::class, 'perubahancargo_create']);

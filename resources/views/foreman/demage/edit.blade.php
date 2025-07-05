@@ -58,6 +58,12 @@ EDIT
                                         value="{{$data->bertandatangan}}">
                                 </div>
                             </div>
+                            <div class="form-group row">
+                                <label class="col-sm-2 col-form-label">detail</label>
+                                <div class="col-sm-10">
+                                    <textarea id="summernote" name="detail">{!!$data->detail!!}</textarea>
+                                </div>
+                            </div>
 
                             <div class="form-group row">
                                 <label class="col-sm-2 col-form-label"></label>

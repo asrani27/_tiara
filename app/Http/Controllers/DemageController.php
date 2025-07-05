@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Demage;
 use Illuminate\Http\Request;
+use Barryvdh\DomPDF\Facade\Pdf;
 use Illuminate\Support\Facades\Auth;
 
 class DemageController extends Controller
@@ -27,6 +28,12 @@ class DemageController extends Controller
         Demage::create($param);
         toastr()->success('berhasil Di simpan');
         return redirect('foreman/demage');
+    }
+    public function demage_beritaacara($id)
+    {
+        $data = Demage::find($id);
+        $pdf = Pdf::loadView('laporan.pdf_berita_acara', compact('data'));
+        return $pdf->stream();
     }
     public function demage_update(Request $req, $id)
     {
