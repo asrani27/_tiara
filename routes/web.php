@@ -7,38 +7,15 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\LoginController;
-use App\Http\Controllers\RekamController;
-use App\Http\Controllers\BannerController;
 use App\Http\Controllers\DemageController;
-use App\Http\Controllers\DokterController;
-use App\Http\Controllers\JadwalController;
-use App\Http\Controllers\PasienController;
-use App\Http\Controllers\ProdukController;
 use App\Http\Controllers\ProfilController;
 use App\Http\Controllers\ReportController;
-use App\Http\Controllers\UploadController;
-use App\Http\Controllers\BiodataController;
 use App\Http\Controllers\ForemanController;
 use App\Http\Controllers\LaporanController;
-use App\Http\Controllers\LayananController;
-use App\Http\Controllers\PegawaiController;
 use App\Http\Controllers\CustomerController;
-use App\Http\Controllers\KategoriController;
-use App\Http\Controllers\KonsumenController;
 use App\Http\Controllers\ComplatedController;
-use App\Http\Controllers\GantiPassController;
-use App\Http\Controllers\PemesananController;
-use App\Http\Controllers\PengajuanController;
-use App\Http\Controllers\JadwalSayaController;
-use App\Http\Controllers\KonsultasiController;
-use App\Http\Controllers\ProdukSayaController;
 use App\Http\Controllers\SuperadminController;
 use App\Http\Controllers\AwalLoadingController;
-use App\Http\Controllers\ComplatedController;
-use App\Http\Controllers\DemageController;
-use App\Http\Controllers\PersyaratanController;
-use App\Http\Controllers\PerubahanCargoController;
-use App\Http\Controllers\PemesananKonsumenController;
 use App\Http\Controllers\PerubahanCargoController;
 
 Route::get('/', [HomeController::class, 'welcome']);
@@ -187,7 +164,6 @@ Route::group(['middleware' => ['auth']], function () {
         Route::post('/awalloading/edit/{id}', [AwalLoadingController::class, 'awalloading_update']);
 
         Route::get('/complated', [ComplatedController::class, 'complated']);
-<<<<<<< HEAD
         Route::get('/complated/create', [ComplatedController::class, 'complated_create']);
         Route::post('/complated/create', [ComplatedController::class, 'complated_store']);
         Route::get('/complated/edit/{id}', [ComplatedController::class, 'complated_edit']);
@@ -208,12 +184,6 @@ Route::group(['middleware' => ['auth']], function () {
         Route::get('/perubahancargo/edit/{id}', [PerubahanCargoController::class, 'perubahancargo_edit']);
         Route::get('/perubahancargo/delete/{id}', [PerubahanCargoController::class, 'perubahancargo_delete']);
         Route::post('/perubahancargo/edit/{id}', [PerubahanCargoController::class, 'perubahancargo_update']);
-=======
-
-        Route::get('/demage', [DemageController::class, 'demage']);
-
-        Route::get('/perubahancargo', [PerubahanCargoController::class, 'perubahancargo']);
->>>>>>> 90ef2df (f)
     });
 });
 Route::group(['middleware' => ['auth']], function () {
