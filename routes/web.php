@@ -85,26 +85,33 @@ Route::group(['middleware' => ['auth']], function () {
         Route::get('/customer/{id}/delete', [SuperadminController::class, 'customer_delete']);
 
         Route::get('awalloading', [SuperadminController::class, 'awalloading']);
+        Route::get('awalloading/print', [SuperadminController::class, 'awalloading_print']);
         Route::get('awalloading/delete/{id}', [SuperadminController::class, 'awalloading_delete']);
 
         Route::get('loading', [SuperadminController::class, 'loading']);
+        Route::get('loading/print', [SuperadminController::class, 'loading_print']);
         Route::get('loading/delete/{id}', [SuperadminController::class, 'loading_delete']);
 
         Route::get('complated', [SuperadminController::class, 'complated']);
+        Route::get('complated/print', [SuperadminController::class, 'complated_print']);
         Route::get('complated/delete/{id}', [SuperadminController::class, 'complated_delete']);
 
         Route::get('demage', [SuperadminController::class, 'demage']);
+        Route::get('demage/print', [SuperadminController::class, 'demage_print']);
         Route::get('demage/delete/{id}', [SuperadminController::class, 'demage_delete']);
 
         Route::get('perubahancargo', [SuperadminController::class, 'perubahancargo']);
+        Route::get('perubahancargo/print', [SuperadminController::class, 'perubahancargo_print']);
         Route::get('perubahancargo/delete/{id}', [SuperadminController::class, 'perubahancargo_delete']);
 
+        Route::get('penunjukan/print', [SuperadminController::class, 'penunjukan_print']);
         Route::get('penunjukan', [SuperadminController::class, 'penunjukan']);
         Route::get('penunjukan/verifikasi/{id}', [SuperadminController::class, 'penunjukan_verifikasi']);
         Route::post('penunjukan/verifikasi/{id}', [SuperadminController::class, 'penunjukan_verifikasi_update']);
         Route::get('penunjukan/delete/{id}', [SuperadminController::class, 'penunjukan_delete']);
 
         Route::get('pengajuan', [SuperadminController::class, 'pengajuan']);
+        Route::get('pengajuan/print', [SuperadminController::class, 'pengajuan_print']);
         Route::get('pengajuan/create', [SuperadminController::class, 'pengajuan_create']);
         Route::post('pengajuan/create', [SuperadminController::class, 'pengajuan_store']);
         Route::get('pengajuan/edit/{id}', [SuperadminController::class, 'pengajuan_edit']);

@@ -10,6 +10,9 @@ superadmin
 <div class="row">
     <div class="col-12">
 
+        <a href="/superadmin/penunjukan/print" class="btn btn-sm bg-gradient-warning"><i class="fas fa-print"></i>
+            Print</a>
+        <br /><br />
         <div class="card">
             <div class="card-header">
                 <h3 class="card-title">Data Surat</h3>

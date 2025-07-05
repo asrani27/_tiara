@@ -43,8 +43,8 @@ Foreman
                             <td>{{$item->nama_operator}}</td>
                             <td>{{$item->kerusakan}}</td>
                             <td>
-                                <a href="/superadmin/demage/edit/{{$item->id}}" class="btn btn-xs btn-success"><i
-                                        class="fas fa-edit"></i> edit</a>
+                                {{-- <a href="/superadmin/demage/edit/{{$item->id}}" class="btn btn-xs btn-success"><i
+                                        class="fas fa-edit"></i> edit</a> --}}
 
                                 <a href="/superadmin/demage/delete/{{$item->id}}" class=" btn btn-xs btn-danger"
                                     onclick="return confirm('yakin Di Hapus?');"><i class="fas fa-trash"></i>

@@ -49,8 +49,8 @@ Foreman
                             <td>{{$item->penyimpanan_sebelum}}</td>
                             <td>{{$item->draf_survei}}</td>
                             <td>
-                                <a href="/superadmin/complated/edit/{{$item->id}}" class="btn btn-xs btn-success"><i
-                                        class="fas fa-edit"></i> edit</a>
+                                {{-- <a href="/superadmin/complated/edit/{{$item->id}}"
+                                    class="btn btn-xs btn-success"><i class="fas fa-edit"></i> edit</a> --}}
 
                                 <a href="/superadmin/complated/delete/{{$item->id}}" class=" btn btn-xs btn-danger"
                                     onclick="return confirm('yakin Di Hapus?');"><i class="fas fa-trash"></i>

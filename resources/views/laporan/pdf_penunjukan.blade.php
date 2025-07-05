@@ -62,10 +62,19 @@
         <tr>
             <td width="60%"></td>
             <td></td>
-            <td><br />{{\Carbon\Carbon::now()->translatedFormat('d F Y')}}<br />
+            <td><br />
+                @if (Auth::user()->roles == 'superadmin')
+
+                {{\Carbon\Carbon::now()->translatedFormat('d F Y')}}<br />
+                Admin<br /><br /><br /><br />
+
+                <u>{{Auth::user()->name}}</u><br />
+                @else
+                {{\Carbon\Carbon::now()->translatedFormat('d F Y')}}<br />
                 Foreman<br /><br /><br /><br />
 
                 <u>{{Auth::user()->foreman->nama}}</u><br />
+                @endif
 
             </td>
         </tr>

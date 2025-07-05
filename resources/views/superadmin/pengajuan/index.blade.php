@@ -12,6 +12,8 @@ superadmin
 
         <a href="/superadmin/pengajuan/create" class="btn btn-sm bg-gradient-purple"><i class="fas fa-plus"></i>
             Tambah</a>
+        <a href="/superadmin/pengajuan/print" class="btn btn-sm bg-gradient-warning"><i class="fas fa-print"></i>
+            Print</a>
         <br /><br />
         <div class="card">
             <div class="card-header">

@@ -45,8 +45,8 @@ Foreman
                             <td>{{\Carbon\Carbon::parse($item->mulai_memuat)->format('d-m-Y H:i:s')}}</td>
                             <td>{{\Carbon\Carbon::parse($item->selesai_memuat)->format('d-m-Y H:i:s')}}</td>
                             <td>
-                                <a href="/superadmin/awalloading/edit/{{$item->id}}" class="btn btn-xs btn-success"><i
-                                        class="fas fa-edit"></i> edit</a>
+                                {{-- <a href="/superadmin/awalloading/edit/{{$item->id}}"
+                                    class="btn btn-xs btn-success"><i class="fas fa-edit"></i> edit</a> --}}
 
                                 <a href="/superadmin/awalloading/delete/{{$item->id}}" class=" btn btn-xs btn-danger"
                                     onclick="return confirm('yakin Di Hapus?');"><i class="fas fa-trash"></i>

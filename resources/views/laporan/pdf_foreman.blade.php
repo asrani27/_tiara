@@ -13,32 +13,29 @@
     <table width="100%">
         <tr>
             <td width="15%">
-                <img src="data:image/jpeg;base64,{{ base64_encode(file_get_contents(public_path('logo/rs.png'))) }}"
+                <img src="data:image/jpeg;base64,{{ base64_encode(file_get_contents(public_path('logo/logonew.png'))) }}"
                     width="100px">
             </td>
             <td style="text-align: center;" width="60%">
 
-                <font size="24px"><b>RUMAH SAKIT SUAKA INSAN BANJARMASIN
+                <font size="24px"><b>PT BORNEO PERSADA UTAMA
                     </b></font><br />
 
-                Jl. Zafri Zam Zam No.60, Belitung Sel., Kec. Banjarmasin Bar., Kota Banjarmasin, Kalimantan Selatan
-                70124
+                Stevedoring Company & Heary Equipment Rental
             </td>
             <td width="15%">
             </td>
         </tr>
     </table>
     <hr>
-    <h3 style="text-align: center">LAPORAN DATA PASIEN
+    <h3 style="text-align: center">LAPORAN DATA FOREMAN
     </h3>
     <br />
     <table width="100%" border="1" cellpadding="5" cellspacing="0">
         <tr>
             <th>No</th>
-            <th>Nama Pasien</th>
-            <th>Telp</th>
-            <th>Alamat</th>
-            <th>umur</th>
+            <th>Nama</th>
+            <th>Jabatan</th>
         </tr>
         @php
         $no =1;
@@ -48,9 +45,8 @@
         <tr>
             <td>{{$key + 1}}</td>
             <td>{{$item->nama}}</td>
-            <td>{{$item->telp}}</td>
-            <td>{{$item->alamat}}</td>
-            <td>{{$item->umur}}</td>
+            <td>{{$item->jabatan}}</td>
+
         </tr>
         @endforeach
     </table>
@@ -59,10 +55,19 @@
         <tr>
             <td width="60%"></td>
             <td></td>
-            <td><br />Mengetahui, {{\Carbon\Carbon::now()->translatedFormat('d F Y')}}<br />
-                RS Suaka Insan<br /><br /><br /><br />
+            <td><br />
+                @if (Auth::user()->roles == 'superadmin')
 
-                <u>-</u><br />
+                {{\Carbon\Carbon::now()->translatedFormat('d F Y')}}<br />
+                Admin<br /><br /><br /><br />
+
+                <u>{{Auth::user()->name}}</u><br />
+                @else
+                {{\Carbon\Carbon::now()->translatedFormat('d F Y')}}<br />
+                Foreman<br /><br /><br /><br />
+
+                <u>{{Auth::user()->foreman->nama}}</u><br />
+                @endif
 
             </td>
         </tr>

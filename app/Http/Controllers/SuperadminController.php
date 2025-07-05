@@ -2,15 +2,16 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\AwalLoading;
-use App\Models\Complated;
-use App\Models\Customer;
 use App\Models\Demage;
+use App\Models\Report;
+use App\Models\Customer;
+use App\Models\Complated;
 use App\Models\Pengajuan;
 use App\Models\Penunjukan;
-use App\Models\PerubahanCargo;
-use App\Models\Report;
+use App\Models\AwalLoading;
 use Illuminate\Http\Request;
+use App\Models\PerubahanCargo;
+use Barryvdh\DomPDF\Facade\Pdf;
 use Illuminate\Support\Facades\Auth;
 
 class SuperadminController extends Controller
@@ -144,5 +145,48 @@ class SuperadminController extends Controller
         PerubahanCargo::find($id)->delete();
         toastr()->success('berhasil Di hapus');
         return back();
+    }
+
+    public function awalloading_print()
+    {
+        $data = AwalLoading::get();
+        $pdf = Pdf::loadView('laporan.pdf_awalloading', compact('data'))->setPaper('a4', 'landscape');;
+        return $pdf->stream();
+    }
+    public function perubahancargo_print()
+    {
+        $data = PerubahanCargo::get();
+        $pdf = Pdf::loadView('laporan.pdf_perubahancargo', compact('data'))->setPaper('a4', 'landscape');;
+        return $pdf->stream();
+    }
+    public function loading_print()
+    {
+        $data = Report::get();
+        $pdf = Pdf::loadView('laporan.pdf_report', compact('data'))->setPaper('a4', 'landscape');;
+        return $pdf->stream();
+    }
+    public function complated_print()
+    {
+        $data = Complated::get();
+        $pdf = Pdf::loadView('laporan.pdf_complated', compact('data'))->setPaper('a4', 'landscape');;
+        return $pdf->stream();
+    }
+    public function demage_print()
+    {
+        $data = Demage::get();
+        $pdf = Pdf::loadView('laporan.pdf_demage', compact('data'))->setPaper('a4', 'landscape');;
+        return $pdf->stream();
+    }
+    public function penunjukan_print()
+    {
+        $data = Penunjukan::get();
+        $pdf = Pdf::loadView('laporan.pdf_penunjukan', compact('data'))->setPaper('a4', 'landscape');;
+        return $pdf->stream();
+    }
+    public function pengajuan_print()
+    {
+        $data = Pengajuan::get();
+        $pdf = Pdf::loadView('laporan.pdf_pengajuan', compact('data'))->setPaper('a4', 'landscape');;
+        return $pdf->stream();
     }
 }
