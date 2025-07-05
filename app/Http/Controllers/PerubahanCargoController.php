@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\PerubahanCargo;
 use Illuminate\Http\Request;
+use App\Models\PerubahanCargo;
+use Illuminate\Support\Facades\Auth;
 
 class PerubahanCargoController extends Controller
 {
@@ -11,7 +12,7 @@ class PerubahanCargoController extends Controller
 
     public function perubahancargo()
     {
-        $data = PerubahanCargo::orderBy('id', 'DESC')->paginate(10);
+        $data = PerubahanCargo::where('foreman_id', Auth::user()->foreman->id)->orderBy('id', 'DESC')->paginate(10);
         return view('foreman.perubahancargo.index', compact('data'));
     }
 
@@ -21,14 +22,17 @@ class PerubahanCargoController extends Controller
     }
     public function perubahancargo_store(Request $req)
     {
-
-        PerubahanCargo::create($req->all());
+        $param = $req->all();
+        $param['foreman_id'] = Auth::user()->foreman->id;
+        PerubahanCargo::create($param);
         toastr()->success('berhasil Di simpan');
         return redirect('foreman/perubahancargo');
     }
     public function perubahancargo_update(Request $req, $id)
     {
-        PerubahanCargo::find($id)->update($req->all());
+        $param = $req->all();
+        $param['foreman_id'] = Auth::user()->foreman->id;
+        PerubahanCargo::find($id)->update($param);
         toastr()->success('berhasil Di simpan');
         return redirect('foreman/perubahancargo');
     }

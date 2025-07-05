@@ -11,7 +11,7 @@ class ComplatedController extends Controller
 
     public function complated()
     {
-        $data = Complated::orderBy('id', 'DESC')->paginate(10);
+        $data = Complated::where('foreman_id', Auth::user()->foreman->id)->orderBy('id', 'DESC')->paginate(10);
         return view('foreman.complated.index', compact('data'));
     }
 

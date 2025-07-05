@@ -2,10 +2,15 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\AwalLoading;
+use App\Models\Complated;
+use App\Models\Demage;
 use App\Models\User;
 use App\Models\Foreman;
 use App\Models\Pengajuan;
 use App\Models\Penunjukan;
+use App\Models\PerubahanCargo;
+use App\Models\Report;
 use Illuminate\Http\Request;
 use Barryvdh\DomPDF\Facade\Pdf;
 use Illuminate\Support\Facades\Auth;
@@ -156,7 +161,7 @@ class ForemanController extends Controller
     //SURAT PENGAJUAN
     public function pengajuan()
     {
-        $data = Pengajuan::orderBy('id', 'DESC')->paginate(10);
+        $data = Pengajuan::where('foreman_id', Auth::user()->foreman->id)->orderBy('id', 'DESC')->paginate(10);
         return view('foreman.pengajuan.index', compact('data'));
     }
 
@@ -198,6 +203,42 @@ class ForemanController extends Controller
     {
         $data = Penunjukan::where('foreman_id', Auth::user()->foreman->id)->get();
         $pdf = Pdf::loadView('laporan.pdf_penunjukan', compact('data'))->setPaper('a4', 'landscape');;
+        return $pdf->stream();
+    }
+    public function print_pengajuan()
+    {
+        $data = Pengajuan::where('foreman_id', Auth::user()->foreman->id)->get();
+        $pdf = Pdf::loadView('laporan.pdf_pengajuan', compact('data'))->setPaper('a4', 'landscape');;
+        return $pdf->stream();
+    }
+    public function print_awalloading()
+    {
+        $data = AwalLoading::where('foreman_id', Auth::user()->foreman->id)->get();
+        $pdf = Pdf::loadView('laporan.pdf_awalloading', compact('data'))->setPaper('a4', 'landscape');;
+        return $pdf->stream();
+    }
+    public function print_report()
+    {
+        $data = Report::where('foreman_id', Auth::user()->foreman->id)->get();
+        $pdf = Pdf::loadView('laporan.pdf_report', compact('data'))->setPaper('a4', 'landscape');;
+        return $pdf->stream();
+    }
+    public function print_complated()
+    {
+        $data = Complated::where('foreman_id', Auth::user()->foreman->id)->get();
+        $pdf = Pdf::loadView('laporan.pdf_complated', compact('data'))->setPaper('a4', 'landscape');;
+        return $pdf->stream();
+    }
+    public function print_demage()
+    {
+        $data = Demage::where('foreman_id', Auth::user()->foreman->id)->get();
+        $pdf = Pdf::loadView('laporan.pdf_demage', compact('data'))->setPaper('a4', 'landscape');;
+        return $pdf->stream();
+    }
+    public function print_perubahancargo()
+    {
+        $data = PerubahanCargo::where('foreman_id', Auth::user()->foreman->id)->get();
+        $pdf = Pdf::loadView('laporan.pdf_perubahancargo', compact('data'))->setPaper('a4', 'landscape');;
         return $pdf->stream();
     }
 }

@@ -10,7 +10,7 @@ class AwalLoadingController extends Controller
 {
     public function awalloading()
     {
-        $data = AwalLoading::orderBy('id', 'DESC')->paginate(10);
+        $data = AwalLoading::where('foreman_id', Auth::user()->foreman->id)->orderBy('id', 'DESC')->paginate(10);
         return view('foreman.awalloading.index', compact('data'));
     }
 

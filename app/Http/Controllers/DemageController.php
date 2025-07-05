@@ -4,13 +4,14 @@ namespace App\Http\Controllers;
 
 use App\Models\Demage;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class DemageController extends Controller
 {
-  
+
     public function demage()
     {
-        $data = Demage::orderBy('id', 'DESC')->paginate(10);
+        $data = Demage::where('foreman_id', Auth::user()->foreman->id)->orderBy('id', 'DESC')->paginate(10);
         return view('foreman.demage.index', compact('data'));
     }
 
@@ -21,13 +22,17 @@ class DemageController extends Controller
     public function demage_store(Request $req)
     {
 
-        Demage::create($req->all());
+        $param = $req->all();
+        $param['foreman_id'] = Auth::user()->foreman->id;
+        Demage::create($param);
         toastr()->success('berhasil Di simpan');
         return redirect('foreman/demage');
     }
     public function demage_update(Request $req, $id)
     {
-        Demage::find($id)->update($req->all());
+        $param = $req->all();
+        $param['foreman_id'] = Auth::user()->foreman->id;
+        Demage::find($id)->update($param);
         toastr()->success('berhasil Di simpan');
         return redirect('foreman/demage');
     }

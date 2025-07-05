@@ -18,30 +18,4 @@ class LaporanController extends Controller
     {
         return view('superadmin.laporan.index');
     }
-    public function pilih()
-    {
-        $jenis = request()->get('jenis');
-        if ($jenis == '1') {
-            $data = Dokter::get();
-            $pdf = Pdf::loadView('superadmin.laporan.pdf_dokter', compact('data'))->setPaper('a4', 'landscape');;
-            return $pdf->stream();
-        }
-
-        if ($jenis == '2') {
-            $data = Pasien::get();
-            $pdf = Pdf::loadView('superadmin.laporan.pdf_pasien', compact('data'))->setPaper('a4', 'landscape');;
-            return $pdf->stream();
-        }
-
-        if ($jenis == '3') {
-            $data = Stok::get();
-            $pdf = Pdf::loadView('superadmin.laporan.pdf_stok', compact('data'))->setPaper('a4', 'landscape');;
-            return $pdf->stream();
-        }
-        if ($jenis == '4') {
-            $data = Jadwal::get();
-            $pdf = Pdf::loadView('superadmin.laporan.pdf_jadwal', compact('data'))->setPaper('a4', 'landscape');;
-            return $pdf->stream();
-        }
-    }
 }
