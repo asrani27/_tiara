@@ -123,6 +123,16 @@ Route::group(['middleware' => ['auth']], function () {
 
 Route::group(['middleware' => ['auth']], function () {
     Route::prefix('foreman')->group(function () {
+
+        //cetak
+        Route::get('penunjukan/print', [ForemanController::class, 'print_penunjukan']);
+        Route::get('pengajuan/print', [ForemanController::class, 'print_pengajuan']);
+        Route::get('awalloading/print', [ForemanController::class, 'print_awalloading']);
+        Route::get('report/print', [ForemanController::class, 'print_report']);
+        Route::get('complated/print', [ForemanController::class, 'print_complated']);
+        Route::get('demage/print', [ForemanController::class, 'print_demage']);
+        Route::get('perubahancargo/print', [ForemanController::class, 'print_perubahancargo']);
+        //-------------------------------//
         Route::get('penunjukan', [ForemanController::class, 'penunjukan']);
         Route::get('penunjukan/verifikasi/{id}', [ForemanController::class, 'penunjukan_verifikasi']);
         Route::post('penunjukan/verifikasi/{id}', [ForemanController::class, 'penunjukan_verifikasi_update']);

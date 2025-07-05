@@ -7,6 +7,7 @@ use App\Models\Foreman;
 use App\Models\Pengajuan;
 use App\Models\Penunjukan;
 use Illuminate\Http\Request;
+use Barryvdh\DomPDF\Facade\Pdf;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Validator;
 
@@ -193,5 +194,10 @@ class ForemanController extends Controller
     }
 
     //REPORT LOADING
-
+    public function print_penunjukkan()
+    {
+        $data = Penunjukan::where('foreman_id', Auth::user()->foreman->id)->get();
+        $pdf = Pdf::loadView('superadmin.laporan.pdf_penunjukan', compact('data'))->setPaper('a4', 'landscape');;
+        return $pdf->stream();
+    }
 }
