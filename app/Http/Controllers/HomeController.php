@@ -26,13 +26,6 @@ use Illuminate\Support\Facades\Auth;
 
 class HomeController extends Controller
 {
-    public function user()
-    {
-        $tp = count(Produk::where('toko_id', Auth::user()->toko->id)->get());
-        $pt = Auth::user()->toko->nama_toko;
-        $data = Auth::user()->toko;
-        return view('user.home', compact('tp', 'pt', 'data'));
-    }
     public function foreman()
     {
         return view('foreman.home');
@@ -73,20 +66,6 @@ class HomeController extends Controller
         }
     }
 
-    public function soal()
-    {
-        return Soal::get();
-    }
-
-    public function pegawai()
-    {
-        $page = 'profil';
-        $pegawai = Auth::user()->pegawai;
-        $layanan = Layanan::get();
-        $pengajuan = Pengajuan::where('pegawai_id', $pegawai->id)->get();
-        return view('pegawai.home', compact('page', 'pegawai', 'layanan', 'pengajuan'));
-    }
-
     public function welcome()
     {
         if (Auth::check()) {
@@ -101,80 +80,5 @@ class HomeController extends Controller
             }
         }
         return view('welcome');
-    }
-
-    public function tentang()
-    {
-        $kategori = Kategori::get();
-        $profil = Profil::first();
-        return view('tentang', compact('kategori', 'profil'));
-    }
-
-    public function kontak()
-    {
-        $kategori = Kategori::get();
-        $profil = Profil::first();
-        return view('kontak', compact('kategori', 'profil'));
-    }
-
-    public function semuaproduk()
-    {
-        $produk = Produk::orderBy('created_at', 'DESC')->paginate(24);
-        $kategori = Kategori::get();
-        $profil = Profil::first();
-        return view('semuaproduk', compact('kategori', 'profil', 'produk'));
-    }
-    public function kategoriproduk($id)
-    {
-        $produk = Produk::where('kategori_id', $id)->orderBy('created_at', 'DESC')->paginate(24);
-        $kategori = Kategori::get();
-        $namaKategori = Kategori::find($id);
-        $profil = Profil::first();
-        return view('kategoriproduk', compact('kategori', 'profil', 'produk', 'namaKategori'));
-    }
-
-    public function cariProduk()
-    {
-        $kategori_id = request()->kategori_id;
-        $kategori = Kategori::get();
-        $profil = Profil::first();
-        $namaKategori = Kategori::find($kategori_id);
-        $search = request()->search;
-
-        if ($kategori_id == null) {
-            $produk = Produk::where('nama', 'LIKE', '%' . $search . '%')->orderBy('created_at', 'DESC')->paginate(24);
-        } else {
-            $produk = Produk::where('kategori_id', $kategori_id)->where('nama', 'LIKE', '%' . $search . '%')->orderBy('created_at', 'DESC')->paginate(24);
-        }
-
-        request()->flash();
-        return view('search', compact('kategori', 'profil', 'produk', 'namaKategori', 'search'));
-    }
-
-    public function detailProduk($id)
-    {
-        $kategori = Kategori::get();
-        $profil = Profil::first();
-        $produk = Produk::find($id);
-        $data = Produk::get();
-        return view('detail', compact('profil', 'kategori', 'produk', 'data'));
-    }
-
-    public function pengrajin()
-    {
-        $kategori = Kategori::get();
-        $profil = Profil::first();
-        $pengrajin = Toko::get();
-        return view('pengrajin', compact('profil', 'kategori', 'pengrajin'));
-    }
-
-    public function produkPengrajin($id)
-    {
-        $produk = Produk::where('toko_id', $id)->get();
-
-        $kategori = Kategori::get();
-        $profil = Profil::first();
-        $pengrajin = Toko::find($id);
-        return view('pengrajin_produk', compact('profil', 'kategori', 'pengrajin', 'produk'));
     }
 }
