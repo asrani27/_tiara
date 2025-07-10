@@ -159,6 +159,7 @@ Route::group(['middleware' => ['auth']], function () {
         Route::get('perubahancargo/print', [ForemanController::class, 'print_perubahancargo']);
         //-------------------------------//
         Route::get('penunjukan', [ForemanController::class, 'penunjukan']);
+        Route::get('penunjukan/ok/{id}', [ForemanController::class, 'penunjukan_ok']);
         Route::get('penunjukan/verifikasi/{id}', [ForemanController::class, 'penunjukan_verifikasi']);
         Route::post('penunjukan/verifikasi/{id}', [ForemanController::class, 'penunjukan_verifikasi_update']);
 

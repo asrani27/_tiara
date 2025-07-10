@@ -42,6 +42,9 @@
                 <p>
                     Surat Penunjukan
                 </p>
+                @if (notifPenunjukan() > 0)
+                <span class="right badge badge-danger">{{notifPenunjukan()}}</span>
+                @endif
             </a>
         </li>
 
@@ -51,6 +54,9 @@
                 <p>
                     Surat Pengajuan
                 </p>
+                @if (notifPengajuan() > 0)
+                <span class="right badge badge-danger">{{notifPengajuan()}}</span>
+                @endif
             </a>
         </li>
         <li class="nav-header">REPORT</li>

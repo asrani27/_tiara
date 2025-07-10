@@ -2,6 +2,7 @@
 
 use App\Models\Foreman;
 use App\Models\Pasien;
+use App\Models\Pengajuan;
 use App\Models\Penunjukan;
 use App\Models\Upload;
 
@@ -20,7 +21,18 @@ function foreman()
 {
     return Foreman::get();
 }
-
+function notifPengajuan()
+{
+    return Pengajuan::where('status', null)->count();
+}
+function notifPenunjukan()
+{
+    return Penunjukan::where('status', null)->count();
+}
+function notifPenunjukanForeman()
+{
+    return Penunjukan::where('foreman_id', Auth::user()->foreman->id)->where('view', null)->count();
+}
 function penunjukan()
 {
     return Penunjukan::get();

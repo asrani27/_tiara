@@ -241,4 +241,11 @@ class ForemanController extends Controller
         $pdf = Pdf::loadView('laporan.pdf_perubahancargo', compact('data'))->setPaper('a4', 'landscape');;
         return $pdf->stream();
     }
+
+    public function penunjukan_ok($id)
+    {
+        Penunjukan::find($id)->update(['view' => 1]);
+        toastr()->success('telah dilaksanakan');
+        return back();
+    }
 }

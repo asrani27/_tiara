@@ -31,6 +31,7 @@ foreman
                             <th>Foreman Yg di tugaskan</th>
                             <th>File</th>
                             <th>Status</th>
+                            <th></th>
                         </tr>
                     </thead>
                     @php
@@ -48,6 +49,13 @@ foreman
                             <td><a href="/storage/{{$item->file}}" target="_blank"><i class="fa fa-download"></i>
                                     Download</a></td>
                             <td>{{$item->status}}</td>
+                            <td>
+                                @if ($item->view == null)
+                                <a href='/foreman/penunjukan/ok/{{$item->id}}' class="btn btn-xs btn-success"
+                                    style="border-radius:20px"><i class="fa fa-check-circle"></i></a>
+                                @endif
+
+                            </td>
                         </tr>
                         @endforeach
                     </tbody>

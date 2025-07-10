@@ -10,12 +10,14 @@
         </li>
         <li class="nav-header">SURAT</li>
         <li class="nav-item">
-            <a href="/foreman/penunjukan"
-                class="nav-link {{ Request::is('foreman/penunjukan*') ? 'active' : '' }}">
+            <a href="/foreman/penunjukan" class="nav-link {{ Request::is('foreman/penunjukan*') ? 'active' : '' }}">
                 <i class="nav-icon fas fa-envelope-square"></i>
                 <p>
                     Surat Penunjukan
                 </p>
+                @if (notifPenunjukanForeman() > 0)
+                <span class="right badge badge-danger">{{notifPenunjukanForeman()}}</span>
+                @endif
             </a>
         </li>
 
