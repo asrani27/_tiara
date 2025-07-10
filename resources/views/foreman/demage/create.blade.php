@@ -31,6 +31,18 @@ TAMBAH
                                 </div>
                             </div>
                             <div class="form-group row">
+                                <label class="col-sm-2 col-form-label">Nomor Surat</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" name="nomor_surat">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-sm-2 col-form-label">detail</label>
+                                <div class="col-sm-10">
+                                    <textarea id="summernote" name="detail"></textarea>
+                                </div>
+                            </div>
+                            <div class="form-group row">
                                 <label class="col-sm-2 col-form-label">Nama operator</label>
                                 <div class="col-sm-10">
                                     <input type="text" class="form-control" name="nama_operator">
@@ -39,25 +51,19 @@ TAMBAH
                             <div class="form-group row">
                                 <label class="col-sm-2 col-form-label">kronologi</label>
                                 <div class="col-sm-10">
-                                    <input type="text" class="form-control" name="kronologi">
+                                    <textarea id="summernote" name="kronologi"></textarea>
                                 </div>
                             </div>
                             <div class="form-group row">
                                 <label class="col-sm-2 col-form-label">kerusakan</label>
                                 <div class="col-sm-10">
-                                    <input type="text" class="form-control" name="kerusakan">
+                                    <textarea id="summernote" name="kerusakan"></textarea>
                                 </div>
                             </div>
                             <div class="form-group row">
                                 <label class="col-sm-2 col-form-label">bertandatangan</label>
                                 <div class="col-sm-10">
                                     <input type="text" class="form-control" name="bertandatangan">
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <label class="col-sm-2 col-form-label">detail</label>
-                                <div class="col-sm-10">
-                                    <textarea id="summernote" name="detail"></textarea>
                                 </div>
                             </div>
                             <div class="form-group row">

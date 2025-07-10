@@ -9,8 +9,8 @@ foreman
 @section('content')
 <div class="row">
     <div class="col-12">
-        <a href="/foreman/penunjukan/print" class="btn btn-sm bg-gradient-warning"><i class="fas fa-print"></i>
-            Print</a>
+        <!--<a href="/foreman/penunjukan/print" class="btn btn-sm bg-gradient-warning"><i class="fas fa-print"></i>
+            Print</a>-->
         <br /><br />
         <div class="card">
             <div class="card-header">

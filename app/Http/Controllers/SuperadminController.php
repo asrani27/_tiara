@@ -38,6 +38,11 @@ class SuperadminController extends Controller
         toastr()->success('Sukses Di Hapus');
         return back();
     }
+    public function customer_detail($id)
+    {
+        $data = Customer::find($id);
+        return view('superadmin.customer.detail', compact('data'));
+    }
     public function penunjukan()
     {
         $data = Penunjukan::orderBy('id', 'DESC')->paginate(10);

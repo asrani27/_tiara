@@ -4,14 +4,14 @@
 <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
 @endpush
 @section('title')
-superadmin
+ADMIN
 @endsection
 @section('content')
 <div class="row">
     <div class="col-12">
 
-        <a href="/superadmin/pengajuan/create" class="btn btn-sm bg-gradient-purple"><i class="fas fa-plus"></i>
-            Tambah</a>
+        <!--<a href="/superadmin/pengajuan/create" class="btn btn-sm bg-gradient-purple"><i class="fas fa-plus"></i>
+            Tambah</a>-->
         <a href="/superadmin/pengajuan/print" class="btn btn-sm bg-gradient-warning"><i class="fas fa-print"></i>
             Print</a>
         <br /><br />
@@ -49,7 +49,7 @@ superadmin
                             <td>
 
                                 <a href="/superadmin/pengajuan/edit/{{$item->id}}" class="btn btn-xs btn-success"><i
-                                        class="fas fa-edit"></i> edit</a>
+                                        class="fas fa-edit"></i> Verifikasi</a>
 
                                 <a href="/superadmin/pengajuan/delete/{{$item->id}}" class=" btn btn-xs btn-danger"
                                     onclick="return confirm('yakin DI Hapus?');"><i class="fas fa-trash"></i>

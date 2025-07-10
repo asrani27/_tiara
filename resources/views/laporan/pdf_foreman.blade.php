@@ -14,14 +14,17 @@
         <tr>
             <td width="15%">
                 <img src="data:image/jpeg;base64,{{ base64_encode(file_get_contents(public_path('logo/logonew.png'))) }}"
-                    width="100px">
+                    width="150px">
             </td>
             <td style="text-align: center;" width="60%">
 
                 <font size="24px"><b>PT BORNEO PERSADA UTAMA
                     </b></font><br />
 
-                Stevedoring Company & Heary Equipment Rental
+                <font size="20px">Stevedoring Company & Heary Equipment Rental<br /></font>
+                    
+                    Jl. Mulawarman Desa Kaliorang Kec.Kaliorang Kab.Kutai Timur, Prov.Kalimatan Timur<br />
+                    Tepl. +62.21.4303289 - Email: pt.bpukutim@yahoo.com
             </td>
             <td width="15%">
             </td>
@@ -56,7 +59,12 @@
             <td width="60%"></td>
             <td></td>
             <td><br />
-                @if (Auth::user()->roles == 'superadmin')
+                Sangkulirang, {{\Carbon\Carbon::now()->translatedFormat('d F Y')}}<br />
+                PT BORNEO PERSADA UTAMA<br /><br /><br /><br />
+
+                <u>JERRY FIRDAUS</u>
+
+                <!--@if (Auth::user()->roles == 'superadmin')
 
                 {{\Carbon\Carbon::now()->translatedFormat('d F Y')}}<br />
                 Admin<br /><br /><br /><br />
@@ -67,7 +75,7 @@
                 Foreman<br /><br /><br /><br />
 
                 <u>{{Auth::user()->foreman->nama}}</u><br />
-                @endif
+                @endif-->
 
             </td>
         </tr>

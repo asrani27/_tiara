@@ -4,7 +4,7 @@
 <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
 @endpush
 @section('title')
-Foreman
+ADMIN
 @endsection
 @section('content')
 <div class="row">
@@ -52,9 +52,11 @@ Foreman
                                 {{-- <a href="/superadmin/complated/edit/{{$item->id}}"
                                     class="btn btn-xs btn-success"><i class="fas fa-edit"></i> edit</a> --}}
 
-                                <a href="/superadmin/complated/delete/{{$item->id}}" class=" btn btn-xs btn-danger"
+                               <a href="/superadmin/complated/delete/{{$item->id}}" class=" btn btn-xs btn-danger"
                                     onclick="return confirm('yakin Di Hapus?');"><i class="fas fa-trash"></i>
                                     Delete</a>
+                                <a href="/foreman/awalloading/cetak/{{$item->id}}" class="btn btn-xs btn-warning"><i
+                                    class="fas fa-print"></i> cetak </a>
 
                             </td>
                         </tr>

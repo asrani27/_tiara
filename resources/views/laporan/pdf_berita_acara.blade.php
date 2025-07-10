@@ -36,11 +36,30 @@
                 {!!$data->detail!!}
             </td>
         </tr>
+        <tr style="text-align: justify;" width="50%">
+            <td>
+                Nama Operator : {!!$data->nama_operator!!}
+            </td>
+        </tr>
+        <br />
+        <tr  style="text-align: justify;">
+            <td>Kronologis : {!!$data->kronologi!!}</td>
+        </tr>
+        <br />
+        <tr style="text-align: justify;" width="50%">
+            <td>Adapun Kerusakan tersebut meliputi : </td>
+        </tr>
+        <tr>
+            <td>
+            - {!!$data->kerusakan!!}
+            </td>
+        </tr>
     </table>
-
+    <br /><br />
     Demikianlah permohonan kami atas bantuan bapak kearah ini sebelumnya kami ucapkan
     terima kasih
     <table width="100%">
+        <br /><br />
         <tr>
             <td width="40%"></td>
             <td></td>

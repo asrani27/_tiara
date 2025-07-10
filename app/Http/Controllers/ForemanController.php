@@ -198,7 +198,7 @@ class ForemanController extends Controller
         return redirect('foreman/pengajuan');
     }
 
-    //REPORT LOADING
+    //print
     public function print_penunjukan()
     {
         $data = Penunjukan::where('foreman_id', Auth::user()->foreman->id)->get();
@@ -241,11 +241,32 @@ class ForemanController extends Controller
         $pdf = Pdf::loadView('laporan.pdf_perubahancargo', compact('data'))->setPaper('a4', 'landscape');;
         return $pdf->stream();
     }
+<<<<<<< HEAD
 
     public function penunjukan_ok($id)
     {
         Penunjukan::find($id)->update(['view' => 1]);
         toastr()->success('telah dilaksanakan');
         return back();
+=======
+    //CETAK
+    public function awalloading_cetak($id)
+    {
+        $data = AwalLoading::find($id);
+        $pdf = Pdf::loadView('laporan.pdf_cetak_awalloading', compact('data'));
+        return $pdf->stream();
+    }
+    public function complated_cetak($id)
+    {
+        $data = Complated::find($id);
+        $pdf = Pdf::loadView('laporan.pdf_cetak_complated', compact('data'));
+        return $pdf->stream();
+    }
+    public function perubahancargo_cetak($id)
+    {
+        $data = PerubahanCargo::find($id);
+        $pdf = Pdf::loadView('laporan.pdf_cetak_perubahancargo', compact('data'));
+        return $pdf->stream();
+>>>>>>> 93c5d63 (f)
     }
 }

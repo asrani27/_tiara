@@ -12,8 +12,8 @@ Foreman
 
         <a href="/foreman/pengajuan/create" class="btn btn-sm bg-gradient-purple"><i class="fas fa-plus"></i>
             Tambah</a>
-        <a href="/foreman/pengajuan/print" class="btn btn-sm bg-gradient-warning"><i class="fas fa-print"></i>
-            Print</a>
+        <!--<a href="/foreman/pengajuan/print" class="btn btn-sm bg-gradient-warning"><i class="fas fa-print"></i>
+            Print</a>-->
         <br /><br />
         <div class="card">
             <div class="card-header">
@@ -52,6 +52,8 @@ Foreman
                                 <a href="/foreman/pengajuan/delete/{{$item->id}}" class=" btn btn-xs btn-danger"
                                     onclick="return confirm('yakin DI Hapus?');"><i class="fas fa-trash"></i>
                                     Delete</a>
+                                <a href="/superadmin/pengajuan/cetak/{{$item->id}}" class="btn btn-xs btn-warning"><i
+                                    class="fas fa-print"></i> cetak </a>
 
                             </td>
                         </tr>

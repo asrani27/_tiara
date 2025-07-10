@@ -4,7 +4,7 @@
 <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
 @endpush
 @section('title')
-Foreman
+ADMIN
 @endsection
 @section('content')
 <div class="row">
@@ -26,7 +26,6 @@ Foreman
                             <th>No</th>
                             <th>Foreman</th>
                             <th>Hari/Tanggal</th>
-                            <th>No Palksa</th>
                             <th>Waktu Kerja</th>
                             <th>Perkataan</th>
                             <th>Aksi</th>
@@ -41,7 +40,6 @@ Foreman
                             <td>{{1 + $key}}</td>
                             <td>{{$item->foreman == null ? null : $item->foreman->nama}}</td>
                             <td>{{\Carbon\Carbon::parse($item->tanggal)->format('d-m-Y')}}</td>
-                            <td>{{$item->nomor}}</td>
                             <td>{{$item->waktu}}</td>
                             <td>{{$item->perkataan}}</td>
 

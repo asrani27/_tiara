@@ -85,38 +85,56 @@ TAMBAH
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <label class="col-sm-2 col-form-label">nomor_lhv</label>
+                                <label class="col-sm-2 col-form-label">Cargo</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" name="cargo">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-sm-2 col-form-label">Muatan</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" name="muatan">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-sm-2 col-form-label">Tanggal</label>
+                                <div class="col-sm-10">
+                                    <input type="date" class="form-control" name="tanggal_muatan">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-sm-2 col-form-label">nomor lhv</label>
                                 <div class="col-sm-10">
                                     <input type="text" class="form-control" name="nomor_lhv">
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <label class="col-sm-2 col-form-label">nomor_siupal</label>
+                                <label class="col-sm-2 col-form-label">nomor siupal</label>
                                 <div class="col-sm-10">
                                     <input type="text" class="form-control" name="nomor_siupal">
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <label class="col-sm-2 col-form-label">jasa_kapal</label>
+                                <label class="col-sm-2 col-form-label">jasa kapal</label>
                                 <div class="col-sm-10">
                                     <input type="text" class="form-control" name="jasa_kapal">
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <label class="col-sm-2 col-form-label">jasa_barang</label>
+                                <label class="col-sm-2 col-form-label">jasa barang</label>
                                 <div class="col-sm-10">
                                     <input type="text" class="form-control" name="jasa_barang">
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <label class="col-sm-2 col-form-label">jasa_labuh</label>
+                                <label class="col-sm-2 col-form-label">jasa labuh</label>
                                 <div class="col-sm-10">
                                     <input type="text" class="form-control" name="jasa_labuh">
                                 </div>
                             </div>
 
                             <div class="form-group row">
-                                <label class="col-sm-2 col-form-label">jasa_pbm</label>
+                                <label class="col-sm-2 col-form-label">jasa pbm</label>
                                 <div class="col-sm-10">
                                     <input type="text" class="form-control" name="jasa_pbm">
                                 </div>

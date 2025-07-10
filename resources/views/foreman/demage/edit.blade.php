@@ -31,6 +31,19 @@ EDIT
                                 </div>
                             </div>
                             <div class="form-group row">
+                                <label class="col-sm-2 col-form-label">Nomor Surat</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" name="nomor_surat"
+                                        value="{{$data->nomor_surat}}">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-sm-2 col-form-label">detail</label>
+                                <div class="col-sm-10">
+                                    <textarea id="summernote" name="detail">{!!$data->detail!!}</textarea>
+                                </div>
+                            </div>
+                            <div class="form-group row">
                                 <label class="col-sm-2 col-form-label">Nama operator</label>
                                 <div class="col-sm-10">
                                     <input type="text" class="form-control" name="nama_operator"
@@ -40,15 +53,13 @@ EDIT
                             <div class="form-group row">
                                 <label class="col-sm-2 col-form-label">kronologi</label>
                                 <div class="col-sm-10">
-                                    <input type="text" class="form-control" name="kronologi"
-                                        value="{{$data->kronologi}}">
+                                    <textarea id="summernote" name="kronologi">{!!$data->kronologi!!}</textarea>
                                 </div>
                             </div>
                             <div class="form-group row">
                                 <label class="col-sm-2 col-form-label">kerusakan</label>
                                 <div class="col-sm-10">
-                                    <input type="text" class="form-control" name="kerusakan"
-                                        value="{{$data->kerusakan}}">
+                                    <textarea id="summernote" name="kerusakan">{!!$data->kerusakan!!}</textarea>
                                 </div>
                             </div>
                             <div class="form-group row">
@@ -56,12 +67,6 @@ EDIT
                                 <div class="col-sm-10">
                                     <input type="text" class="form-control" name="bertandatangan"
                                         value="{{$data->bertandatangan}}">
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <label class="col-sm-2 col-form-label">detail</label>
-                                <div class="col-sm-10">
-                                    <textarea id="summernote" name="detail">{!!$data->detail!!}</textarea>
                                 </div>
                             </div>
 

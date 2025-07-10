@@ -12,11 +12,8 @@ Foreman
 
         <a href="/foreman/perubahancargo/create" class="btn btn-sm bg-gradient-purple"><i class="fas fa-plus"></i>
             Tambah</a>
-<<<<<<< HEAD
-        <a href="/foreman/perubahancargo/print" class="btn btn-sm bg-gradient-warning"><i class="fas fa-print"></i>
-            Print</a>
-=======
->>>>>>> 90ef2df (f)
+        <!--<a href="/foreman/perubahancargo/print" class="btn btn-sm bg-gradient-warning"><i class="fas fa-print"></i>
+            Print</a>-->
         <br /><br />
         <div class="card">
             <div class="card-header">
@@ -25,13 +22,8 @@ Foreman
                 </div>
             </div>
             <!-- /.card-header -->
-<<<<<<< HEAD
             <div class="card-body table-responsive">
                 <table id="example1" class="table table-striped table-valign-middle">
-=======
-            <div class="card-body table-responsive p-0">
-                <table class="table table-striped table-valign-middle">
->>>>>>> 90ef2df (f)
                     <thead>
                         <tr>
                             <th>No</th>
@@ -49,11 +41,7 @@ Foreman
                         @foreach ($data as $key => $item)
                         <tr style="font-size:12px; font-family:Arial, Helvetica, sans-serif">
                             <td>{{$data->firstItem() + $key}}</td>
-<<<<<<< HEAD
                             <td>{{$item->memuat_oleh}}</td>
-=======
-                            <td>{{$item->memuat_olah}}</td>
->>>>>>> 90ef2df (f)
                             <td>{{$item->agent_diataskapal}}</td>
                             <td>{{$item->rencana_penyimpanan}}</td>
                             <td>{{$item->cargo_diataskapal}}</td>
@@ -64,6 +52,8 @@ Foreman
                                 <a href="/foreman/perubahancargo/delete/{{$item->id}}" class=" btn btn-xs btn-danger"
                                     onclick="return confirm('yakin Di Hapus?');"><i class="fas fa-trash"></i>
                                     Delete</a>
+                                <a href="/foreman/perubahancargo/cetak/{{$item->id}}" class="btn btn-xs btn-warning"><i
+                                    class="fas fa-print"></i> cetak </a>
 
                             </td>
                         </tr>

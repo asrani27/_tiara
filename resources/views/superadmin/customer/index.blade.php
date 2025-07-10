@@ -27,10 +27,12 @@ ADMIN
                 <table class="table table-striped table-valign-middle">
                     <thead>
                         <tr>
-                            <th>#</th>
+                            <th>No</th>
                             <th>Foto</th>
                             <th>Nama Cutomer</th>
                             <th>Username</th>
+                            <th>Instansi</th>
+                            <th>Alamat</th>
                             <th>Aksi</th>
                         </tr>
                     </thead>
@@ -53,6 +55,8 @@ ADMIN
                             </td>
                             <td>{{$item->nama}}</td>
                             <td>{{$item->user == null ? '' : $item->user->username}}</td>
+                            <td>{{$item->instansi}}</td>
+                            <td>{{$item->alamat}}</td>
                             <td>
 
                                 {{-- <a href="/superadmin/customer/{{$item->id}}/edit" class="btn btn-xs btn-success"><i
@@ -60,6 +64,8 @@ ADMIN
                                 <a href="/superadmin/customer/{{$item->id}}/delete" class="btn btn-xs btn-danger"
                                     onclick="return confirm('yakin DI Hapus?');"><i class="fas fa-trash"></i>
                                     delete</a>
+                                <a href="/superadmin/customer/{{$item->id}}/detail" class="btn btn-xs btn-success"><i
+                                        class="fas fa-eye"></i> Detail</a>
 
                                 @if ($item->user == null)
                                 <a href="/superadmin/customer/{{$item->id}}/akun" class="btn btn-xs btn-warning"><i

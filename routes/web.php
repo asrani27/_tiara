@@ -17,6 +17,7 @@ use App\Http\Controllers\ComplatedController;
 use App\Http\Controllers\SuperadminController;
 use App\Http\Controllers\AwalLoadingController;
 use App\Http\Controllers\PerubahanCargoController;
+use App\Models\Foreman;
 
 Route::get('/', [HomeController::class, 'welcome']);
 Route::get('/tentangkami', [HomeController::class, 'tentang']);
@@ -65,6 +66,7 @@ Route::group(['middleware' => ['auth']], function () {
         Route::get('/customer/print', [SuperadminController::class, 'customer_print']);
         Route::get('/customer/{id}/reset', [SuperadminController::class, 'customer_reset']);
         Route::get('/customer/{id}/delete', [SuperadminController::class, 'customer_delete']);
+        Route::get('customer/{id}.detail', [SuperadminController::class, 'customer_detail']);
 
         Route::get('awalloading', [SuperadminController::class, 'awalloading']);
         Route::get('awalloading/print', [SuperadminController::class, 'awalloading_print']);
@@ -130,14 +132,18 @@ Route::group(['middleware' => ['auth']], function () {
 Route::group(['middleware' => ['auth']], function () {
     Route::prefix('foreman')->group(function () {
 
-        //cetak
+        //print
         Route::get('penunjukan/print', [ForemanController::class, 'print_penunjukan']);
         Route::get('pengajuan/print', [ForemanController::class, 'print_pengajuan']);
         Route::get('awalloading/print', [ForemanController::class, 'print_awalloading']);
-        Route::get('report/print', [ForemanController::class, 'print_report']);
+        Route::get('loading/print', [ForemanController::class, 'print_report']);
         Route::get('complated/print', [ForemanController::class, 'print_complated']);
         Route::get('demage/print', [ForemanController::class, 'print_demage']);
         Route::get('perubahancargo/print', [ForemanController::class, 'print_perubahancargo']);
+        //cetak
+        Route::get('awalloading/cetak/{id}', [ForemanController::class, 'awalloading_cetak']);
+        Route::get('complated/cetak/{id}', [ForemanController::class, 'complated_cetak']);
+        Route::get('perubahancargo/cetak/{id}', [ForemanController::class, 'perubahancargo_cetak']);
         //-------------------------------//
         Route::get('penunjukan', [ForemanController::class, 'penunjukan']);
         Route::get('penunjukan/ok/{id}', [ForemanController::class, 'penunjukan_ok']);

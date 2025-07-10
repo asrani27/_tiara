@@ -14,28 +14,30 @@
         <tr>
             <td width="15%">
                 <img src="data:image/jpeg;base64,{{ base64_encode(file_get_contents(public_path('logo/logonew.png'))) }}"
-                    width="100px">
+                    width="150px">
             </td>
             <td style="text-align: center;" width="60%">
 
                 <font size="24px"><b>PT BORNEO PERSADA UTAMA
                     </b></font><br />
 
-                Stevedoring Company & Heary Equipment Rental
+                <font size="20px">Stevedoring Company & Heary Equipment Rental<br /></font>
+                    
+                    Jl. Mulawarman Desa Kaliorang Kec.Kaliorang Kab.Kutai Timur, Prov.Kalimatan Timur<br />
+                    Tepl. +62.21.4303289 - Email: pt.bpukutim@yahoo.com
             </td>
             <td width="15%">
             </td>
         </tr>
     </table>
     <hr>
-    <h3 style="text-align: center">LAPORAN DATA SURAT PENUNJUKAN
+    <h3 style="text-align: center">LAPORAN DATA REPORT COMPLATED
     </h3>
     <br />
     <table width="100%" border="1" cellpadding="5" cellspacing="0">
         <tr>
             <th>No</th>
             <th>Hari/Tanggal</th>
-            <th>No Palksa</th>
             <th>Waktu Kerja</th>
             <th>Perkataan</th>
         </tr>
@@ -47,7 +49,6 @@
         <tr>
             <td>{{$key + 1}}</td>
             <td>{{\Carbon\Carbon::parse($item->tanggal)->format('d-m-Y')}}</td>
-            <td>{{$item->nomor}}</td>
             <td>{{$item->waktu}}</td>
             <td>{{$item->perkataan}}</td>
         </tr>
@@ -59,18 +60,10 @@
             <td width="60%"></td>
             <td></td>
             <td><br />
-                @if (Auth::user()->roles == 'superadmin')
+                Sangkulirang, {{\Carbon\Carbon::now()->translatedFormat('d F Y')}}<br />
+                PT BORNEO PERSADA UTAMA<br /><br /><br /><br />
 
-                {{\Carbon\Carbon::now()->translatedFormat('d F Y')}}<br />
-                Admin<br /><br /><br /><br />
-
-                <u>{{Auth::user()->name}}</u><br />
-                @else
-                {{\Carbon\Carbon::now()->translatedFormat('d F Y')}}<br />
-                Foreman<br /><br /><br /><br />
-
-                <u>{{Auth::user()->foreman->nama}}</u><br />
-                @endif
+                <u>JERRY FIRDAUS</u>
 
             </td>
         </tr>

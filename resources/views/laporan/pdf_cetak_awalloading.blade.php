@@ -28,107 +28,74 @@
         </tr>
     </table>
     <hr>
-
-
     <br />
-    <table width="100%" cellpadding="5" cellspacing="0">
-
+    <table width="100%">
         <tr>
-            <td width="10%">No</td>
-            <td>: {{$data->nomor}}</td>
+            <td style="text-align: center;" width="60%">
 
-            <td>Kepada Yth.</td>
-        
-        <tr>
-            <td>Lampiran</td>
-            <td>: {{$data->lampiran}}</td>
+                <font size="20px"><b><u>LAPORAN AWAL LOADING
+                    </b></font></u><br />
 
-            <td>{{$data->alamat_penerima}}</td>
-        </tr>
-        <tr>
-            <td>Perihal</td>
-            <td>: {{$data->perihal}}</td>
-
-            <td>Di-<br />
-            Samarinda</td>
-
-        </tr>
-    </table>
-    <br /><br />
-    <table>
-        <tr>
-            <td> Dengan Hormat, <br />
-                Sesuai dengan peraturan menteri perhubungan nomor PM 152 tahun 2016 tentang
-                penyelenggaraan dan pengusahaan bongkar muat dari dan ke kapal. Bersama ini
-                kami dari PT Borneo Persada Utama Menyampaikan RKBM barang di pelabuhan / jetty sebagai berikut :
+                Tanggal :  {{\Carbon\Carbon::now()->translatedFormat('d F Y')}}<br /><br />
             </td>
         </tr>
     </table>
-
-    <table style="padding-left:120px">
+    <table>
+        <tr>
+            <td>Yang Terhormat Bapak/Ibu</td>
+        </tr>
+        <br />
+        <tr>
+            <td>Kami dengan senang hati memberitahukan laporan awal loading kapal kepada kapal yang bertanggung jawab di Pelabuhan Muat Kaliorang, 
+                sebagaimana tercantum di bawah ini:</td>
+        </tr>
+    </table>
+    <br />
+    <table style="padding-left:50px">
         <tr>
             <td>Nama Kapal</td>
             <td>: {{$data->nama_kapal}}</td>
         </tr>
         <tr>
-            <td>Bendera</td>
-            <td>: {{$data->bendera}}</td>
+            <td>Pelabuhan Muatan</td>
+            <td>: {{$data->pelabuhan_pemuatan}}</td>
         </tr>
         <tr>
-            <td>Isi Kotor</td>
-            <td>: {{$data->isi_kotor}}</td>
+            <td>Pelabuhan Pembuangan</td>
+            <td>: {{$data->pelabuhan_pembuangan}}</td>
         </tr>
         <tr>
-            <td>Dari</td>
-            <td>: {{$data->dari}}</td>
+            <td>Deskripsi Barang</td>
+            <td>: {{$data->deskripsi_barang}}</td>
         </tr>
         <tr>
-            <td>Tujuan</td>
-            <td>: {{$data->tujuan}}</td>
+            <td>Jumlah Cargo</td>
+            <td>: {{$data->jumlah_cargo}}</td>
         </tr>
         <tr>
-            <td>Cargo</td>
-            <td>: {{$data->agen_kapal}}</td>
+            <td>Waktu Dihidupkan</td>
+            <td>: {{\Carbon\Carbon::parse($data->waktu_dihidupkan)->format('d M Y H:i:s')}}</td>
         </tr>
         <tr>
-            <td>Muatan</td>
-            <td>: {{$data->muatan}}</td>
+            <td>Mulai Memuat</td>
+            <td>: {{\Carbon\Carbon::parse($data->mulai_memuat)->format('d M Y H:i:s')}}</td>
         </tr>
         <tr>
-            <td>Tanggal</td>
-            <td>: {{\Carbon\Carbon::parse($data->tanggal)->format('d M Y')}}</td>
+            <td>Selesai Memuat</td>
+            <td>: {{\Carbon\Carbon::parse($data->selesai_memuat)->format('d M Y H:i:s')}}</td>
         </tr>
-        
-    </table>
-
-    Demikianlah permohonan kami atas bantuan bapak kearah ini sebelumnya kami ucapkan
-    terima kasih
-    <table width="100%">
         <tr>
-            <td width="40%"></td>
-            <td></td>
-            <td><br />
-                Hormat Kami <br />
-                PT. BORNEO PERSADA UTAMA<br />
-                Pimpinan<br /><br /><br /><br />
-
-
-
-                <u>M.JERRY FIRDAUS</u><br /><br />
-            </td>
+            <td>Draft Survey Akhir </td>
+            <td>: {{$data->survey_akhir}}</td>
         </tr>
     </table>
-    <table>
-        <tr>
-            <td> Tembusan <br />
-                1. Arsip <br />
-                2. Agent 
-            </td>
-            <td width="15%">
-            </td>
-        </tr>
-        <br />
-    </table>
+    <br /> <br />
+    <br /> <br />
+    <br /> <br />
+    <br /> <br />
+    <br /> <br />
+    <br /> <br />
+    <br /> <br />
      <hr>
     <table>
         <tr>
@@ -158,5 +125,4 @@
     </table>
     <hr>
 </body>
-
 </html>

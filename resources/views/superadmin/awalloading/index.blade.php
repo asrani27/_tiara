@@ -4,7 +4,7 @@
 <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
 @endpush
 @section('title')
-Foreman
+ADMIN
 @endsection
 @section('content')
 <div class="row">
@@ -14,7 +14,7 @@ Foreman
         <br /><br />
         <div class="card">
             <div class="card-header">
-                <h3 class="card-title">Data Report Loading</h3>
+                <h3 class="card-title">Data Report Awal Loading</h3>
                 <div class="card-tools">
                 </div>
             </div>
@@ -51,6 +51,8 @@ Foreman
                                 <a href="/superadmin/awalloading/delete/{{$item->id}}" class=" btn btn-xs btn-danger"
                                     onclick="return confirm('yakin Di Hapus?');"><i class="fas fa-trash"></i>
                                     Delete</a>
+                                <a href="/foreman/awalloading/cetak/{{$item->id}}" class="btn btn-xs btn-warning"><i
+                                    class="fas fa-print"></i> cetak </a>
 
                             </td>
                         </tr>

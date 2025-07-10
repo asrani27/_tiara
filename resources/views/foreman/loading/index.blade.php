@@ -28,7 +28,6 @@ Foreman
                         <tr>
                             <th>No</th>
                             <th>Hari/Tanggal</th>
-                            <th>No Palksa</th>
                             <th>Waktu Kerja</th>
                             <th>Perkataan</th>
                             <th>Aksi</th>
@@ -42,7 +41,6 @@ Foreman
                         <tr style="font-size:12px; font-family:Arial, Helvetica, sans-serif">
                             <td>{{$data->firstItem() + $key}}</td>
                             <td>{{\Carbon\Carbon::parse($item->tanggal)->format('d-m-Y')}}</td>
-                            <td>{{$item->nomor}}</td>
                             <td>{{$item->waktu}}</td>
                             <td>{{$item->perkataan}}</td>
 

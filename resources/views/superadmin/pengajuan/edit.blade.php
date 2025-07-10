@@ -23,19 +23,10 @@ EDIT
                     <div class="card">
                         <div class="card-body">
                             <div class="form-group row">
-                                <label class="col-sm-2 col-form-label">Berdasarkan surat Customer</label>
-                                <div class="col-sm-10">
-                                    <select class="form-control" name="surat_penunjukan_id">
-                                        @foreach (penunjukan() as $item)
-                                        <option value="{{$item->id}}" {{$data->surat_penunjukan_id == $item->id ?
-                                            'selected':''}}>{{\carbon\carbon::parse($item->tanggal)->format('d
-                                            M Y')}} - {{$item->user->name}}
-                                        </option>
-                                        @endforeach
-                                    </select>
-                                </div>
+                                <label class="col-sm-2 col-form-label">Berdasarkan surat Foreman</label>
+                                
                             </div>
-                            <div class="form-group row">
+                            <!--<div class="form-group row">
                                 <label class="col-sm-2 col-form-label">Tanggal</label>
                                 <div class="col-sm-10">
                                     <input type="date" class="form-control" name="tanggal" value="{{$data->tanggal}}"
@@ -99,49 +90,7 @@ EDIT
                                 <div class="col-sm-10">
                                     <input type="text" class="form-control" name="tujuan" value="{{$data->tujuan}}">
                                 </div>
-                            </div>
-                            <div class="form-group row">
-                                <label class="col-sm-2 col-form-label">nomor_lhv</label>
-                                <div class="col-sm-10">
-                                    <input type="text" class="form-control" name="nomor_lhv"
-                                        value="{{$data->nomor_lhv}}">
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <label class="col-sm-2 col-form-label">nomor_siupal</label>
-                                <div class="col-sm-10">
-                                    <input type="text" class="form-control" name="nomor_siupal"
-                                        value="{{$data->nomor_siupal}}">
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <label class="col-sm-2 col-form-label">jasa_kapal</label>
-                                <div class="col-sm-10">
-                                    <input type="text" class="form-control" name="jasa_kapal"
-                                        value="{{$data->jasa_kapal}}">
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <label class="col-sm-2 col-form-label">jasa_barang</label>
-                                <div class="col-sm-10">
-                                    <input type="text" class="form-control" name="jasa_barang"
-                                        value="{{$data->jasa_barang}}">
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <label class="col-sm-2 col-form-label">jasa_labuh</label>
-                                <div class="col-sm-10">
-                                    <input type="text" class="form-control" name="jasa_labuh"
-                                        value="{{$data->jasa_labuh}}">
-                                </div>
-                            </div>
-
-                            <div class="form-group row">
-                                <label class="col-sm-2 col-form-label">jasa_pbm</label>
-                                <div class="col-sm-10">
-                                    <input type="text" class="form-control" name="jasa_pbm" value="{{$data->jasa_pbm}}">
-                                </div>
-                            </div>
+                            </div>-->
                             <div class="form-group row">
                                 <label class="col-sm-2 col-form-label">Status</label>
                                 <div class="col-sm-10">
