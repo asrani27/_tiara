@@ -12,8 +12,11 @@ Foreman
 
         <a href="/foreman/demage/create" class="btn btn-sm bg-gradient-purple"><i class="fas fa-plus"></i>
             Tambah</a>
+<<<<<<< HEAD
         <a href="/foreman/demage/print" class="btn btn-sm bg-gradient-warning"><i class="fas fa-print"></i>
             Print</a>
+=======
+>>>>>>> 90ef2df (f)
         <br /><br />
         <div class="card">
             <div class="card-header">
@@ -22,8 +25,13 @@ Foreman
                 </div>
             </div>
             <!-- /.card-header -->
+<<<<<<< HEAD
             <div class="card-body table-responsive">
                 <table id="example1" class="table table-striped table-valign-middle">
+=======
+            <div class="card-body table-responsive p-0">
+                <table class="table table-striped table-valign-middle">
+>>>>>>> 90ef2df (f)
                     <thead>
                         <tr>
                             <th>No</th>
@@ -50,8 +58,11 @@ Foreman
                                 <a href="/foreman/demage/delete/{{$item->id}}" class=" btn btn-xs btn-danger"
                                     onclick="return confirm('yakin Di Hapus?');"><i class="fas fa-trash"></i>
                                     Delete</a>
+<<<<<<< HEAD
                                 <a href="/foreman/demage/cetak/{{$item->id}}" class="btn btn-xs btn-warning"><i
                                         class="fas fa-print"></i> berita acara</a>
+=======
+>>>>>>> 90ef2df (f)
 
                             </td>
                         </tr>

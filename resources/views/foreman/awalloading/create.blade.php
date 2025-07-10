@@ -86,8 +86,11 @@ TAMBAH
                                     <input type="text" class="form-control" name="survei_akhir">
                                 </div>
                             </div>
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 90ef2df (f)
                             <div class="form-group row">
                                 <label class="col-sm-2 col-form-label"></label>
                                 <div class="col-sm-10">
