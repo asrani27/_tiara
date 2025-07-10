@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Customer;
 use App\Models\Foreman;
 use App\Models\Pasien;
 use App\Models\Pengajuan;
@@ -20,6 +21,10 @@ function listSyarat($persyaratan_id)
 function foreman()
 {
     return Foreman::get();
+}
+function notifCustomer()
+{
+    return Customer::where('view', null)->count();
 }
 function notifPengajuan()
 {

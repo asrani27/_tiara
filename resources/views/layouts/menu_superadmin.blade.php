@@ -24,6 +24,9 @@
                 <p>
                     Customer
                 </p>
+                @if (notifCustomer() > 0)
+                <span class="right badge badge-danger">{{notifCustomer()}}</span>
+                @endif
             </a>
         </li>
         <li class="nav-item">

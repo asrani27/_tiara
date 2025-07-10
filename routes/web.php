@@ -61,6 +61,7 @@ Route::group(['middleware' => ['auth']], function () {
         Route::post('/report/edit/{id}', [ReportController::class, 'report_update']);
 
         Route::get('/customer', [SuperadminController::class, 'customer']);
+        Route::get('/customer/ok/{id}', [SuperadminController::class, 'customer_ok']);
         Route::get('/customer/print', [SuperadminController::class, 'customer_print']);
         Route::get('/customer/{id}/reset', [SuperadminController::class, 'customer_reset']);
         Route::get('/customer/{id}/delete', [SuperadminController::class, 'customer_delete']);

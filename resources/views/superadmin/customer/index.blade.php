@@ -70,6 +70,10 @@ ADMIN
                                         class="fas fa-lock"></i> Reset Password</a>
 
                                 @endif
+                                @if ($item->view == null)
+                                <a href='/superadmin/customer/ok/{{$item->id}}' class="btn btn-xs btn-success"
+                                    style="border-radius:20px"><i class="fa fa-check-circle"></i></a>
+                                @endif
 
                             </td>
                         </tr>

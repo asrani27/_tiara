@@ -214,4 +214,10 @@ class SuperadminController extends Controller
         $pdf = Pdf::loadView('laporan.pdf_surat_pengajuan', compact('data'));
         return $pdf->stream();
     }
+    public function customer_ok($id)
+    {
+        Customer::find($id)->update(['view' => 1]);
+        toastr()->success('telah diverified');
+        return back();
+    }
 }
