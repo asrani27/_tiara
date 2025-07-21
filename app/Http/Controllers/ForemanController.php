@@ -219,8 +219,11 @@ class ForemanController extends Controller
     }
     public function print_report()
     {
-        $data = Report::where('foreman_id', Auth::user()->foreman->id)->get();
-        $pdf = Pdf::loadView('laporan.pdf_report', compact('data'))->setPaper('a4', 'landscape');;
+
+        $awal = AwalLoading::find(request()->get('awalloading_id'));
+        $data = $awal->report;
+
+        $pdf = Pdf::loadView('laporan.pdf_report', compact('data', 'awal'))->setPaper('a4', 'landscape');;
         return $pdf->stream();
     }
     public function print_complated()

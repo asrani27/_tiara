@@ -14,4 +14,8 @@ class Report extends Model
     {
         return $this->belongsTo(Foreman::class);
     }
+    public function awalloading()
+    {
+        return $this->belongsTo(AwalLoading::class);
+    }
 }

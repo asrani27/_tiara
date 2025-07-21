@@ -1,11 +1,13 @@
 <?php
 
-use App\Models\Customer;
-use App\Models\Foreman;
 use App\Models\Pasien;
+use App\Models\Upload;
+use App\Models\Foreman;
+use App\Models\Customer;
 use App\Models\Pengajuan;
 use App\Models\Penunjukan;
-use App\Models\Upload;
+use App\Models\AwalLoading;
+use Illuminate\Support\Facades\Auth;
 
 function listUpload($pegawai_id, $persyaratan_id)
 {
@@ -21,6 +23,10 @@ function listSyarat($persyaratan_id)
 function foreman()
 {
     return Foreman::get();
+}
+function awalloading()
+{
+    return AwalLoading::where('foreman_id', Auth::user()->foreman->id)->get();
 }
 function notifCustomer()
 {

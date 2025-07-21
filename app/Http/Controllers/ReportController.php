@@ -11,7 +11,8 @@ class ReportController extends Controller
     public function loading()
     {
         $data = Report::where('foreman_id', Auth::user()->foreman->id)->orderBy('id', 'DESC')->paginate(10);
-        return view('foreman.loading.index', compact('data'));
+        $id = null;
+        return view('foreman.loading.index', compact('data', 'id'));
     }
 
     public function loading_create()
@@ -32,13 +33,14 @@ class ReportController extends Controller
         $param = $req->all();
         $param['foreman_id'] = Auth::user()->foreman->id;
         Report::find($id)->update($param);
-        toastr()->success('berhasil Di simpan');
+    toastr()->success('berhasil Di update');
         return redirect('foreman/loading');
     }
     public function loading_edit($id)
     {
-        $data = Report::find($id);
-        return view('foreman.loading.edit', compact('data'));
+        $edit = Report::find($id);
+        $data = Report::where('foreman_id', Auth::user()->foreman->id)->orderBy('id', 'DESC')->paginate(10);
+        return view('foreman.loading.index', compact('data', 'id', 'edit'));
     }
     public function loading_delete($id)
     {
