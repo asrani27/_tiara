@@ -26,64 +26,73 @@ EDIT
                             <div class="form-group row">
                                 <label class="col-sm-2 col-form-label">Tanggal</label>
                                 <div class="col-sm-10">
-                                    <input type="date" class="form-control" name="tanggal" value="{{$data->tanggal}}"
-                                        required>
+                                    <input type="date" class="form-control" name="tanggal" 
+                                    value="{{$data->tanggal}}" required>
                                 </div>
                             </div>
                             <div class="form-group row">
                                 <label class="col-sm-2 col-form-label">nomor</label>
                                 <div class="col-sm-10">
-                                    <input type="text" class="form-control" name="nomor" value="{{$data->nomor}}">
+                                    <input type="text" class="form-control" name="nomor" 
+                                    value="{{$data->nomor}}">
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <label class="col-sm-2 col-form-label">lampiran</label>
+                                <label class="col-sm-2 col-form-label">Lampiran</label>
                                 <div class="col-sm-10">
-                                    <input type="text" class="form-control" name="lampiran" value="{{$data->lampiran}}">
+                                    <input type="text" class="form-control" name="lampiran" 
+                                    value="{{$data->lampiran}}">
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <label class="col-sm-2 col-form-label">alamat_penerima</label>
+                                <label class="col-sm-2 col-form-label">Perihal</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" name="perihal" 
+                                    value="{{$data->perihal}}">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-sm-2 col-form-label">Alamat Penerima</label>
                                 <div class="col-sm-10">
                                     <input type="text" class="form-control" name="alamat_penerima"
                                         value="{{$data->alamat_penerima}}">
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <label class="col-sm-2 col-form-label">nama_kapal</label>
+                                <label class="col-sm-2 col-form-label">Nama Kapal</label>
                                 <div class="col-sm-10">
                                     <input type="text" class="form-control" name="nama_kapal"
                                         value="{{$data->nama_kapal}}">
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <label class="col-sm-2 col-form-label">bendera</label>
+                                <label class="col-sm-2 col-form-label">Bendera</label>
                                 <div class="col-sm-10">
                                     <input type="text" class="form-control" name="bendera" value="{{$data->bendera}}">
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <label class="col-sm-2 col-form-label">isi_kotor</label>
+                                <label class="col-sm-2 col-form-label">Isi Kotor</label>
                                 <div class="col-sm-10">
                                     <input type="text" class="form-control" name="isi_kotor"
                                         value="{{$data->isi_kotor}}">
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <label class="col-sm-2 col-form-label">agen_kapal</label>
+                                <label class="col-sm-2 col-form-label">Agen Kapal</label>
                                 <div class="col-sm-10">
                                     <input type="text" class="form-control" name="agen_kapal"
                                         value="{{$data->agen_kapal}}">
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <label class="col-sm-2 col-form-label">dari</label>
+                                <label class="col-sm-2 col-form-label">Dari</label>
                                 <div class="col-sm-10">
                                     <input type="text" class="form-control" name="dari" value="{{$data->dari}}">
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <label class="col-sm-2 col-form-label">tujuan</label>
+                                <label class="col-sm-2 col-form-label">Tujuan</label>
                                 <div class="col-sm-10">
                                     <input type="text" class="form-control" name="tujuan" value="{{$data->tujuan}}">
                                 </div>
@@ -101,51 +110,9 @@ EDIT
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <label class="col-sm-2 col-form-label">Tanggal</label>
+                                <label class="col-sm-2 col-form-label">Tanggal Muatan</label>
                                 <div class="col-sm-10">
                                     <input type="date" class="form-control" name="tanggal_muatan" value="{{$data->tanggal_muatan}}">
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <label class="col-sm-2 col-form-label">nomor lhv</label>
-                                <div class="col-sm-10">
-                                    <input type="text" class="form-control" name="nomor_lhv"
-                                        value="{{$data->nomor_lhv}}">
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <label class="col-sm-2 col-form-label">nomor siupal</label>
-                                <div class="col-sm-10">
-                                    <input type="text" class="form-control" name="nomor_siupal"
-                                        value="{{$data->nomor_siupal}}">
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <label class="col-sm-2 col-form-label">jasa kapal</label>
-                                <div class="col-sm-10">
-                                    <input type="text" class="form-control" name="jasa_kapal"
-                                        value="{{$data->jasa_kapal}}">
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <label class="col-sm-2 col-form-label">jasa barang</label>
-                                <div class="col-sm-10">
-                                    <input type="text" class="form-control" name="jasa_barang"
-                                        value="{{$data->jasa_barang}}">
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <label class="col-sm-2 col-form-label">jasa labuh</label>
-                                <div class="col-sm-10">
-                                    <input type="text" class="form-control" name="jasa_labuh"
-                                        value="{{$data->jasa_labuh}}">
-                                </div>
-                            </div>
-
-                            <div class="form-group row">
-                                <label class="col-sm-2 col-form-label">jasa pbm</label>
-                                <div class="col-sm-10">
-                                    <input type="text" class="form-control" name="jasa_pbm" value="{{$data->jasa_pbm}}">
                                 </div>
                             </div>
                             <div class="form-group row">

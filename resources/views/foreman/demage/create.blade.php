@@ -51,13 +51,13 @@ TAMBAH
                             <div class="form-group row">
                                 <label class="col-sm-2 col-form-label">kronologi</label>
                                 <div class="col-sm-10">
-                                    <textarea id="summernote" name="kronologi"></textarea>
+                                    <textarea id="summernote2" name="kronologi"></textarea>
                                 </div>
                             </div>
                             <div class="form-group row">
                                 <label class="col-sm-2 col-form-label">kerusakan</label>
                                 <div class="col-sm-10">
-                                    <textarea id="summernote" name="kerusakan"></textarea>
+                                    <textarea id="summernote3" name="kerusakan"></textarea>
                                 </div>
                             </div>
                             <div class="form-group row">
@@ -89,6 +89,8 @@ TAMBAH
 <script>
     $(document).ready(function() {
         $('#summernote').summernote();
+        $('#summernote2').summernote();
+        $('#summernote3').summernote();
     });
 </script>
 <script>

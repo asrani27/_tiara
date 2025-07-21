@@ -31,12 +31,6 @@ TAMBAH
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <label class="col-sm-2 col-form-label">nomor palka</label>
-                                <div class="col-sm-10">
-                                    <input type="text" class="form-control" name="nomor">
-                                </div>
-                            </div>
-                            <div class="form-group row">
                                 <label class="col-sm-2 col-form-label">waktu</label>
                                 <div class="col-sm-10">
                                     <input type="text" class="form-control" name="waktu">

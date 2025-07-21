@@ -30,6 +30,10 @@ Foreman
                             <th>Tanggal</th>
                             <th>No Surat</th>
                             <th>Alamat Penerima</th>
+                            <th>Isi Kotor</th>
+                            <th>Muatan</th>
+                            <th>Cargo</th>
+                            <th>Tanggal Muatan</th>
                             <th>Aksi</th>
                         </tr>
                     </thead>
@@ -43,6 +47,10 @@ Foreman
                             <td>{{\Carbon\Carbon::parse($item->tanggal)->format('d-m-Y')}}</td>
                             <td>{{$item->nomor}}</td>
                             <td>{{$item->alamat_penerima}}</td>
+                            <td>{{$item->isi_kotor}}</td>
+                            <td>{{$item->muatan}}</td>
+                            <td>{{$item->cargo}}</td>
+                            <td>{{\Carbon\Carbon::parse($item->tanggal_muatan)->format('d-m-Y')}}</td>
 
                             <td>
 

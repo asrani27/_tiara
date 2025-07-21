@@ -41,13 +41,6 @@ TAMBAH
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <label class="col-sm-2 col-form-label">pelabuhan tujuan</label>
-                                <div class="col-sm-10">
-                                    <input type="text" class="form-control" name="pelabuhan_tujuan" required>
-                                </div>
-                            </div>
-
-                            <div class="form-group row">
                                 <label class="col-sm-2 col-form-label">file</label>
                                 <div class="col-sm-10">
                                     <input type="file" class="form-control" name="file" required>

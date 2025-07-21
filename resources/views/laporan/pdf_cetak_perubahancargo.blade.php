@@ -58,7 +58,7 @@
         </tr>
         <tr>
             <td>Memuat Oleh</td>
-            <td>: {{$data->memuat_oleg}}</td>
+            <td>: {{$data->memuat_oleh}}</td>
         </tr>
         <tr>
             <td>Posisi Akhir</td>

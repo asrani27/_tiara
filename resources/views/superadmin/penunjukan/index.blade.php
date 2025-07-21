@@ -28,7 +28,6 @@ ADMIN
                             <th>Tanggal</th>
                             <th>Rencana muatan</th>
                             <th>Pelabuhan Muatan</th>
-                            <th>Pelabuhan Tujuan</th>
                             <th>Foreman Yg di tugaskan</th>
                             <th>File</th>
                             <th>status</th>
@@ -45,7 +44,6 @@ ADMIN
                             <td>{{\Carbon\Carbon::parse($item->tanggal)->format('d-m-Y')}}</td>
                             <td>{{$item->rencana_muatan}}</td>
                             <td>{{$item->pelabuhan_muatan}}</td>
-                            <td>{{$item->pelabuhan_tujuan}}</td>
                             <td>{{$item->foreman == null ? null : $item->foreman->nama}}</td>
                             <td><a href="/storage/{{$item->file}}" target="_blank"><i class="fa fa-download"></i>
                                     Download</a></td>

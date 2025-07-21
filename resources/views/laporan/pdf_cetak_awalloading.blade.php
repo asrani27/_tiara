@@ -86,7 +86,7 @@
         </tr>
         <tr>
             <td>Draft Survey Akhir </td>
-            <td>: {{$data->survey_akhir}}</td>
+            <td>: {{\Carbon\Carbon::parse($data->survei_akhir)->format('d M Y H:i:s')}}</td>
         </tr>
     </table>
     <br /> <br />

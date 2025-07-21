@@ -30,52 +30,52 @@ TAMBAH
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <label class="col-sm-2 col-form-label">Nama tempat</label>
+                                <label class="col-sm-2 col-form-label">Nama Tempat</label>
                                 <div class="col-sm-10">
                                     <input type="text" class="form-control" name="nama_tempat">
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <label class="col-sm-2 col-form-label">memuat_oleh</label>
+                                <label class="col-sm-2 col-form-label">Memuat Oleh</label>
                                 <div class="col-sm-10">
                                     <input type="text" class="form-control" name="memuat_oleh">
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <label class="col-sm-2 col-form-label">posisi_akhir</label>
+                                <label class="col-sm-2 col-form-label">Posisi Akhir</label>
                                 <div class="col-sm-10">
                                     <input type="text" class="form-control" name="posisi_akhir">
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <label class="col-sm-2 col-form-label">agent_diataskapal</label>
+                                <label class="col-sm-2 col-form-label">Agent Diatas Kapal</label>
                                 <div class="col-sm-10">
                                     <input type="text" class="form-control" name="agent_diataskapal">
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <label class="col-sm-2 col-form-label">draft_mt</label>
+                                <label class="col-sm-2 col-form-label">Draft</label>
                                 <div class="col-sm-10">
                                     <input type="text" class="form-control" name="draft_mt">
                                 </div>
                             </div>
 
                             <div class="form-group row">
-                                <label class="col-sm-2 col-form-label">ujicoba_selesai</label>
+                                <label class="col-sm-2 col-form-label">Uji Coba Selesai</label>
                                 <div class="col-sm-10">
                                     <input type="text" class="form-control" name="ujicoba_selesai">
                                 </div>
                             </div>
 
                             <div class="form-group row">
-                                <label class="col-sm-2 col-form-label">rencana_penyimpanan</label>
+                                <label class="col-sm-2 col-form-label">Rencana Penyimpanan</label>
                                 <div class="col-sm-10">
                                     <input type="text" class="form-control" name="rencana_penyimpanan">
                                 </div>
                             </div>
 
                             <div class="form-group row">
-                                <label class="col-sm-2 col-form-label">cargo_diataskapal</label>
+                                <label class="col-sm-2 col-form-label">Cargo Diatas Kapal</label>
                                 <div class="col-sm-10">
                                     <input type="text" class="form-control" name="cargo_diataskapal">
                                 </div>

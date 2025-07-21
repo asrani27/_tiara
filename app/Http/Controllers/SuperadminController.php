@@ -48,6 +48,12 @@ class SuperadminController extends Controller
         $data = Penunjukan::orderBy('id', 'DESC')->paginate(10);
         return view('superadmin.penunjukan.index', compact('data'));
     }
+    public function penunjukan_delete($id)
+    {
+        Penunjukan::find($id)->delete();
+        toastr()->success('berhasil Di hapus');
+        return redirect('superadmin/penunjukan');
+    }
     public function penunjukan_verifikasi($id)
     {
         $data = Penunjukan::find($id);

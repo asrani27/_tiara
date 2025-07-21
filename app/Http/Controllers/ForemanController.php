@@ -248,4 +248,23 @@ class ForemanController extends Controller
         toastr()->success('telah dilaksanakan');
         return back();
     }
+    //cetak
+    public function awalloading_cetak($id)
+    {
+        $data = AwalLoading::find($id);
+        $pdf = Pdf::loadView('laporan.pdf_cetak_awalloading', compact('data'));
+        return $pdf->stream();
+    }
+    public function complated_cetak($id)
+    {
+        $data = Complated::find($id);
+        $pdf = Pdf::loadView('laporan.pdf_cetak_complated', compact('data'));
+        return $pdf->stream();
+    }
+    public function perubahancargo_cetak($id)
+    {
+        $data = PerubahanCargo::find($id);
+        $pdf = Pdf::loadView('laporan.pdf_cetak_perubahancargo', compact('data'));
+        return $pdf->stream();
+    }
 }

@@ -27,7 +27,7 @@ ADMIN
                             <th>Foreman</th>
                             <th>Tanggal Surat</th>
                             <th>Nama Operator</th>
-                            <th>Kerusakan</th>
+                            <th>Bertanda Tangan</th>
                             <th>Aksi</th>
                         </tr>
                     </thead>
@@ -41,7 +41,7 @@ ADMIN
                             <td>{{$item->foreman == null ? null : $item->foreman->nama}}</td>
                             <td>{{\Carbon\Carbon::parse($item->tanggal_surat)->format('d-m-Y')}}</td>
                             <td>{{$item->nama_operator}}</td>
-                            <td>{{$item->kerusakan}}</td>
+                            <td>{{$item->bertandatangan}}</td>
                             <td>
                                 {{-- <a href="/superadmin/demage/edit/{{$item->id}}" class="btn btn-xs btn-success"><i
                                         class="fas fa-edit"></i> edit</a> --}}

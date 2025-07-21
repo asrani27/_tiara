@@ -37,49 +37,55 @@ TAMBAH
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <label class="col-sm-2 col-form-label">lampiran</label>
+                                <label class="col-sm-2 col-form-label">Lampiran</label>
                                 <div class="col-sm-10">
                                     <input type="text" class="form-control" name="lampiran">
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <label class="col-sm-2 col-form-label">alamat_penerima</label>
+                                <label class="col-sm-2 col-form-label">Perihal</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" name="perihal">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-sm-2 col-form-label">Alamat Penerima</label>
                                 <div class="col-sm-10">
                                     <input type="text" class="form-control" name="alamat_penerima">
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <label class="col-sm-2 col-form-label">nama_kapal</label>
+                                <label class="col-sm-2 col-form-label">Nama Kapal</label>
                                 <div class="col-sm-10">
                                     <input type="text" class="form-control" name="nama_kapal">
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <label class="col-sm-2 col-form-label">bendera</label>
+                                <label class="col-sm-2 col-form-label">Bendera</label>
                                 <div class="col-sm-10">
                                     <input type="text" class="form-control" name="bendera">
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <label class="col-sm-2 col-form-label">isi_kotor</label>
+                                <label class="col-sm-2 col-form-label">Isi Kotor</label>
                                 <div class="col-sm-10">
                                     <input type="text" class="form-control" name="isi_kotor">
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <label class="col-sm-2 col-form-label">agen_kapal</label>
+                                <label class="col-sm-2 col-form-label">Agen Kapal</label>
                                 <div class="col-sm-10">
                                     <input type="text" class="form-control" name="agen_kapal">
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <label class="col-sm-2 col-form-label">dari</label>
+                                <label class="col-sm-2 col-form-label">Dari</label>
                                 <div class="col-sm-10">
                                     <input type="text" class="form-control" name="dari">
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <label class="col-sm-2 col-form-label">tujuan</label>
+                                <label class="col-sm-2 col-form-label">Tujuan</label>
                                 <div class="col-sm-10">
                                     <input type="text" class="form-control" name="tujuan">
                                 </div>
@@ -97,7 +103,7 @@ TAMBAH
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <label class="col-sm-2 col-form-label">Tanggal</label>
+                                <label class="col-sm-2 col-form-label">Tanggal Muatan</label>
                                 <div class="col-sm-10">
                                     <input type="date" class="form-control" name="tanggal_muatan">
                                 </div>

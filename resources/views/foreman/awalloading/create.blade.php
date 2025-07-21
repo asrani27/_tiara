@@ -53,21 +53,14 @@ TAMBAH
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <label class="col-sm-2 col-form-label">Waktu Dihidupkan</label>
+                                <label class="col-sm-2 col-form-label">Waktu Tiba</label>
                                 <div class="col-sm-10">
                                     <input type="datetime-local" class="form-control" name="waktu_dihidupkan"
                                         value="{{\Carbon\Carbon::now()->format('Y-m-d H:i:s')}}" required>
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <label class="col-sm-2 col-form-label">mulai_memuat</label>
-                                <div class="col-sm-10">
-                                    <input type="datetime-local" class="form-control" name="mulai_memuat"
-                                        value="{{\Carbon\Carbon::now()->format('Y-m-d H:i:s')}}" required>
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <label class="col-sm-2 col-form-label">mulai_memuat</label>
+                                <label class="col-sm-2 col-form-label">Mulai Memuat</label>
                                 <div class="col-sm-10">
                                     <input type="datetime-local" class="form-control" name="mulai_memuat"
                                         value="{{\Carbon\Carbon::now()->format('Y-m-d H:i:s')}}" required>
@@ -81,9 +74,10 @@ TAMBAH
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <label class="col-sm-2 col-form-label">Survei Akhir</label>
+                                <label class="col-sm-2 col-form-label">Draft Survey Akhir</label>
                                 <div class="col-sm-10">
-                                    <input type="text" class="form-control" name="survei_akhir">
+                                    <input type="datetime-local" class="form-control" name="survei_akhir"
+                                        value="{{\Carbon\Carbon::now()->format('Y-m-d H:i:s')}}" required>
                                 </div>
                             </div>                     
                             <div class="form-group row">

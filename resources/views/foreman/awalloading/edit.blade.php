@@ -59,7 +59,7 @@ EDIT
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <label class="col-sm-2 col-form-label">Waktu Dihidupkan</label>
+                                <label class="col-sm-2 col-form-label">Waktu Tiba</label>
                                 <div class="col-sm-10">
                                     <input type="datetime-local" class="form-control" name="waktu_dihidupkan"
                                         value="{{$data->waktu_dihidupkan}}">
@@ -80,9 +80,9 @@ EDIT
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <label class="col-sm-2 col-form-label">Survei Akhir</label>
+                                <label class="col-sm-2 col-form-label">Draft Survey Akhir</label>
                                 <div class="col-sm-10">
-                                    <input type="text" class="form-control" name="survei_akhir"
+                                    <input type="datetime-local" class="form-control" name="survei_akhir"
                                         value="{{$data->survei_akhir}}">
                                 </div>
                             </div>

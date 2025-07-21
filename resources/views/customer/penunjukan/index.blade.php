@@ -27,7 +27,6 @@ CUSTOMER
                             <th>Tanggal</th>
                             <th>Rencana muatan</th>
                             <th>Pelabuhan Muatan</th>
-                            <th>Pelabuhan Tujuan</th>
                             <th>File</th>
                             <th>Aksi</th>
                         </tr>
@@ -42,7 +41,6 @@ CUSTOMER
                             <td>{{\Carbon\Carbon::parse($item->tanggal)->format('d-m-Y')}}</td>
                             <td>{{$item->rencana_muatan}}</td>
                             <td>{{$item->pelabuhan_muatan}}</td>
-                            <td>{{$item->pelabuhan_tujuan}}</td>
                             <td><a href="/storage/{{$item->file}}" target="_blank"><i class="fa fa-download"></i>
                                     Download</a></td>
                             <td>

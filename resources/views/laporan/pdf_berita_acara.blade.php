@@ -29,33 +29,26 @@
     </table>
     <hr>
 
-    <h3 style="text-align: center"><u>BERITA ACARA</u><br /> NOMOR : </h3><br />
+    <h3 style="text-align: center">
+        <u>BERITA ACARA</u> <br/> Nomor : {!!$data->nomor_surat!!}
+    </h3> 
+        <br />
     <table>
         <tr>
             <td>
                 {!!$data->detail!!}
-            </td>
-        </tr>
-        <tr style="text-align: justify;" width="50%">
-            <td>
                 Nama Operator : {!!$data->nama_operator!!}
             </td>
-        </tr>
-        <br />
+        </tr><br/>
         <tr  style="text-align: justify;">
-            <td>Kronologis : {!!$data->kronologi!!}</td>
-        </tr>
-        <br />
-        <tr style="text-align: justify;" width="50%">
-            <td>Adapun Kerusakan tersebut meliputi : </td>
-        </tr>
-        <tr>
             <td>
-            - {!!$data->kerusakan!!}
+                {!!$data->kronologi!!}
+                Adapun Kerusakan tersebut meliputi : <br/>
+                {!!$data->kerusakan!!}
             </td>
         </tr>
+    <br/>   
     </table>
-    <br /><br />
     Demikianlah permohonan kami atas bantuan bapak kearah ini sebelumnya kami ucapkan
     terima kasih
     <table width="100%">
@@ -72,6 +65,38 @@
             </td>
         </tr>
     </table>
+    </table>
+    <br /> <br />
+    <br /> <br />
+    <br /> <br />
+     <hr>
+    <table>
+        <tr>
+            <td style="text-align: center" width="60%">
+                <b>H E A D &nbsp;&nbsp;&nbsp; O F F I C E : </b>
+            </td>
+            <td width="15%">
+            </td> 
+        </tr> 
+    </table>
+    <hr>
+    <table>
+        <tr>
+            <td><b>JL. Mulawarman Desa kaliorang Kec.Kaliorang
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b></td>
+            <td><b>Telp   : +082255550233/0823-5838-1532</b></td>
+        </tr>
+        <tr>
+            <td><b>kab.Kutai Timur, Prov.Kalimantan Timur </b></td>
+            <td><b>Fax    : +62.21.4303289</b></td>
+        </tr>
+        <tr>
+            <td><b> </b></td>
+            <td><b>E-mail : pt.bpukutim@yahoo.com </b></td>
+        </tr>
+    </table>
+    <hr>
 </body>
 
 </html>

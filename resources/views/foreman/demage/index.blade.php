@@ -29,7 +29,7 @@ Foreman
                             <th>No</th>
                             <th>Tanggal Surat</th>
                             <th>Nama Operator</th>
-                            <th>Kerusakan</th>
+                            <th>Bertanda Tangan</th>
                             <th>Aksi</th>
                         </tr>
                     </thead>
@@ -42,10 +42,10 @@ Foreman
                             <td>{{$data->firstItem() + $key}}</td>
                             <td>{{\Carbon\Carbon::parse($item->tanggal_surat)->format('d-m-Y')}}</td>
                             <td>{{$item->nama_operator}}</td>
-                            <td>{{$item->kerusakan}}</td>
+                            <td>{{$item->bertandatangan}}</td>
                             <td>
-                                <a href="/foreman/demage/edit/{{$item->id}}" class="btn btn-xs btn-success"><i
-                                        class="fas fa-edit"></i> edit</a>
+                                <a href="/foreman/demage/edit/{{$item->id}}" class="btn btn-xs btn-success">
+                                    <i class="fas fa-edit"></i> edit</a>
 
                                 <a href="/foreman/demage/delete/{{$item->id}}" class=" btn btn-xs btn-danger"
                                     onclick="return confirm('yakin Di Hapus?');"><i class="fas fa-trash"></i>
