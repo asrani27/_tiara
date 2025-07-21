@@ -71,6 +71,8 @@ Route::group(['middleware' => ['auth']], function () {
         Route::get('awalloading', [SuperadminController::class, 'awalloading']);
         Route::get('awalloading/print', [SuperadminController::class, 'awalloading_print']);
         Route::get('awalloading/delete/{id}', [SuperadminController::class, 'awalloading_delete']);
+        Route::get('awalloading/report/{id}', [SuperadminController::class, 'awalloading_report']);
+        Route::get('awalloading/cetak/{id}', [SuperadminController::class, 'awalloading_cetak']);
 
         Route::get('loading', [SuperadminController::class, 'loading']);
         Route::get('loading/print', [SuperadminController::class, 'loading_print']);

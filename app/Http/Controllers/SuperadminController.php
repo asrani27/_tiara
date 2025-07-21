@@ -17,6 +17,21 @@ use Illuminate\Support\Facades\Auth;
 
 class SuperadminController extends Controller
 {
+    public function awalloading_cetak($id)
+    {
+        $data = AwalLoading::find($id);
+        $pdf = Pdf::loadView('laporan.pdf_cetak_awalloading', compact('data'));
+        return $pdf->stream();
+    }
+    public function awalloading_report($id)
+    {
+
+        $awal = AwalLoading::find($id);
+        $data = $awal->report;
+
+        $pdf = Pdf::loadView('laporan.pdf_report', compact('data', 'awal'))->setPaper('a4', 'landscape');;
+        return $pdf->stream();
+    }
     public function customer()
     {
         $data = Customer::orderBy('id', 'DESC')->paginate(10);

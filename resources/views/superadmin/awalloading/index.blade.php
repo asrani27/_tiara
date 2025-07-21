@@ -51,9 +51,12 @@ ADMIN
                                 <a href="/superadmin/awalloading/delete/{{$item->id}}" class=" btn btn-xs btn-danger"
                                     onclick="return confirm('yakin Di Hapus?');"><i class="fas fa-trash"></i>
                                     Delete</a>
-                                <a href="/foreman/awalloading/cetak/{{$item->id}}" class="btn btn-xs btn-warning"><i
-                                    class="fas fa-print"></i> cetak </a>
+                                <a href="/superadmin/awalloading/cetak/{{$item->id}}" class="btn btn-xs btn-warning"><i
+                                        class="fas fa-print"></i> Report Awal </a>
 
+
+                                <a href="/superadmin/awalloading/report/{{$item->id}}" class="btn btn-xs btn-warning"><i
+                                        class="fas fa-print"></i> Report Loading</a>
                             </td>
                         </tr>
                         @endforeach
