@@ -46,6 +46,30 @@ TAMBAH
                                     <input type="file" class="form-control" name="file" required>
                                 </div>
                             </div>
+                            <div class="form-group row">
+                                <label class="col-sm-2 col-form-label">Nama Kapal</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" name="nama_kapal" required>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-sm-2 col-form-label">Jenis Barang</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" name="jenis_barang" required>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-sm-2 col-form-label">Tanggal Sandar</label>
+                                <div class="col-sm-10">
+                                    <input type="date" class="form-control" name="tgl_sandar" required>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-sm-2 col-form-label">Estimasi Waktu Pengerjaan</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" name="estimasi" required>
+                                </div>
+                            </div>
 
 
                             <div class="form-group row">
