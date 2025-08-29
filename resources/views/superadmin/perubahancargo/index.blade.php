@@ -46,9 +46,7 @@ ADMIN
                             <td>{{$item->rencana_penyimpanan}}</td>
                             <td>{{$item->cargo_diataskapal}}</td>
                             <td>
-                                <a href="/superadmin/perubahancargo/edit/{{$item->id}}"
-                                    class="btn btn-xs btn-success"><i class="fas fa-edit"></i> Verifikasi</a>
-
+                                
                                 <a href="/superadmin/perubahancargo/delete/{{$item->id}}" class=" btn btn-xs btn-danger"
                                     onclick="return confirm('yakin Di Hapus?');"><i class="fas fa-trash"></i>
                                     Delete</a>

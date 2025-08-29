@@ -4,23 +4,24 @@ namespace App\Http\Controllers;
 
 use Carbon\Carbon;
 use App\Models\Soal;
+use App\Models\Stok;
 use App\Models\Toko;
 use App\Models\Waktu;
 use App\Models\Banner;
+use App\Models\Dokter;
+use App\Models\Pasien;
 use App\Models\Produk;
 use App\Models\Profil;
+use App\Models\Foreman;
 use App\Models\Jawaban;
 use App\Models\Layanan;
 use App\Models\Pegawai;
 use App\Models\Peserta;
+use App\Models\Customer;
 use App\Models\Kategori;
 use App\Models\Pengajuan;
 use App\Models\BenarSalah;
-use App\Models\Customer;
-use App\Models\Dokter;
-use App\Models\Foreman;
-use App\Models\Pasien;
-use App\Models\Stok;
+use App\Models\Penunjukan;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -39,10 +40,10 @@ class HomeController extends Controller
     public function superadmin()
     {
         $customer = count(Customer::get());
-        $produk = 1;
+        $penunjukan = count(Penunjukan::get());
         $foreman = count(Foreman::get());
 
-        return view('superadmin.home', compact('customer', 'produk', 'foreman'));
+        return view('superadmin.home', compact('customer', 'penunjukan', 'foreman'));
     }
 
     public function gantipass()

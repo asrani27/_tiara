@@ -79,6 +79,10 @@
             <td>: {{$data->isi_kotor}}</td>
         </tr>
         <tr>
+            <td>Agent Kapal</td>
+            <td>: {{$data->agen_kapal}}</td>
+        </tr>
+        <tr>
             <td>Dari</td>
             <td>: {{$data->dari}}</td>
         </tr>
@@ -88,7 +92,7 @@
         </tr>
         <tr>
             <td>Cargo</td>
-            <td>: {{$data->agen_kapal}}</td>
+            <td>: {{$data->cargo}}</td>
         </tr>
         <tr>
             <td>Muatan</td>

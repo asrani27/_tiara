@@ -55,7 +55,7 @@ ADMIN
                                <a href="/superadmin/complated/delete/{{$item->id}}" class=" btn btn-xs btn-danger"
                                     onclick="return confirm('yakin Di Hapus?');"><i class="fas fa-trash"></i>
                                     Delete</a>
-                                <a href="/foreman/awalloading/cetak/{{$item->id}}" class="btn btn-xs btn-warning"><i
+                                <a href="/foreman/complated/cetak/{{$item->id}}" class="btn btn-xs btn-warning"><i
                                     class="fas fa-print"></i> cetak </a>
 
                             </td>

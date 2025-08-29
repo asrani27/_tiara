@@ -38,9 +38,9 @@
         <tr>
             <th>No</th>
             <th>Tanggal</th>
+            <th>Nama Kapal</th>
             <th>Rencana muatan</th>
             <th>Pelabuhan Muatan</th>
-            <th>Pelabuhan Tujuan</th>
             <th>Foreman Yg di tugaskan</th>
             <th>Status</th>
         </tr>
@@ -52,9 +52,9 @@
         <tr>
             <td>{{$key + 1}}</td>
             <td>{{\Carbon\Carbon::parse($item->tanggal)->format('d-m-Y')}}</td>
+            <td>{{$item->nama_kapal}}</td>
             <td>{{$item->rencana_muatan}}</td>
             <td>{{$item->pelabuhan_muatan}}</td>
-            <td>{{$item->pelabuhan_tujuan}}</td>
             <td>{{$item->foreman == null ? null : $item->foreman->nama}}</td>
             <td>{{$item->status}}</td>
         </tr>

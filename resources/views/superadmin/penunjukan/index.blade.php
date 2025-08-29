@@ -26,6 +26,7 @@ ADMIN
                         <tr>
                             <th>No</th>
                             <th>Tanggal</th>
+                            <th>Nama Kapal</th>
                             <th>Rencana muatan</th>
                             <th>Pelabuhan Muatan</th>
                             <th>Foreman Yg di tugaskan</th>
@@ -42,6 +43,7 @@ ADMIN
                         <tr style="font-size:12px; font-family:Arial, Helvetica, sans-serif">
                             <td>{{$data->firstItem() + $key}}</td>
                             <td>{{\Carbon\Carbon::parse($item->tanggal)->format('d-m-Y')}}</td>
+                            <td>{{$item->nama_kapal}}</td>
                             <td>{{$item->rencana_muatan}}</td>
                             <td>{{$item->pelabuhan_muatan}}</td>
                             <td>{{$item->foreman == null ? null : $item->foreman->nama}}</td>
