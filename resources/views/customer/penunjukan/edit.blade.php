@@ -30,6 +30,13 @@ EDIT
                                 </div>
                             </div>
                             <div class="form-group row">
+                                <label class="col-sm-2 col-form-label">Nama Kapal</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" name="nama_kapal"
+                                        value="{{$data->nama_kapal}}" required>
+                                </div>
+                            </div>
+                            <div class="form-group row">
                                 <label class="col-sm-2 col-form-label">Rencana muatan</label>
                                 <div class="col-sm-10">
                                     <input type="text" class="form-control" name="rencana_muatan"

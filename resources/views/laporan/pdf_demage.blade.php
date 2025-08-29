@@ -40,7 +40,8 @@
             <th>Tanggal Surat</th>
             <th>Nomor Surat</th>
             <th>Nama Operator</th>
-            <th>kronologi</th>
+            <th>Kronologi</th>
+            <th>Kerusakan</th>
             <th>Bertanda Tangan</th>
         </tr>
         @php
@@ -53,7 +54,8 @@
             <td>{{\Carbon\Carbon::parse($item->tanggal_surat)->format('d-m-Y')}}</td>
             <td>{{$item->nomor_surat}}</td>
             <td>{{$item->nama_operator}}</td>
-            <td>{{$item->kronologi}}</td>
+            <td>{!!$item->kronologi!!}</td>
+            <td>{!!$item->kerusakan!!}</td>
             <td>{{$item->bertandatangan}}</td>
         </tr>
         @endforeach

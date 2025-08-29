@@ -32,7 +32,7 @@ Beranda
 
       <div class="info-box-content">
         <span class="info-box-text">Total Surat Penunjukan</span>
-        <span class="info-box-number">{{$produk}}</span>
+        <span class="info-box-number">{{$penunjukan}}</span>
 
         <div class="progress">
           <div class="progress-bar" style="width: 70%"></div>
