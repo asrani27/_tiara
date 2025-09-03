@@ -18,4 +18,8 @@ class Penunjukan extends Model
     {
         return $this->belongsTo(Foreman::class, 'foreman_id');
     }
+    public function awalloading()
+    {
+        return $this->hasOne(AwalLoading::class, 'surat_penunjukan_id');
+    }
 }

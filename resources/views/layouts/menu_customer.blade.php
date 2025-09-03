@@ -24,7 +24,14 @@
                 </p>
             </a>
         </li>
-
+        <li class="nav-item">
+            <a href="/customer/progress" class="nav-link {{Request::is('customer/progress') ? 'active' : ''}}">
+                <i class="nav-icon fa fa-calendar"></i>
+                <p>
+                    Progress Pekerjaan
+                </p>
+            </a>
+        </li>
         <li class="nav-item">
             <a href="/logout" class="nav-link">
                 <i class="nav-icon fas fa-sign-out-alt"></i>

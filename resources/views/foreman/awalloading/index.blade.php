@@ -27,6 +27,7 @@ Foreman
                     <thead>
                         <tr>
                             <th>No</th>
+                            <th>Nama Customer</th>
                             <th>Nama Perusahaan</th>
                             <th>Nama Kapal</th>
                             <th>Jumlah Cargo</th>
@@ -42,6 +43,17 @@ Foreman
                         @foreach ($data as $key => $item)
                         <tr style="font-size:12px; font-family:Arial, Helvetica, sans-serif">
                             <td>{{$data->firstItem() + $key}}</td>
+                            <td>
+                                @if ($item->penunjukan == null)
+                                -
+                                @else
+                                @if ($item->penunjukan->user == null)
+                                -
+                                @else
+                                {{$item->penunjukan->user->name}}
+                                @endif
+                                @endif
+                            </td>
                             <td>{{$item->perusahaan == null ? '': $item->perusahaan->nama}}</td>
                             <td>{{$item->nama_kapal}}</td>
                             <td>{{$item->jumlah_cargo}}</td>

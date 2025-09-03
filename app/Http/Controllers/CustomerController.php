@@ -37,6 +37,11 @@ class CustomerController extends Controller
         $data = Penunjukan::where('user_id', Auth::user()->id)->paginate(10);
         return view('customer.penunjukan.index', compact('data'));
     }
+    public function progress()
+    {
+        $data = Penunjukan::where('user_id', Auth::user()->id)->paginate(10);
+        return view('customer.progress.index', compact('data'));
+    }
     public function penunjukan_create()
     {
         return view('customer.penunjukan.create');

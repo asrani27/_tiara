@@ -216,6 +216,7 @@ Route::group(['middleware' => ['auth']], function () {
 Route::group(['middleware' => ['auth']], function () {
     Route::prefix('customer')->group(function () {
 
+        Route::get('progress', [CustomerController::class, 'progress']);
         Route::get('profil', [CustomerController::class, 'profil']);
         Route::post('profil', [CustomerController::class, 'update_profil']);
 
