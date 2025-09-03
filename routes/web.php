@@ -220,6 +220,7 @@ Route::group(['middleware' => ['auth']], function () {
         Route::get('profil', [CustomerController::class, 'profil']);
         Route::post('profil', [CustomerController::class, 'update_profil']);
 
+        Route::get('progress/report/{id}', [CustomerController::class, 'print_report']);
         Route::get('penunjukan', [CustomerController::class, 'penunjukan']);
         Route::get('penunjukan/create', [CustomerController::class, 'penunjukan_create']);
         Route::post('penunjukan/create', [CustomerController::class, 'penunjukan_store']);

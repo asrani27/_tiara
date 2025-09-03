@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\Penunjukan;
+use App\Models\AwalLoading;
 use Illuminate\Http\Request;
+use Barryvdh\DomPDF\Facade\Pdf;
 use Illuminate\Support\Facades\Auth;
 
 class CustomerController extends Controller
@@ -90,5 +92,14 @@ class CustomerController extends Controller
         Penunjukan::find($id)->delete();
         toastr()->success('berhasil Di Hapu');
         return back();
+    }
+    public function print_report($id)
+    {
+
+        $awal = AwalLoading::find($id);
+        $data = $awal->report;
+
+        $pdf = Pdf::loadView('laporan.pdf_report', compact('data', 'awal'))->setPaper('a4', 'landscape');;
+        return $pdf->stream();
     }
 }

@@ -24,6 +24,7 @@ CUSTOMER
                             <th>Nama Perusahaan</th>
                             <th>Nama Kapal</th>
                             <th>Status</th>
+                            <th>Aksi</th>
                         </tr>
                     </thead>
                     @php
@@ -101,6 +102,20 @@ CUSTOMER
                                     @endif
                                     @endif
                                 </table>
+                                @endif
+                            </td>
+                            <td>
+                                @if ($item->awalloading != null)
+                                @if ($item->awalloading->status_belumdikerjakan != null
+                                && $item->awalloading->status_sedangdikerjakan != null
+                                && $item->awalloading->status_selesai != null)
+                                <a href="/customer/progress/report/{{$item->awalloading->id}}"
+                                    class="btn btn-danger btn-sm" target="_blank">Report</a>
+                                @else
+
+                                @endif
+                                @else
+
                                 @endif
                             </td>
                         </tr>
