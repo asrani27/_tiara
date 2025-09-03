@@ -78,7 +78,8 @@ class SuperadminController extends Controller
     {
         $data = Penunjukan::find($id)->update([
             'foreman_id' => $req->foreman_id,
-            'status' => $req->status
+            'status' => $req->status,
+            'perusahaan_over' => $req->perusahaan_over
         ]);
         toastr()->success('berhasil Di update');
         return redirect('/superadmin/penunjukan');

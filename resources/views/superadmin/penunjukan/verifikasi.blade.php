@@ -50,26 +50,37 @@ EDIT
                                         value="{{$data->pelabuhan_muatan}}" readonly>
                                 </div>
                             </div>
+                            <div class="form-group row">
+                                <label class="col-sm-2 col-form-label">Status</label>
+                                <div class="col-sm-10">
+                                    <select class="form-control" name="status" id="status" required>
+                                        <option value="">pilih</option>
+                                        <option value="diterima">diterima</option>
+                                        <option value="diover">diover</option>
+                                    </select>
+                                </div>
+                            </div>
 
                             <div class="form-group row">
                                 <label class="col-sm-2 col-form-label">Pilih foreman</label>
                                 <div class="col-sm-10">
-                                    <select class="form-control" name="foreman_id">
+                                    <select class="form-control" name="foreman_id" id="foreman" disabled>
+                                        <option value="">-pilih-</option>
                                         @foreach (foreman() as $item)
                                         <option value="{{$item->id}}">{{$item->nama}}</option>
                                         @endforeach
                                     </select>
                                 </div>
                             </div>
+
                             <div class="form-group row">
-                                <label class="col-sm-2 col-form-label">Status</label>
+                                <label class="col-sm-2 col-form-label">Nama Perusahaan Over</label>
                                 <div class="col-sm-10">
-                                    <select class="form-control" name="status">
-                                        <option value="diterima">diterima</option>
-                                        <option value="ditolak">ditolak</option>
-                                    </select>
+                                    <input type="text" class="form-control" name="perusahaan_over" id="perusahaan_over"
+                                        disabled>
                                 </div>
                             </div>
+
                             <div class="form-group row">
                                 <label class="col-sm-2 col-form-label"></label>
                                 <div class="col-sm-10">
@@ -89,6 +100,29 @@ EDIT
 
 @push('js')
 
+<script>
+    document.getElementById('status').addEventListener('change', function () {
+    let status = this.value;
+    let foreman = document.getElementById('foreman');
+    let perusahaanOver = document.getElementById('perusahaan_over');
+
+    if (status === 'diterima') {
+        foreman.disabled = false;
+        perusahaanOver.disabled = true;
+        perusahaanOver.value = ''; // reset kalau sebelumnya keisi
+    } else if (status === 'diover') {
+        foreman.disabled = true;
+        foreman.value = ''; // reset kalau sebelumnya keisi
+        perusahaanOver.disabled = false;
+    } else {
+        // kalau pilih kosong reset semua
+        foreman.disabled = true;
+        foreman.value = '';
+        perusahaanOver.disabled = true;
+        perusahaanOver.value = '';
+    }
+});
+</script>
 <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-bs4.min.js"></script>
 <script>
     $(document).ready(function() {
