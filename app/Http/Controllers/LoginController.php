@@ -39,7 +39,10 @@ class LoginController extends Controller
 
     public function simpanDaftar(Request $req)
     {
-
+        if ($req->password != $req->confirm_password) {
+            toastr()->error('Password tidak sama');
+            return back();
+        }
         if (User::where('username', $req->username)->first() == null) {
             $user = new User;
             $user->name = $req->name;
