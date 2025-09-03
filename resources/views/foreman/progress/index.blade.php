@@ -84,7 +84,7 @@ Foreman
 
                                     <tr style="background-color: rgb(200, 242, 215)">
                                         <td style="padding: 3px"><i class="fa fa-check"></i> Sedang Di Kerjakan</td>
-                                        <td style="padding: 3px">: {{$item->status_belumdikerjakan}}</td>
+                                        <td style="padding: 3px">: {{$item->status_sedangdikerjakan}}</td>
                                         <td style="padding: 3px">
                                             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                             <a href="/foreman/progress/{{$item->id}}/batalstatus2" class="text-red"><i
