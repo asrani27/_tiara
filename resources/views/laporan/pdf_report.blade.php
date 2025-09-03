@@ -11,24 +11,30 @@
             font-family: Arial, sans-serif;
             font-size: 14px;
         }
+
         table {
             border-collapse: collapse;
         }
+
         .header-table td {
             vertical-align: top;
         }
+
         .data-table th {
             text-align: left;
             padding-right: 10px;
         }
+
         .bordered-table {
             border: 1px solid #000;
         }
+
         .bordered-table th,
         .bordered-table td {
             border: 1px solid #000;
             padding: 5px;
         }
+
         .center {
             text-align: center;
         }
@@ -41,7 +47,8 @@
     <table width="100%" class="header-table">
         <tr>
             <td width="15%">
-                <img src="data:image/jpeg;base64,{{ base64_encode(file_get_contents(public_path('logo/logonew.png'))) }}" width="120px">
+                <img src="data:image/jpeg;base64,{{ base64_encode(file_get_contents(public_path('logo/logonew.png'))) }}"
+                    width="120px">
             </td>
             <td class="center" width="70%">
                 <div style="font-size: 22px; font-weight: bold;">PT BORNEO PERSADA UTAMA</div>
@@ -65,10 +72,14 @@
             </td>
         </tr>
     </table>
-    <br/>
-    <br/>
+    <br />
+    <br />
     <!-- DATA KAPAL -->
     <table class="data-table">
+        <tr>
+            <th>Nama Perusahaan</th>
+            <td>: {{ $awal->perusahaan == null ? "": $awal->perusahaan->nama }}</td>
+        </tr>
         <tr>
             <th>Nama Kapal</th>
             <td>: {{ $awal->nama_kapal }}</td>
@@ -144,4 +155,5 @@
     </table>
 
 </body>
+
 </html>

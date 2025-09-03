@@ -22,9 +22,9 @@
                     </b></font><br />
 
                 <font size="20px">Stevedoring Company & Heary Equipment Rental<br /></font>
-                    
-                    Jl. Mulawarman Desa Kaliorang Kec.Kaliorang Kab.Kutai Timur, Prov.Kalimatan Timur<br />
-                    Tepl. +62.21.4303289 - Email: pt.bpukutim@yahoo.com
+
+                Jl. Mulawarman Desa Kaliorang Kec.Kaliorang Kab.Kutai Timur, Prov.Kalimatan Timur<br />
+                Tepl. +62.21.4303289 - Email: pt.bpukutim@yahoo.com
             </td>
             <td width="15%">
             </td>
@@ -66,7 +66,7 @@
         </tr>
         @endforeach
     </table>
-<br /> <br />
+    <br /> <br />
     <table width="100%">
         <tr>
             <td width="60%"></td>
