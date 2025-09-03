@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Carbon\Carbon;
 use App\Models\AwalLoading;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -23,6 +24,7 @@ class AwalLoadingController extends Controller
 
         $param = $req->all();
         $param['foreman_id'] = Auth::user()->foreman->id;
+        $param['status_belumdikerjakan'] = Carbon::now();
         AwalLoading::create($param);
         toastr()->success('berhasil Di simpan');
         return redirect('foreman/awalloading');

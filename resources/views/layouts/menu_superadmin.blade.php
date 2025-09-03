@@ -19,6 +19,15 @@
             </a>
         </li>
         <li class="nav-item">
+            <a href="/superadmin/perusahaan"
+                class="nav-link {{ Request::is('superadmin/perusahaan*') ? 'active' : '' }}">
+                <i class="nav-icon fas fa-list"></i>
+                <p>
+                    Data Perusahaan
+                </p>
+            </a>
+        </li>
+        <li class="nav-item">
             <a href="/superadmin/customer" class="nav-link {{ Request::is('superadmin/customer*') ? 'active' : '' }}">
                 <i class="nav-icon fas fa-users"></i>
                 <p>

@@ -55,6 +55,14 @@
                 </p>
             </a>
         </li>
+        <li class="nav-item">
+            <a href="/foreman/progress" class="nav-link">
+                <i class="nav-icon fas fa-file-alt"></i>
+                <p>
+                    Progress Pekerjaan
+                </p>
+            </a>
+        </li>
         <li class="nav-header">KENDALA</li>
         <li class="nav-item">
             <a href="/foreman/demage" class="nav-link">

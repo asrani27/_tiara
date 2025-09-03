@@ -15,6 +15,10 @@ class AwalLoading extends Model
     {
         return $this->belongsTo(Foreman::class);
     }
+    public function perusahaan()
+    {
+        return $this->belongsTo(Perusahaan::class);
+    }
     public function report()
     {
         return $this->hasMany(Report::class, 'awalloading_id');

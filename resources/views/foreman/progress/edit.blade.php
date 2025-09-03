@@ -24,17 +24,6 @@ EDIT
                         <div class="card-body">
 
                             <div class="form-group row">
-                                <label class="col-sm-2 col-form-label">Nama Perusahaan</label>
-                                <div class="col-sm-10">
-                                    <select class="form-control" name="perusahaan_id">
-                                        @foreach (perusahaan() as $item)
-                                        <option value="{{$item->id}}" {{$data->perusahaan_id ==$item->id ?
-                                            'selected':''}}>{{$item->nama}}</option>
-                                        @endforeach
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="form-group row">
                                 <label class="col-sm-2 col-form-label">Nama Kapal</label>
                                 <div class="col-sm-10">
                                     <input type="text" class="form-control" name="nama_kapal"

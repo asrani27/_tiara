@@ -12,22 +12,19 @@ Foreman
 
         <a href="/foreman/awalloading/create" class="btn btn-sm bg-gradient-purple"><i class="fas fa-plus"></i>
             Tambah</a>
-        <!--<a href="/foreman/awalloading/print" class="btn btn-sm bg-gradient-warning"><i class="fas fa-print"></i>
-            Print</a>-->
         <br /><br />
         <div class="card">
             <div class="card-header">
-                <h3 class="card-title">Data Report Awal Loading</h3>
+                <h3 class="card-title">Data Report Loading</h3>
                 <div class="card-tools">
                 </div>
             </div>
             <!-- /.card-header -->
-            <div class="card-body table-responsive">
-                <table id="example1" class="table table-striped table-valign-middle">
+            <div class="card-body table-responsive p-0">
+                <table class="table table-striped table-valign-middle">
                     <thead>
                         <tr>
                             <th>No</th>
-                            <th>Nama Perusahaan</th>
                             <th>Nama Kapal</th>
                             <th>Jumlah Cargo</th>
                             <th>Mulai Memuat</th>
@@ -42,21 +39,17 @@ Foreman
                         @foreach ($data as $key => $item)
                         <tr style="font-size:12px; font-family:Arial, Helvetica, sans-serif">
                             <td>{{$data->firstItem() + $key}}</td>
-                            <td>{{$item->perusahaan == null ? '': $item->perusahaan->nama}}</td>
                             <td>{{$item->nama_kapal}}</td>
                             <td>{{$item->jumlah_cargo}}</td>
                             <td>{{\Carbon\Carbon::parse($item->mulai_memuat)->format('d-m-Y H:i:s')}}</td>
                             <td>{{\Carbon\Carbon::parse($item->selesai_memuat)->format('d-m-Y H:i:s')}}</td>
                             <td>
-                                <a href="/foreman/awalloading/edit/{{$item->id}}" class="btn btn-xs btn-success"><i
+                                <a href="/foreman/loading/edit/{{$item->id}}" class="btn btn-xs btn-success"><i
                                         class="fas fa-edit"></i> edit</a>
 
-                                <a href="/foreman/awalloading/delete/{{$item->id}}" class=" btn btn-xs btn-danger"
+                                <a href="/foreman/loading/delete/{{$item->id}}" class=" btn btn-xs btn-danger"
                                     onclick="return confirm('yakin Di Hapus?');"><i class="fas fa-trash"></i>
                                     Delete</a>
-
-                                <a href="/foreman/awalloading/cetak/{{$item->id}}" class="btn btn-xs btn-warning"><i
-                                        class="fas fa-print"></i> cetak </a>
 
                             </td>
                         </tr>

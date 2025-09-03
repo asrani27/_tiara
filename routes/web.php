@@ -17,6 +17,8 @@ use App\Http\Controllers\ComplatedController;
 use App\Http\Controllers\SuperadminController;
 use App\Http\Controllers\AwalLoadingController;
 use App\Http\Controllers\PerubahanCargoController;
+use App\Http\Controllers\PerusahaanController;
+use App\Http\Controllers\ProgressController;
 use App\Models\Foreman;
 
 Route::get('/', [HomeController::class, 'welcome']);
@@ -113,6 +115,14 @@ Route::group(['middleware' => ['auth']], function () {
         Route::post('/user/add', [UserController::class, 'store']);
         Route::post('/user/edit/{id}', [UserController::class, 'update']);
 
+
+        Route::get('/perusahaan', [PerusahaanController::class, 'index']);
+        Route::get('/perusahaan/add', [PerusahaanController::class, 'add']);
+        Route::get('/perusahaan/edit/{id}', [PerusahaanController::class, 'edit']);
+        Route::get('/perusahaan/delete/{id}', [PerusahaanController::class, 'delete']);
+        Route::post('/perusahaan/add', [PerusahaanController::class, 'store']);
+        Route::post('/perusahaan/edit/{id}', [PerusahaanController::class, 'update']);
+
         Route::get('gantipass', [HomeController::class, 'gantipass']);
         Route::post('gantipass', [HomeController::class, 'resetpass']);
 
@@ -134,6 +144,13 @@ Route::group(['middleware' => ['auth']], function () {
 Route::group(['middleware' => ['auth']], function () {
     Route::prefix('foreman')->group(function () {
 
+        Route::get('progress', [ProgressController::class, 'progress']);
+        Route::get('progress/{id}/checkstatus1', [ProgressController::class, 'checkstatus1']);
+        Route::get('progress/{id}/batalstatus1', [ProgressController::class, 'batalstatus1']);
+        Route::get('progress/{id}/checkstatus2', [ProgressController::class, 'checkstatus2']);
+        Route::get('progress/{id}/batalstatus2', [ProgressController::class, 'batalstatus2']);
+        Route::get('progress/{id}/checkstatus3', [ProgressController::class, 'checkstatus3']);
+        Route::get('progress/{id}/batalstatus3', [ProgressController::class, 'batalstatus3']);
         //print
         Route::get('penunjukan/print', [ForemanController::class, 'print_penunjukan']);
         Route::get('pengajuan/print', [ForemanController::class, 'print_pengajuan']);

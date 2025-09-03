@@ -7,6 +7,7 @@ use App\Models\Customer;
 use App\Models\Pengajuan;
 use App\Models\Penunjukan;
 use App\Models\AwalLoading;
+use App\Models\Perusahaan;
 use Illuminate\Support\Facades\Auth;
 
 function listUpload($pegawai_id, $persyaratan_id)
@@ -18,6 +19,10 @@ function listSyarat($persyaratan_id)
 {
     $id = json_decode($persyaratan_id);
     return Upload::whereIn('id', $id)->get();
+}
+function perusahaan()
+{
+    return Perusahaan::get();
 }
 
 function foreman()
