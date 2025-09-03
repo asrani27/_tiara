@@ -71,7 +71,7 @@ CUSTOMER
 
                                     <tr style="background-color: rgb(200, 242, 215)">
                                         <td style="padding: 3px"><i class="fa fa-check"></i> Sedang Di Kerjakan</td>
-                                        <td style="padding: 3px">: {{$item->awalloading->tatus_sedangdikerjakan}}</td>
+                                        <td style="padding: 3px">: {{$item->awalloading->status_sedangdikerjakan}}</td>
 
                                     </tr>
                                     @endif
